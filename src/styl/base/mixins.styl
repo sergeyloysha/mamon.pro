@@ -1,0 +1,28 @@
+indent()
+  padding-top: $indent.mobile
+  padding-bottom: $indent.mobile
+
+  +md()
+    padding-top: $indent.desktop
+    padding-bottom: $indent.desktop
+
+indent-top()
+  padding-top: $indent.mobile
+
+  +md()
+    padding-top: $indent.desktop
+
+indent-bottom()
+  padding-bottom: $indent.mobile
+
+  +md()
+    padding-bottom: $indent.desktop
+
+// transition($attr = all)
+//   transition: $attr $transition-time $transition-function
+
+card()
+  transition: ($transition-time * 2) $transition-function
+
+  &:hover
+    box-shadow: 0 2.4rem 3.8rem .3rem rgba($colors.black, .07), 0 .9rem 4.6rem .8rem rgba($colors.black, .06), 0 1.1rem 1.5rem 0 rgba($colors.black, .1)

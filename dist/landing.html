@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <title>VTS Redesign</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="styles/app.css?stamp=1518795185">
+      <script src="js/app.js?stamp=1518795185"></script>
+    </head>
+  </head>
+  <body>
+    <header class="header header_landing">
+      <div class="header__wrapper">
+        <div class="container container_wide">
+          <div class="header__inner">
+            <div class="header__main">
+              <div class="header__logo"><a class="header-logo" href="#">
+                  <svg>
+                    <use xlink:href="#icon-logo"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section">
+      <div class="section__inner">
+        <div class="section-hero section-hero_landing">
+          <div class="container">
+            <div class="section-hero__inner">
+              <div class="section-hero__intro section-hero__intro_landing">
+                <div class="intro">
+                  <h1 class="intro__heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="page">
+      <div class="container">
+        <section class="section section_indent-top section_indent-bottom section_gray">
+          <div class="section__inner">
+            <div class="stories">
+              <div class="stories__wrapper">
+                <div class="stories__content">
+                  <article class="story">
+                    <div class="story__content">
+                      <figure><img src="images/blog/blog-intro.jpg" srcset="images/blog/blog-intro@2x.jpg 2x">
+                      </figure>
+                      <p class="text-large">VTS has today announced that significant momentum in Q3 2017 has resulted in the platform now being used to manage over 365 million sq ft of commercial property in Europe, including over 301 million sq ft in the UK and 90 million sq ft in London alone. London landlords and agency teams are managing in excess of 24 million sq ft of active office and retail vacancy through the platform. Notable buildings using the VTS software include The Adelphi Building, White Collar Factory and East India Dock, where the technology is helping to reduce void and drive in the leasing process.</p>
+                    </div>
+                  </article>
+                </div>
+                <aside class="stories-side stories__side">
+                  <div class="stories-side-form stories-side__form">
+                    <div class="stories-side-form__text text-medium">Fill out this form below to watch this webinar on demand.</div>
+                    <div class="stories-side-form__content">
+                      <script src="//app-sj05.marketo.com/js/forms2/js/forms2.min.js"></script>
+                      <form id="mktoForm_1692"></form>
+                      <script>
+                        MktoForms2.loadForm("//app-sj05.marketo.com", "811-SJQ-803", 1692);
+                        
+                        MktoForms2.onFormRender(function(form) {
+                        
+                          console.log('onFormRender callback');
+                        
+                          var $form = form.getFormElem();
+                        
+                          if($form.hasClass('vts-marketo-form')) {
+                            console.log('has');
+                          } else {
+                        
+                            // Strip styles
+                            $('style', $form).remove();
+                            $('#mktoForms2BaseStyle').remove();
+                            $('#mktoForms2ThemeStyle').remove();
+                            $form.removeAttr('style');
+                            $('*', $form).removeAttr('style');
+                        
+                            // Strip extra elements
+                            $('.mktoAsterix', $form).remove();
+                            $('.mktoOffset', $form).remove();
+                            $('.mktoGutter', $form).remove();
+                            $('.mktoClear', $form).remove();
+                        
+                            // Remove mktoHasWidth
+                            $form.removeClass('mktoHasWidth');
+                            $('.mktoFormRow.hide', form.getFormElem()).removeClass('hide');
+                            $('.mktoPlaceholder:empty, [type="hidden"]', form.getFormElem()).closest('.mktoFormRow').addClass('hide');
+                        
+                            // Set render class
+                            $form.removeClass("pre-render").addClass("vts-marketo-form");
+                          }
+                        });
+                        
+                        
+                      </script>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section__inner">
+            <div class="section__module">
+              <div class="module-cta module-cta_3">
+                <svg class="module-cta__element module-cta__element_5" width="1100px" height="450px" viewbox="0 0 1100 450">
+                  <defs>
+                    <lineargradient id="gradient-1" x1="74%" y1="-3.5%" x2="50%" y2="155%">
+                      <stop stop-color="#140532" offset="0%"></stop>
+                      <stop stop-color="#280F96" stop-opacity="0" offset="100%"></stop>
+                    </lineargradient>
+                    <lineargradient id="gradient-2" x1="8%" y1="-50%" x2="30%" y2="125%">
+                      <stop stop-color="#140532" offset="0%"></stop>
+                      <stop stop-color="#280F96" stop-opacity="0" offset="100%"></stop>
+                    </lineargradient>
+                  </defs>
+                  <g stroke="none" fill="none" fill-opacity="1">
+                    <g fill="url(#gradient-1)">
+                      <polygon points="0 450 700 450 700 0"></polygon>
+                    </g>
+                    <g fill="url(#gradient-2)">
+                      <polygon points="700 450 1100 450 1100 270 700 0"></polygon>
+                    </g>
+                  </g>
+                </svg>
+                <div class="module-cta__content module-cta__content_wide">
+                  <svg class="module-cta__arrow">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                  <h2 class="module-cta__heading">Want to stay in the loop when we publish something new?</h2>
+                  <div class="module-cta__control"><a class="btn btn_large btn_white-navy" href="http://on.vts.com/request-demo.html" target="_blank">Join Mailing List</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer footer_colorful">
+      <div class="container container_wide footer__inner">
+        <div class="footer__row">
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Products</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><a class="footer-section__link" href="landlords.html">For Landlords</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="brokers.html">For Agency Brokers</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Industries</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><a class="footer-section__link" href="industries-office.html">Office</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="industries-retail.html">Retail</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="industries-industrial.html">Industrial</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Other</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><a class="footer-section__link" href="services.html">Services</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="integrations.html">Integrations</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Features</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><a class="footer-section__link" href="features.html#1">Property Marketing</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="features.html#2">Deal Pipeline & Inventory Management</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="features.html#3">Tenant Relationship Managment</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="features.html#4">Portfolio Analytics & Reporting</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Resources</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><a class="footer-section__link" href="customers.html">Customer Stories</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="blog.html">Blog</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="library.html">Library</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="library.html#3">Webinars</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Company</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><a class="footer-section__link" href="company.html">About Us</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="news.html">News</a></li>
+                <li class="footer-section__item"><a class="footer-section__link" href="career.html">Careers</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white"><a href="http://on.vts.com/request-demo.html" target="_blank">Request Demo</a></h6>
+                <h6 class="color-white"><a href="https://app.vts.com/users/sign_in" target="_blank">Login</a></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Sales Inquiries</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><span class="footer-section__text"><a class="footer-section__link" href="mailto:info@vts.com">info@vts.com</a></span></li>
+                <li class="footer-section__item"><span class="footer-section__text">(844) 800-7109</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Product Support</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><span class="footer-section__text"><a class="footer-section__link" href="mailto:support@vts.com">support@vts.com</a></span></li>
+                <li class="footer-section__item"><span class="footer-section__text">(844) 252-3059</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell footer__cell_mobile-full">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Address</h6>
+              </div>
+              <ul class="footer-section__list">
+                <li class="footer-section__item"><span class="footer-section__text">119 West 40th Street, Floor 10, New York, NY 10018</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell footer__cell_2">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Mobile Apps</h6>
+              </div>
+              <ul class="footer-section__list">
+                <div class="apps">
+                  <div class="apps__list">
+                    <div class="apps__item"><a class="app" href="https://itunes.apple.com/us/app/vts-inc/id797067194" target="_blank"><img class="app__badge" src="images/stores/badge-app-store.png" srcset="images/stores/badge-app-store@2x.png 2x"></a></div>
+                    <div class="apps__item"><a class="app" href="https://play.google.com/store/apps/details?id=com.vts.vtsandroid" target="_blank"><img class="app__badge" src="images/stores/badge-google-play.png" srcset="images/stores/badge-google-play@2x.png 2x"></a></div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__cell">
+            <div class="footer-section">
+              <div class="footer__heading">
+                <h6 class="color-white">Social</h6>
+              </div>
+                  <div class="social"><a class="social__link" href="https://twitter.com/viewthespace" target="_blank">
+                      <svg class="social__icon">
+                        <use xlink:href="#icon-social-twitter"></use>
+                      </svg></a><a class="social__link" href="https://www.instagram.com/viewthespace/" target="_blank">
+                      <svg class="social__icon">
+                        <use xlink:href="#icon-social-instagram"></use>
+                      </svg></a><a class="social__link" href="https://www.facebook.com/Viewthespace/" target="_blank">
+                      <svg class="social__icon">
+                        <use xlink:href="#icon-social-facebook"></use>
+                      </svg></a><a class="social__link" href="https://www.linkedin.com/company/view-the-space" target="_blank">
+                      <svg class="social__icon">
+                        <use xlink:href="#icon-social-linkedin"></use>
+                      </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer-copy text-small"><span>View The Space. 2012 - 2018. All Rights Reserved. Every asset. Every opportunity. One platform</span>
+            <ul class="footer-copy__list">
+              <li class="footer-copy__item"><a class="footer-copy__link" href="site_terms.html">Terms & Conditions</a></li>
+              <li class="footer-copy__item"><a class="footer-copy__link" href="terms.html">Subscription Services Agreement</a></li>
+              <li class="footer-copy__item"><a class="footer-copy__link" href="vts-refresh-terms-conditions.html">VTS Refresh Terms and Conditions</a></li>
+              <li class="footer-copy__item"><a class="footer-copy__link" href="videofaq.html">Video Services FAQ</a></li>
+              <li class="footer-copy__item"><a class="footer-copy__link" href="social-media-policy.html">Social Media Policy</a></li>
+              <li class="footer-copy__item"><a class="footer-copy__link" href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

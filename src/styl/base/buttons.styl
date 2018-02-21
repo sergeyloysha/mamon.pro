@@ -1,0 +1,157 @@
+//
+// Buttons
+// -------------------------
+
+// Type mixin
+// -------------------------
+
+button-type($color, $background, $border)
+  color $color
+  background-color $background
+  border-color $border
+
+  svg
+    fill: $color
+
+// Size mixin
+// -------------------------
+
+button-size($padding-top, $padding-bottom, $padding-horizontal, $font-size, $line-height)
+  padding $padding-top $padding-horizontal $padding-bottom $padding-horizontal
+  font-size $font-size
+  line-height $line-height
+
+.btn
+  display: inline-block
+
+  font-family: $font-family-default
+  font-style: normal
+  font-weight 500
+
+  text-align: center
+  vertical-align: middle
+
+  border: .1rem solid transparent
+  white-space: nowrap
+
+  text-decoration: none
+  text-transform uppercase
+
+  user-select: none
+  touch-action: manipulation
+  cursor: pointer
+  opacity: 1
+  transition: $transition-time $transition-function
+  button-size(1.1rem, .8rem, 2rem, $font-size-default, 1)
+
+  &:hover
+    opacity: .8
+
+  &_navy
+    button-type($colors.white, $colors.indigo_5, $colors.indigo_5)
+
+  &_blue
+    button-type($colors.white, $colors.indigo_6, $colors.indigo_6)
+
+  &_outline
+    button-type($colors.indigo_5, transparent, $colors.indigo_5)
+
+  &_white-outline
+    button-type($colors.white, transparent, $colors.white)
+
+  &_white-blue
+    button-type($colors.indigo_6, $colors.white, $colors.white)
+
+  &_white-navy
+    button-type($colors.indigo_5, $colors.white, $colors.white)
+
+  &_white-black
+    button-type($colors.black, $colors.white, $colors.white)
+
+  &_white-transparent
+    button-type($colors.white, transparent, transparent)
+
+  // Button sizes
+  // -------------------------
+
+  &_wide
+    min-width 15rem
+
+    +sm()
+      min-width 25rem
+
+  &_large
+    button-size(1.3rem, 1.1rem, 2rem, $font-size-default, 1)
+    +sm()
+      button-size(1.9rem, 1.5rem, 3rem, $font-size-default, 1)
+
+  &_next,
+  &_prev
+    button-size(1.1rem, .8rem, 1rem, $font-size-default, 1)
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+
+    span
+      user-select none
+      touch-action: none
+
+    svg
+      display: block
+      width: 1.4rem
+      height: 1.4rem
+      position: relative
+      top: -.1rem
+      left: 0
+      display: block
+      transition: left .1s $transition-function
+
+  &_next
+    svg
+      margin-left: 1rem
+
+    &:hover
+      svg
+        left: .2rem
+
+  &_prev
+
+    svg
+      margin-right: 1rem
+      transform: rotate(180deg)
+
+    &:hover
+      svg
+        left: -.2rem
+
+  &_in,
+  &_in-disabled
+    button-size(1.2rem, .7rem, 0, $font-size-default, 1)
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+
+    &:hover
+      svg
+        left: .2rem
+
+    span
+      user-select none
+      touch-action: none
+
+    svg
+      position: relative
+      left: 0
+      display: block
+      width: 1.4rem
+      height: 1.4rem
+      margin-right: .6rem
+      transition: left .1s $transition-function
+
+  &_in-disabled
+    cursor: inherit
+    &:hover
+      opacity: 1
+      svg
+        left: 0
+
