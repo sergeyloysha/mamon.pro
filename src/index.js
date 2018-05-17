@@ -1,9 +1,13 @@
-import './js/app.js';
-import './styl/app.styl';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
+import registerServiceWorker from './registerServiceWorker'
 
-let requireAll = r => r.keys().forEach(r);
+import 'resources/styles/app.css'
 
-// подключение svg-спрайтов
-requireAll(require.context('./icons/', true, /\.svg$/));
-// подключение pug-шаблонов
-requireAll(require.context('./pug/', false, /\.pug$/));
+ReactDOM.render(
+  <App />,
+  document.querySelector('.app')
+)
+
+registerServiceWorker()

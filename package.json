@@ -1,42 +1,26 @@
 {
-  "name": "vts-redesign",
-  "version": "0.1.8",
-  "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --progress --watch --config webpack.dev.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "headless": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0"
-  },
-  "author": "Sergey Loysha(sergeyloysha@gmail.com) @darwinapps",
-  "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "^7.1.5",
-    "babel-core": "7.0.0-beta.2",
-    "babel-loader": "^7.1.2",
-    "babel-polyfill": "7.0.0-beta.2",
-    "babel-preset-env": "2.0.0-beta.2",
-    "css-loader": "^0.28.7",
-    "cssnano": "^3.10.0",
-    "extract-loader": "^1.0.1",
-    "extract-text-webpack-plugin": "^3.0.1",
-    "file-loader": "^1.1.5",
-    "html-loader": "^0.5.1",
-    "optimize-css-assets-webpack-plugin": "^3.2.0",
-    "postcss-loader": "^2.0.7",
-    "pug-html-loader": "^1.1.5",
-    "style-loader": "^0.19.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "svg-sprite-loader": "^3.2.6",
-    "svgo-loader": "^1.2.1",
-    "webpack": "^3.7.1",
-    "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
-  },
+  "name": "mamon.pro",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://mamon.pro",
   "dependencies": {
-    "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0",
-    "owl.carousel": "^2.2.0",
-    "vue": "^2.5.13"
+    "gh-pages": "^1.1.0",
+    "node-sass-chokidar": "^1.0.1",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "NODE_PATH=src/ npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "NODE_PATH=src/ npm-run-all build-css build-js"
   }
 }

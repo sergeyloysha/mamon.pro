@@ -1,0 +1,88 @@
+@import './vendor/normalize';
+@import './fonts';
+@import './variables';
+@import './media';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 400 1.6rem/1.5 'Hellix', '-apple-system', BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  background-color: map-get($colors, white);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: map-get($colors, bloack);
+  text-decoration: none;
+
+  &:hover {
+    &::before {
+      right: 0;
+      background: rgba(map-get($colors, indigo), 1);
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: .2rem;
+    border-radius: .2rem;
+    background: rgba(map-get($colors, indigo), .5);
+    transition: .25s;
+  }
+}
+
+.app {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__container {
+    max-width: 90rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 5.8rem;
+    letter-spacing: -.1rem;
+    color: map-get($colors, black);
+    margin: 0 0 2rem 0;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+    color: map-get($colors, black);
+
+    &_main {
+      font-weight: 400;
+      font-size: 2.4rem;
+    }
+  }
+
+}
