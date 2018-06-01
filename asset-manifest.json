@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.bf3e3084.css",
-  "main.css.map": "static/css/main.bf3e3084.css.map",
-  "main.js": "static/js/main.90f4e74c.js",
-  "main.js.map": "static/js/main.90f4e74c.js.map",
+  "main.css": "static/css/main.89d1a804.css",
+  "main.css.map": "static/css/main.89d1a804.css.map",
+  "main.js": "static/js/main.6e38e96d.js",
+  "main.js.map": "static/js/main.6e38e96d.js.map",
   "static/media/Hellix-Black.woff": "static/media/Hellix-Black.884223a7.woff",
   "static/media/Hellix-Black.woff2": "static/media/Hellix-Black.a8ee2028.woff2",
   "static/media/Hellix-Bold.woff": "static/media/Hellix-Bold.541f6e99.woff",
@@ -18,5 +18,8 @@
   "static/media/Hellix-SemiBold.woff": "static/media/Hellix-SemiBold.b1ce2c9c.woff",
   "static/media/Hellix-SemiBold.woff2": "static/media/Hellix-SemiBold.6aa05418.woff2",
   "static/media/Hellix-Thin.woff": "static/media/Hellix-Thin.3d1d9555.woff",
-  "static/media/Hellix-Thin.woff2": "static/media/Hellix-Thin.d6a25bc1.woff2"
+  "static/media/Hellix-Thin.woff2": "static/media/Hellix-Thin.d6a25bc1.woff2",
+  "static/media/andrey_pitunov.jpg": "static/media/andrey_pitunov.663e09c4.jpg",
+  "static/media/evgeny_yakimovich.jpeg": "static/media/evgeny_yakimovich.1881f7b0.jpeg",
+  "static/media/sergey_loysha.jpg": "static/media/sergey_loysha.e91d1c70.jpg"
 }
