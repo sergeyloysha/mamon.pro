@@ -360,50 +360,109 @@ body {
 *::after {
   box-sizing: border-box; }
 
-a {
-  position: relative;
-  display: inline-block;
-  font-weight: 400;
-  font-size: 2.4rem;
-  text-decoration: none; }
-  a:hover::before {
-    right: 0;
-    background: #5528ff; }
-  a::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: .2rem;
-    border-radius: .2rem;
-    background: rgba(85, 40, 255, 0.5);
-    transition: .25s; }
+.button {
+  padding: .4rem 1.2rem;
+  background: #5528FF;
+  border-radius: .4rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity .2s ease-out; }
+  .button:hover {
+    opacity: .8; }
 
-.app__wrapper {
+.logo {
+  display: flex;
+  align-items: flex-start; }
+  .logo__thumb {
+    display: block;
+    width: 100%;
+    max-width: 4.8rem;
+    height: auto;
+    margin-right: 2rem; }
+  .logo__name {
+    position: relative;
+    top: .4rem;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1; }
+
+.app__header {
   display: flex;
   align-items: center;
-  height: 100vh; }
+  justify-content: space-between;
+  margin-bottom: 3rem; }
+  @media screen and (min-width: 768px) {
+    .app__header {
+      margin-bottom: 5rem; } }
 
 .app__container {
   max-width: 90rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 5rem 2rem; }
+  @media screen and (min-width: 768px) {
+    .app__container {
+      padding: 10rem 2rem; } }
 
-.app__name {
-  font-weight: 700;
-  font-size: 5.8rem;
-  letter-spacing: -.1rem;
-  color: #000000;
-  margin: 0 0 2rem 0; }
+.app__control {
+  padding: 2rem 0; }
 
 .app__desc {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin: 0 0 2rem 0;
   color: #000000; }
+  @media screen and (min-width: 768px) {
+    .app__desc {
+      font-size: 3.2rem; } }
   .app__desc_main {
-    font-weight: 400;
-    font-size: 2.4rem; }
+    font-size: 2.8rem;
+    font-weight: 600; }
+    @media screen and (min-width: 768px) {
+      .app__desc_main {
+        font-size: 3.6rem; } }
+
+.app__team {
+  padding-top: 2rem; }
+  @media screen and (min-width: 576px) {
+    .app__team {
+      padding-top: 4rem; } }
+
+.app-team {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+  .app-team__item {
+    width: 50%;
+    padding: 0 1rem;
+    margin-bottom: 3rem; }
+    @media screen and (min-width: 768px) {
+      .app-team__item {
+        width: 33.333332%;
+        padding: 0 1.5rem; } }
+
+.app-member {
+  display: flex;
+  align-items: top; }
+  .app-member__thumb {
+    flex-shrink: 0;
+    width: 4.8rem;
+    height: 4.8rem;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 1.5rem;
+    background: rgba(0, 0, 0, 0.1); }
+    .app-member__thumb img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .app-member__name {
+    font-weight: 600;
+    font-size: 1.8rem; }
+  .app-member__position {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.5); }
+    @media screen and (min-width: 768px) {
+      .app-member__position {
+        font-size: 1.4rem; } }
