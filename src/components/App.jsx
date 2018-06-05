@@ -6,6 +6,8 @@ import thumb2 from 'resources/images/thumbs/sergey_loysha.jpg'
 import thumb3 from 'resources/images/thumbs/andrey_pitunov.jpg'
 import thumb4 from 'resources/images/thumbs/evgeny_yakimovich.jpeg'
 import thumb5 from 'resources/images/thumbs/tomash_svorobovich.jpg'
+import thumb6 from 'resources/images/thumbs/dmitry_shindin.jpg'
+import thumb8 from 'resources/images/thumbs/alex_tukaylo.jpg'
 
 const members = [
   {
@@ -27,35 +29,37 @@ const members = [
     position: 'Front-end Developer',
     thumb: thumb3
   }, {
-    id: 4,
-    firstName: 'Evgeny',
-    lastName: 'Yakimovich',
-    position: 'Product Designer',
-    thumb: thumb4
-  }, {
-    id: 5,
-    firstName: 'Tomash',
-    lastName: 'Svorobovich',
-    position: 'Designer',
-    thumb: thumb5
+    id: 8,
+    firstName: 'Alex',
+    lastName: 'Tukaylo',
+    position: 'Front-end Developer',
+    thumb: thumb8
   }, {
     id: 6,
     firstName: 'Dmitry',
     lastName: 'Shindin',
-    position: 'Full-stack Developer',
-    thumb: null
-  }, {
-    id: 7,
-    firstName: 'Andrey',
-    lastName: 'Yatsenko',
     position: 'Back-end Developer',
-    thumb: null
-  }, {
-    id: 8,
-    firstName: 'Alex',
-    lastName: 'Tukaylo',
-    position: 'Web developer',
-    thumb: null
+    thumb: thumb6
+  },
+  // {
+  //   id: 7,
+  //   firstName: 'Andrey',
+  //   lastName: 'Yatsenko',
+  //   position: 'Back-end Developer',
+  //   thumb: null
+  // }, {
+  //   id: 4,
+  //   firstName: 'Evgeny',
+  //   lastName: 'Yakimovich',
+  //   position: 'Product Designer',
+  //   thumb: thumb4
+  // },
+  {
+    id: 5,
+    firstName: 'Tomash',
+    lastName: 'Svorobovich',
+    position: 'Web Designer',
+    thumb: thumb5
   }
 ]
 
