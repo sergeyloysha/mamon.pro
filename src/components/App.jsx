@@ -58,7 +58,7 @@ const members = [
     id: 5,
     firstName: 'Tomash',
     lastName: 'Svorobovich',
-    position: 'Web Designer',
+    position: 'Designer',
     thumb: thumb5
   }
 ]
@@ -90,17 +90,35 @@ class App extends Component {
               <img className="logo__thumb" src={ logo }></img>
               <div className="logo__name">mamon</div>
             </div>
-            <a href="mailto:contact@mamon.pro" className="button">Contact Us</a>
+            <nav className="nav">
+              <ul className="nav__list">
+                <div className="nav__item">
+                  <a href="#" className="nav__link">Services</a>
+                </div>
+                <div className="nav__item">
+                  <a href="#" className="nav__link">Clients</a>
+                </div>
+                <div className="nav__item">
+                  <a href="#" className="nav__link">Our Team</a>
+                </div>
+                <div className="nav__item">
+                  <a href="mailto:contact@mamon.pro" className="button">Contact Us</a>
+                </div>
+              </ul>
+            </nav>
           </div>
           <p className="app__desc app__desc_main">We're an independent development agency.</p>
           <p className="app__desc">We understand the intricacies of web development inside-out. That's why we build rock-solid Mobile and Web applications enriched with user-centered visual experiences.</p>
-          <div className="app__team">
+          {/* <div className="app__team">
             <div className="app-team">
               { members.map((member, index) =>
                 <div className="app-team__item" key={ index }>
                   <Member member={ member } />
                 </div> ) }
             </div>
+          </div> */}
+          <div className="section">
+            <div className="section__heading"></div>
           </div>
         </div>
       </div>
