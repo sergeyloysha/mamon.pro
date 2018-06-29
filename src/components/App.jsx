@@ -54,13 +54,14 @@ const members = [
   //   lastName: 'Yatsenko',
   //   position: 'Back-end Developer',
   //   thumb: null
-  // }, {
-  //   id: 4,
-  //   firstName: 'Evgeny',
-  //   lastName: 'Yakimovich',
-  //   position: 'Product Designer',
-  //   thumb: thumb4
   // },
+  {
+    id: 4,
+    firstName: 'Evgeny',
+    lastName: 'Yakimovich',
+    position: 'Product Designer',
+    thumb: thumb4
+  },
   {
     id: 5,
     firstName: 'Tomash',
@@ -109,7 +110,7 @@ class App extends Component {
                   <a href="#" className="nav__link">Our Team</a>
                 </div> */}
                 <div className="nav__item">
-                  <a href="mailto:contact@mamon.pro" className="button">Contact Us</a>
+                  <a href="mailto:contact@mamon.pro" className="nav__button">Contact Us</a>
                 </div>
               </ul>
             </nav>

@@ -361,13 +361,16 @@ body {
   box-sizing: border-box; }
 
 .button {
-  padding: .4rem 1.2rem;
+  display: inline-block;
+  padding: 1.2rem 2rem;
   background: #5528FF;
   border-radius: .4rem;
   font-weight: 600;
+  font-size: 1.6rem;
   color: #ffffff;
   text-decoration: none;
-  transition: opacity .2s ease-out; }
+  transition: opacity .2s ease-out;
+  cursor: pointer; }
   .button:hover {
     opacity: .8; }
 
@@ -486,3 +489,14 @@ body {
   transition: border-color .2s ease-out; }
   .nav__link:hover {
     border-color: #5528FF; }
+
+.nav__button {
+  padding: .4rem 1.2rem;
+  background: #5528FF;
+  border-radius: .4rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity .2s ease-out; }
+  .nav__button:hover {
+    opacity: .8; }
