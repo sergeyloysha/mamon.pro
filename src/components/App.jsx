@@ -9,6 +9,7 @@ import thumb5 from 'resources/images/thumbs/tomash_svorobovich.jpg'
 import thumb6 from 'resources/images/thumbs/dmitry_shindin.jpg'
 import thumb8 from 'resources/images/thumbs/alex_tukaylo.jpg'
 import thumb9 from 'resources/images/thumbs/artyom_khomyakov.jpeg'
+import thumb10 from 'resources/images/thumbs/agneshka_maksimik.jpg'
 
 const members = [
   {
@@ -35,6 +36,12 @@ const members = [
     lastName: 'Tukaylo',
     position: 'Front-end Developer',
     thumb: thumb8
+  }, {
+    id: 10,
+    firstName: 'Agneshka',
+    lastName: 'Maksimik',
+    position: 'Mobile Developer',
+    thumb: thumb10
   }, {
     id: 6,
     firstName: 'Dmitry',
