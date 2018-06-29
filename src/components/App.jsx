@@ -47,13 +47,14 @@ const members = [
   //   lastName: 'Yatsenko',
   //   position: 'Back-end Developer',
   //   thumb: null
-  // }, {
-  //   id: 4,
-  //   firstName: 'Evgeny',
-  //   lastName: 'Yakimovich',
-  //   position: 'Product Designer',
-  //   thumb: thumb4
   // },
+  {
+    id: 4,
+    firstName: 'Evgeny',
+    lastName: 'Yakimovich',
+    position: 'Product Designer',
+    thumb: thumb4
+  },
   {
     id: 5,
     firstName: 'Tomash',
@@ -92,7 +93,7 @@ class App extends Component {
             </div>
             <nav className="nav">
               <ul className="nav__list">
-                <div className="nav__item">
+                {/* <div className="nav__item">
                   <a href="#" className="nav__link">Services</a>
                 </div>
                 <div className="nav__item">
@@ -100,23 +101,24 @@ class App extends Component {
                 </div>
                 <div className="nav__item">
                   <a href="#" className="nav__link">Our Team</a>
-                </div>
+                </div> */}
                 <div className="nav__item">
-                  <a href="mailto:contact@mamon.pro" className="button">Contact Us</a>
+                  <a href="mailto:contact@mamon.pro" className="nav__button">Contact Us</a>
                 </div>
               </ul>
             </nav>
           </div>
           <p className="app__desc app__desc_main">We're an independent development agency.</p>
           <p className="app__desc">We understand the intricacies of web development inside-out. That's why we build rock-solid Mobile and Web applications enriched with user-centered visual experiences.</p>
-          {/* <div className="app__team">
+          {/* <div className="app__button button">Contact Us</div> */}
+          <div className="app__team">
             <div className="app-team">
               { members.map((member, index) =>
                 <div className="app-team__item" key={ index }>
                   <Member member={ member } />
                 </div> ) }
             </div>
-          </div> */}
+          </div>
           <div className="section">
             <div className="section__heading"></div>
           </div>
