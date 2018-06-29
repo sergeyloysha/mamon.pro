@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.a3855d22.css",
   "main.css.map": "static/css/main.a3855d22.css.map",
-  "main.js": "static/js/main.8ae0dd7c.js",
-  "main.js.map": "static/js/main.8ae0dd7c.js.map",
+  "main.js": "static/js/main.d108367b.js",
+  "main.js.map": "static/js/main.d108367b.js.map",
   "static/media/Hellix-Black.woff": "static/media/Hellix-Black.884223a7.woff",
   "static/media/Hellix-Black.woff2": "static/media/Hellix-Black.a8ee2028.woff2",
   "static/media/Hellix-Bold.woff": "static/media/Hellix-Bold.541f6e99.woff",
@@ -19,6 +19,7 @@
   "static/media/Hellix-SemiBold.woff2": "static/media/Hellix-SemiBold.6aa05418.woff2",
   "static/media/Hellix-Thin.woff": "static/media/Hellix-Thin.3d1d9555.woff",
   "static/media/Hellix-Thin.woff2": "static/media/Hellix-Thin.d6a25bc1.woff2",
+  "static/media/agneshka_maksimik.jpg": "static/media/agneshka_maksimik.d0f770cc.jpg",
   "static/media/alex_tukaylo.jpg": "static/media/alex_tukaylo.4ce15698.jpg",
   "static/media/andrey_pitunov.jpg": "static/media/andrey_pitunov.43185e0b.jpg",
   "static/media/artyom_khomyakov.jpeg": "static/media/artyom_khomyakov.c8cb456a.jpeg",
