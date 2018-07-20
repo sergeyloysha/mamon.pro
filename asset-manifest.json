@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.a3855d22.css",
   "main.css.map": "static/css/main.a3855d22.css.map",
-  "main.js": "static/js/main.d108367b.js",
-  "main.js.map": "static/js/main.d108367b.js.map",
+  "main.js": "static/js/main.9140720e.js",
+  "main.js.map": "static/js/main.9140720e.js.map",
   "static/media/Hellix-Black.woff": "static/media/Hellix-Black.884223a7.woff",
   "static/media/Hellix-Black.woff2": "static/media/Hellix-Black.a8ee2028.woff2",
   "static/media/Hellix-Bold.woff": "static/media/Hellix-Bold.541f6e99.woff",
@@ -23,6 +23,7 @@
   "static/media/alex_tukaylo.jpg": "static/media/alex_tukaylo.4ce15698.jpg",
   "static/media/andrey_pitunov.jpg": "static/media/andrey_pitunov.43185e0b.jpg",
   "static/media/artyom_khomyakov.jpeg": "static/media/artyom_khomyakov.c8cb456a.jpeg",
+  "static/media/clients.png": "static/media/clients.367658c2.png",
   "static/media/dmitry_shindin.jpg": "static/media/dmitry_shindin.0e6c5901.jpg",
   "static/media/evgeny_yakimovich.jpeg": "static/media/evgeny_yakimovich.1881f7b0.jpeg",
   "static/media/mamon-logo.svg": "static/media/mamon-logo.974c64e3.svg",
