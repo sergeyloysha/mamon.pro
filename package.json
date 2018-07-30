@@ -10,6 +10,7 @@
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.4.0-alpha.1",
     "react-scripts": "1.1.1"
   },
   "scripts": {
@@ -23,5 +24,8 @@
     "start": "NODE_PATH=src/ npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "NODE_PATH=src/ npm-run-all build-css build-js"
+  },
+  "devDependencies": {
+    "styled-components": "^3.3.3"
   }
 }
