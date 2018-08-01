@@ -1,196 +1,24 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import { Container, App, Logo, Nav, Home, Staff, Footer } from 'styles'
 import constants from 'constants/index'
 import iconLogo from 'resources/images/logo.svg'
-
-const App = styled.div`
-  margin: 0;
-`
-
-App.Container = styled.div`
-  width: 100%;
-  max-width: 107rem;
-  padding: 0 1.5rem;
-  margin: 0 auto;
-`
-
-App.Header = styled.header`
-  padding: 5rem 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-const Logo = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-Logo.Source = styled.div`
-  display: block;
-  width: 4.8rem;
-  height: 4.8rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  ${props => props.source && `
-    background-image: url(${props.source});
-  `}
-`
-
-Logo.Title = styled.div`
-  font-weight: 600;
-  font-size: 2.8rem;
-  margin-left: 2rem;
-`
-
-App.Nav = styled.nav`
-
-`
-
-App.Content = styled.main`
-
-`
-
-App.Section = styled.section`
-
-`
-
-const Nav = styled.nav`
-  margin: 0;
-  padding: 0;
-`
-
-Nav.List = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-Nav.Item = styled.div`
-  margin-left: 4rem;
-  font-size: 2.4rem;
-
-  display: flex;
-  align-items: center;
-
-  ${props => props.divider && `
-    &::before {
-      content: '/';
-      display: block;
-      margin-right: 1rem;
-    }
-  `}
-`
-
-Nav.Link = styled.a`
-  display: block;
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color .2s;
-
-  &:hover {
-    color: #5528FF;
-  }
-`
-
-const Home = styled.div`
-`
-
-Home.Inner = styled.div`
-  width: 60%;
-`
-
-Home.Heading = styled.h1`
-  margin: 5rem 0 8rem 0;
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1.2;
-`
-
-Home.Description = styled.div`
-`
-
-Home.Description.Paragraph = styled.p`
-  margin: 0 0 3rem 0;
-  font-size: 2.4rem;
-  font-weight: 400;
-`
-
-const Staff = styled.div`
-  padding: 5rem 0;
-`
-
-Staff.List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-`
-
-Staff.Item = styled.div`
-  width: 33.333332%;
-  padding: 0 1.5rem;
-  margin-bottom: 50px;
-`
-
-Staff.Card = styled.div`
-  height: 100%;
-  padding: 3rem;
-  position: relative;
-  border-radius: .5rem;
-  background: #fff;
-  box-shadow: 0px 1rem 4rem rgba(98, 122, 129, 0.13);
-
-  display: flex;
-  align-items: center;
-`
-
-Staff.Card.Photo = styled.div`
-  flex-shrink: 0;
-  width: 6.4rem;
-  height: 6.4rem;
-  border-radius: 100%;
-  background: #ececec;
-  margin-right: 2rem;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  ${props => props.source && `
-    background-image: url(${props.source});
-  `}
-`
-
-Staff.Card.Info = styled.div``
-Staff.Card.Info.Name = styled.div`
-  font-weight: 500;
-  font-size: 1.8rem;
-`
-Staff.Card.Info.Position = styled.div`
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #777;
-`
 
 export default class extends Component {
   render () {
     return (
       <App>
-        <App.Container>
-          <App.Header>
-            <Logo
-              onClick={(e) => console.log(e)}
-            >
-              <Logo.Source source={iconLogo} />
-              {/* <Logo.Title>Mamon</Logo.Title> */}
-            </Logo>
-            <App.Nav>
-              <Nav.List>
-                {/* <Nav.Item>
+        <App.Header>
+          <Container>
+            <App.Header.Inner>
+              <Logo
+                onClick={(e) => console.log(e)}
+              >
+                <Logo.Source source={iconLogo} />
+                {/* <Logo.Title>Mamon</Logo.Title> */}
+              </Logo>
+              <App.Nav>
+                <Nav.List>
+                  {/* <Nav.Item>
                   <Nav.Link to='/services'>Services</Nav.Link>
                 </Nav.Item>
 
@@ -202,15 +30,18 @@ export default class extends Component {
                   <Nav.Link to='/about'>About</Nav.Link>
                 </Nav.Item> */}
 
-                <Nav.Item divider>
-                  <Nav.Link href='mailto:contact@mamon.pro'>contact@mamon.pro</Nav.Link>
-                </Nav.Item>
-              </Nav.List>
-            </App.Nav>
-          </App.Header>
+                  <Nav.Item divider>
+                    <Nav.Link href='mailto:contact@mamon.pro'>contact@mamon.pro</Nav.Link>
+                  </Nav.Item>
+                </Nav.List>
+              </App.Nav>
+            </App.Header.Inner>
+          </Container>
+        </App.Header>
 
-          <App.Content>
-            <App.Section>
+        <App.Content>
+          <App.Section>
+            <Container>
               <Home>
                 <Home.Inner>
                   <Home.Heading>We're an independent development agency.</Home.Heading>
@@ -220,8 +51,10 @@ export default class extends Component {
                   </Home.Description>
                 </Home.Inner>
               </Home>
-            </App.Section>
-            <App.Section>
+            </Container>
+          </App.Section>
+          <App.Section>
+            <Container>
               <Staff>
                 <Staff.List>
                   { constants.staff.map((item, index) =>
@@ -241,9 +74,26 @@ export default class extends Component {
                   }
                 </Staff.List>
               </Staff>
-            </App.Section>
-          </App.Content>
-        </App.Container>
+            </Container>
+          </App.Section>
+          <App.Section>
+            <Footer>
+              <Container>
+                <Footer.Inner>
+                  <Footer.Heading>Want to work with us?</Footer.Heading>
+                  <Footer.List>
+                    <Footer.List.Item>
+                      /&nbsp;<Footer.List.Link href='mailto:contact@mamon.pro'>contact@mamon.pro</Footer.List.Link>
+                    </Footer.List.Item>
+                  </Footer.List>
+                  <Footer.Contacts>
+                    1 May Street #21, Grodno, 230006
+                  </Footer.Contacts>
+                </Footer.Inner>
+              </Container>
+            </Footer>
+          </App.Section>
+        </App.Content>
       </App>
     )
   }
