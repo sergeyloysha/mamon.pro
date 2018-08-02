@@ -17,9 +17,8 @@ import fontGraphikBoldWebWoff2 from 'resources/fonts/Graphik-Bold-Web.woff2'
 
 const colors = {
   white: '#ffffff',
-  black: '#000000',
   indigo: '#5528FF',
-  dark: '#121212'
+  base: '#121212'
 }
 
 injectGlobal`
@@ -61,9 +60,11 @@ injectGlobal`
   body {
     margin: 0;
     padding: 0;
+
     font: 400 1.4rem/1.5 'Graphik Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     font-size: 1.4rem;
+    color: ${colors.base};
 
     overflow-x: hidden;
   }
@@ -158,7 +159,7 @@ Nav.Item = styled.div`
 
 Nav.Link = styled.a`
   display: block;
-  color: #000;
+  color: ${colors.base};
   text-decoration: none;
   cursor: pointer;
   transition: color .2s;
@@ -188,7 +189,6 @@ Home.Description = styled.div`
 Home.Description.Paragraph = styled.p`
   margin: 0 0 3rem 0;
   font-size: 2.4rem;
-  font-weight: 400;
 `
 
 export const Staff = styled.div`
@@ -241,11 +241,9 @@ Staff.Card.Info = styled.div``
 
 Staff.Card.Info.Name = styled.div`
   font-family: 'Graphik Medium';
-  font-weight: 500;
   font-size: 1.8rem;
 `
 Staff.Card.Info.Position = styled.div`
-  font-weight: 400;
   font-size: 1.6rem;
   color: #777;
 `
@@ -253,7 +251,7 @@ Staff.Card.Info.Position = styled.div`
 export const Footer = styled.footer`
   position: relative;
   color: ${colors.white};
-  background: ${colors.dark};
+  background: ${colors.base};
 `
 
 Footer.Inner = styled.div`
