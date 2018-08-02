@@ -1,5 +1,5 @@
 import thumb1 from 'resources/images/thumbs/vadim_karacharski.jpeg'
-import thumb2 from 'resources/images/thumbs/sergey_loysha.jpg'
+import thumb2 from 'resources/images/thumbs/sergey.png'
 import thumb3 from 'resources/images/thumbs/andrey_pitunov.jpg'
 import thumb4 from 'resources/images/thumbs/evgeny_yakimovich.jpeg'
 import thumb5 from 'resources/images/thumbs/tomash_svorobovich.jpg'

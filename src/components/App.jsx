@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import { Container, App, Logo, Nav, Home, Staff, Footer } from 'styles'
+import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service } from 'styles'
 import constants from 'constants/index'
 import iconLogo from 'resources/images/logo.svg'
+import iconFrontEnd from 'resources/images/icons/services/icon-front-end.svg'
+import iconBackEnd from 'resources/images/icons/services/icon-back-end.svg'
+import iconApp from 'resources/images/icons/services/icon-app.svg'
+import iconDesign from 'resources/images/icons/services/icon-design.svg'
 
 export default class extends Component {
   render () {
@@ -19,16 +23,16 @@ export default class extends Component {
               <App.Nav>
                 <Nav.List>
                   {/* <Nav.Item>
-                  <Nav.Link to='/services'>Services</Nav.Link>
-                </Nav.Item>
+                    <Nav.Link to='/services'>Services</Nav.Link>
+                  </Nav.Item>
 
-                <Nav.Item>
-                  <Nav.Link to='/work'>Work</Nav.Link>
-                </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link to='/work'>Work</Nav.Link>
+                  </Nav.Item>
 
-                <Nav.Item>
-                  <Nav.Link to='/about'>About</Nav.Link>
-                </Nav.Item> */}
+                  <Nav.Item>
+                    <Nav.Link to='/about'>About</Nav.Link>
+                  </Nav.Item> */}
 
                   <Nav.Item divider>
                     <Nav.Link href='mailto:contact@mamon.pro'>contact@mamon.pro</Nav.Link>
@@ -40,7 +44,7 @@ export default class extends Component {
         </App.Header>
 
         <App.Content>
-          <App.Section>
+          <Section>
             <Container>
               <Home>
                 <Home.Inner>
@@ -52,8 +56,46 @@ export default class extends Component {
                 </Home.Inner>
               </Home>
             </Container>
-          </App.Section>
-          <App.Section>
+          </Section>
+
+          <Section>
+            <Container>
+              <Services>
+                <Services.List>
+                  <Services.Item>
+                    <Service>
+                      <Service.Icon src={iconFrontEnd} alt='' style={{top: '1rem'}} />
+                      <Service.Heading>Front-end Development</Service.Heading>
+                      <Service.Description>We can turn gorgeous designs into live products with clean code that is on par with todays standards.</Service.Description>
+                    </Service>
+                  </Services.Item>
+                  <Services.Item>
+                    <Service>
+                      <Service.Icon src={iconBackEnd} alt='' />
+                      <Service.Heading>Back-end Development</Service.Heading>
+                      <Service.Description>Need a web app, custom backend system or an API? We use rock-solid and scalable technologies like Node and PHP.</Service.Description>
+                    </Service>
+                  </Services.Item>
+                  <Services.Item>
+                    <Service>
+                      <Service.Icon src={iconApp} alt='' style={{top: '1rem'}} />
+                      <Service.Heading>App Development</Service.Heading>
+                      <Service.Description>Need a web app, custom backend system or an API? We use rock-solid and scalable technologies like Node and PHP.</Service.Description>
+                    </Service>
+                  </Services.Item>
+                  <Services.Item>
+                    <Service>
+                      <Service.Icon src={iconDesign} alt='' />
+                      <Service.Heading>Web App Interfaces</Service.Heading>
+                      <Service.Description>Thorough research forms the steady foundation for the road from wire-frames to pixel perfect web apps.</Service.Description>
+                    </Service>
+                  </Services.Item>
+                </Services.List>
+              </Services>
+            </Container>
+          </Section>
+
+          <Section>
             <Container>
               <Staff>
                 <Staff.List>
@@ -75,8 +117,8 @@ export default class extends Component {
                 </Staff.List>
               </Staff>
             </Container>
-          </App.Section>
-          <App.Section>
+          </Section>
+          <Section>
             <Footer>
               <Container>
                 <Footer.Inner>
@@ -92,7 +134,7 @@ export default class extends Component {
                 </Footer.Inner>
               </Container>
             </Footer>
-          </App.Section>
+          </Section>
         </App.Content>
       </App>
     )

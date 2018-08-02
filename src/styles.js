@@ -127,9 +127,7 @@ App.Content = styled.main`
 
 `
 
-App.Section = styled.section`
-
-`
+export const Section = styled.section``
 
 export const Nav = styled.nav`
   margin: 0;
@@ -205,7 +203,7 @@ Staff.List = styled.div`
 Staff.Item = styled.div`
   width: 33.333332%;
   padding: 0 1.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 `
 
 Staff.Card = styled.div`
@@ -214,7 +212,7 @@ Staff.Card = styled.div`
   position: relative;
   border-radius: .5rem;
   background: #fff;
-  box-shadow: 0px 1rem 4rem rgba(98, 122, 129, 0.13);
+  box-shadow: 0 1rem 4rem rgba(98, 122, 129, 0.13);
 
   display: flex;
   align-items: center;
@@ -297,4 +295,43 @@ Footer.Contacts = styled.div`
   border-top: .2rem solid #545454;
   color: #545454;
   font-size: 2.1rem;
+`
+
+export const Services = styled.div`
+  padding: 10rem 0 5rem 0;
+`
+
+Services.List = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+`
+
+Services.Item = styled.div`
+  width: 50%;
+  padding: 0 1.5rem 5rem 1.5rem;
+`
+
+export const Service = styled.div`
+  position: relative;
+  padding-right: 10rem;
+`
+
+Service.Icon = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+Service.Heading = styled.h2`
+  padding-top: 9rem;
+
+  font-family: 'Graphik Medium';
+  font-weight: normal;
+  font-size: 2.8rem;
+  margin: 0 0 2rem 0;
+`
+Service.Description = styled.div`
+  font-size: 1.8rem;
+  color: #777;
 `
