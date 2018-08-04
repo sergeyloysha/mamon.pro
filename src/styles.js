@@ -322,13 +322,13 @@ Footer.List.Item = styled.div`
     margin-bottom: 0;
   }
   
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     font-size: 3.6rem;
   }
 `
 
 Footer.List.Link = styled.a`
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #7f64fb;
   text-decoration: none;
   transition: color .2s;
@@ -338,8 +338,8 @@ Footer.List.Link = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 3.6rem; 
-  } 
+    font-size: 3.6rem;
+  }
 `
 
 Footer.Contacts = styled.div`
