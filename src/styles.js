@@ -337,7 +337,7 @@ Footer.List.Link = styled.a`
     color: ${colors.white}
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     font-size: 3.6rem; 
   } 
 `
