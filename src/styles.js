@@ -347,10 +347,11 @@ Footer.Contacts = styled.div`
   padding: 4rem 0;
   border-top: .2rem solid #545454;
   color: #545454;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
 
   @media screen and (min-width: 992px) {
     margin-top: 9rem;
+    font-size: 2.1rem;
   } 
 `
 
