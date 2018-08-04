@@ -161,11 +161,16 @@ Nav.Item = styled.div`
 
 Nav.Link = styled.a`
   display: block;
-  color: ${colors.base};
+  color: ${colors.indigo};
   text-decoration: none;
   cursor: pointer;
   transition: color .2s;
-
+  font-size: 2rem;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+  }
+  
   &:hover {
     color: ${colors.indigo};
   }
@@ -175,14 +180,23 @@ export const Home = styled.div`
 `
 
 Home.Inner = styled.div`
-  width: 60%;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 `
 
 Home.Heading = styled.h1`
   margin: 4rem 0 6rem 0;
   font-family: 'Graphik Bold';
-  font-size: 5rem;
-  line-height: 6rem;
+  font-size: 3.6rem;
+  line-height: 1.2;
+  max-width: 44rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 5rem;
+    max-width: 63rem;
+  }
 `
 
 Home.Description = styled.div`
@@ -190,24 +204,43 @@ Home.Description = styled.div`
 
 Home.Description.Paragraph = styled.p`
   margin: 0 0 3rem 0;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+  max-width: 44rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+    max-width: 63rem;
+  }
 `
 
 export const Staff = styled.div`
-  padding: 5rem 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 5rem 0;
+  }
 `
 
 Staff.List = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 `
 
 Staff.Item = styled.div`
-  width: 33.333332%;
+  width: 100%;
+  max-width: 40rem;
   padding: 0 1.5rem;
   margin-bottom: 5rem;
+
+  @media screen and (min-width: 600px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 33.333332%;
+  }
 `
 
 Staff.Card = styled.div`
@@ -257,14 +290,23 @@ export const Footer = styled.footer`
 `
 
 Footer.Inner = styled.div`
-  padding: 9rem 0 0 0;
+  padding: 5rem 0 0 0;
+
+  @media screen and (min-width: 992px) {
+    padding: 9rem 0 0 0;
+  }
 `
 
 Footer.Heading = styled.h1`
-  margin: 6rem 0 4rem 0;
+  margin: 3rem 0 2rem 0;
   font-family: 'Graphik Bold';
-  font-size: 5rem;
-  line-height: 6rem;
+  font-size: 3.2rem;
+  line-height: 1.2;
+
+  @media screen and (min-width: 768px) {
+    margin: 6rem 0 4rem 0;
+    font-size: 5rem;
+  }
 `
 
 Footer.List = styled.div`
@@ -273,36 +315,51 @@ Footer.List = styled.div`
 
 Footer.List.Item = styled.div`
   display: flex;
-  align-items: center;
   margin-bottom: 2rem;
-  font-size: 3.6rem;
+  font-size: 2.2rem;
 
   &:last-child {
     margin-bottom: 0;
   }
+  
+  @media screen and (min-width: 992px) {
+    font-size: 3.6rem;
+  }
 `
 
 Footer.List.Link = styled.a`
-  font-size: 3.6rem;
-  color: ${colors.white};
+  font-size: 2rem;
+  color: #7f64fb;
   text-decoration: none;
   transition: color .2s;
 
   &:hover {
-    color: ${colors.indigo};
+    color: ${colors.white}
   }
+
+  @media screen and (min-width: 992px) {
+    font-size: 3.6rem; 
+  } 
 `
 
 Footer.Contacts = styled.div`
-  margin-top: 9rem;
+  margin-top: 5rem;
   padding: 4rem 0;
   border-top: .2rem solid #545454;
   color: #545454;
   font-size: 2.1rem;
+
+  @media screen and (min-width: 992px) {
+    margin-top: 9rem;
+  } 
 `
 
 export const Services = styled.div`
-  padding: 10rem 0 5rem 0;
+  padding: 5rem 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 10rem 0 5rem 0;
+  }
 `
 
 Services.List = styled.div`
@@ -310,32 +367,64 @@ Services.List = styled.div`
   flex-wrap: wrap;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
+  justify-content: center;
 `
 
 Services.Item = styled.div`
-  width: 50%;
   padding: 0 1.5rem 5rem 1.5rem;
+  text-align: center;
+  width: 100%;
+  
+  @media screen and (min-width: 600px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 `
 
 export const Service = styled.div`
   position: relative;
-  padding-right: 10rem;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 10rem;
+  }
 `
 
 Service.Icon = styled.img`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media screen and (min-width: 768px) {
+    left: 0;
+    transform: translateX(0);
+  }
+  
 `
 Service.Heading = styled.h2`
   padding-top: 9rem;
-
   font-family: 'Graphik Medium';
   font-weight: normal;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
   margin: 0 0 2rem 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.8rem;
+  }
 `
 Service.Description = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #777;
+  max-width: 30rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 42rem;
+    margin: 0;
+    font-size: 1.8rem;
+  }
 `
