@@ -87,10 +87,6 @@ export const App = styled.div`
 
 App.Header = styled.header`
   padding: 5rem 0;
-
-  @media screen and (min-width: 768px) {
-    padding: 5rem 0;
-  }
 `
 
 App.Header.Inner = styled.div`
@@ -108,6 +104,7 @@ Logo.Source = styled.div`
   display: block;
   width: 4.8rem;
   height: 4.8rem;
+  transform: rotate(-45deg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,7 +188,6 @@ Home.Heading = styled.h1`
   font-family: 'Graphik Bold';
   font-size: 3.6rem;
   line-height: 1.2;
-  max-width: 44rem;
 
   @media screen and (min-width: 768px) {
     font-size: 5rem;
@@ -205,7 +201,6 @@ Home.Description = styled.div`
 Home.Description.Paragraph = styled.p`
   margin: 0 0 3rem 0;
   font-size: 1.8rem;
-  max-width: 44rem;
 
   @media screen and (min-width: 768px) {
     font-size: 2.4rem;
