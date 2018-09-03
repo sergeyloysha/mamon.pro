@@ -1,7 +1,11 @@
 import staff from './staff'
 import icons from './icons'
+import colors from './colors'
+import globals from './globals'
 
 export default {
   staff,
-  icons
+  icons,
+  colors,
+  globals
 }

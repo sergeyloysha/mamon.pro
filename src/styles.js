@@ -1,5 +1,3 @@
-import styled, { injectGlobal } from 'styled-components'
-
 import fontGraphikRegularWebEot from 'resources/fonts/Graphik-Regular-Web.eot'
 import fontGraphikRegularWebTtf from 'resources/fonts/Graphik-Regular-Web.ttf'
 import fontGraphikRegularWebWoff from 'resources/fonts/Graphik-Regular-Web.woff'
@@ -15,11 +13,10 @@ import fontGraphikBoldWebTtf from 'resources/fonts/Graphik-Bold-Web.ttf'
 import fontGraphikBoldWebWoff from 'resources/fonts/Graphik-Bold-Web.woff'
 import fontGraphikBoldWebWoff2 from 'resources/fonts/Graphik-Bold-Web.woff2'
 
-const colors = {
-  white: '#ffffff',
-  indigo: '#5528FF',
-  base: '#121212'
-}
+import styled, { injectGlobal } from 'styled-components'
+import constants from 'constants/index'
+
+const { colors } = constants
 
 injectGlobal`
   @font-face {
@@ -158,7 +155,7 @@ Nav.Item = styled.div`
 
 Nav.Link = styled.a`
   display: block;
-  color: ${colors.indigo};
+  color: ${colors.base};
   text-decoration: none;
   cursor: pointer;
   transition: color .2s;
@@ -324,12 +321,12 @@ Footer.List.Item = styled.div`
 
 Footer.List.Link = styled.a`
   font-size: 2.2rem;
-  color: #7f64fb;
+  color: ${colors.white};
   text-decoration: none;
-  transition: color .2s;
+  transition: opacity .2s;
 
   &:hover {
-    color: ${colors.white}
+    opacity: .6;
   }
 
   @media screen and (min-width: 768px) {

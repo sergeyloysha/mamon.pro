@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service } from 'styles'
 import constants from 'constants/index'
 
-const { icons } = constants
+const { staff, icons, globals } = constants
 
 export default class extends Component {
   render () {
@@ -12,27 +12,16 @@ export default class extends Component {
           <Container>
             <App.Header.Inner>
               <Logo
-                onClick={(e) => console.log(e)}
+                onClick={(e) => {
+                  console.log('Yo!')
+                }}
               >
                 <Logo.Source source={icons.logo} />
-                {/* <Logo.Title>Mamon</Logo.Title> */}
               </Logo>
               <App.Nav>
                 <Nav.List>
-                  {/* <Nav.Item>
-                    <Nav.Link to='/services'>Services</Nav.Link>
-                  </Nav.Item>
-
-                  <Nav.Item>
-                    <Nav.Link to='/work'>Work</Nav.Link>
-                  </Nav.Item>
-
-                  <Nav.Item>
-                    <Nav.Link to='/about'>About</Nav.Link>
-                  </Nav.Item> */}
-
                   <Nav.Item divider>
-                    <Nav.Link href='mailto:contact@mamon.pro'>contact@mamon.pro</Nav.Link>
+                    <Nav.Link href={'mailto:' + globals.email}>{globals.email}</Nav.Link>
                   </Nav.Item>
                 </Nav.List>
               </App.Nav>
@@ -96,13 +85,13 @@ export default class extends Component {
             <Container>
               <Staff>
                 <Staff.List>
-                  { constants.staff.map((item, index) =>
+                  { staff.map((item, index) =>
                     <Staff.Item key={index}>
                       <Staff.Card>
                         <Staff.Card.Photo source={item.thumb} />
                         <Staff.Card.Info>
                           <Staff.Card.Info.Name>
-                            { item.firstName + ' ' + item.lastName }
+                            { [item.firstName, item.lastName].join(' ') }
                           </Staff.Card.Info.Name>
                           <Staff.Card.Info.Position>
                             { item.position }
@@ -122,11 +111,11 @@ export default class extends Component {
                   <Footer.Heading>Want to work with us?</Footer.Heading>
                   <Footer.List>
                     <Footer.List.Item>
-                      /&nbsp;<Footer.List.Link href='mailto:contact@mamon.pro'>contact@mamon.pro</Footer.List.Link>
+                      /&nbsp;<Footer.List.Link href={'mailto:' + globals.email}>{globals.email}</Footer.List.Link>
                     </Footer.List.Item>
                   </Footer.List>
                   <Footer.Contacts>
-                    1 May Street #21, Grodno, 230006
+                    {globals.address}
                   </Footer.Contacts>
                 </Footer.Inner>
               </Container>
