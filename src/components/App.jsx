@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service } from 'styles'
-import constants from 'constants/index'
+import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service } from '../styles'
+import constants from '../constants/index'
 
 const { staff, icons, globals } = constants
 

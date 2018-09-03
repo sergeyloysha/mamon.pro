@@ -1,12 +1,12 @@
-import thumb1 from 'resources/images/thumbs/vadim_karacharski.jpeg'
-import thumb2 from 'resources/images/thumbs/sergey.png'
-import thumb3 from 'resources/images/thumbs/andrey_pitunov.jpg'
-import thumb4 from 'resources/images/thumbs/evgeny_yakimovich.jpeg'
-import thumb5 from 'resources/images/thumbs/tomash_svorobovich.jpg'
-import thumb6 from 'resources/images/thumbs/dmitry_shindin.jpg'
-import thumb8 from 'resources/images/thumbs/alex_tukaylo.jpg'
-import thumb9 from 'resources/images/thumbs/artyom_khomyakov.jpeg'
-import thumb10 from 'resources/images/thumbs/agneshka_maksimik.jpg'
+import thumb1 from '../resources/images/thumbs/vadim_karacharski.jpeg'
+import thumb2 from '../resources/images/thumbs/sergey.png'
+import thumb3 from '../resources/images/thumbs/andrey_pitunov.jpg'
+import thumb4 from '../resources/images/thumbs/evgeny_yakimovich.jpeg'
+import thumb5 from '../resources/images/thumbs/tomash_svorobovich.jpg'
+import thumb6 from '../resources/images/thumbs/dmitry_shindin.jpg'
+import thumb8 from '../resources/images/thumbs/alex_tukaylo.jpg'
+import thumb9 from '../resources/images/thumbs/artyom_khomyakov.jpeg'
+import thumb10 from '../resources/images/thumbs/agneshka_maksimik.jpg'
 
 export default [
   {

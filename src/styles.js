@@ -1,20 +1,20 @@
-import fontGraphikRegularWebEot from 'resources/fonts/Graphik-Regular-Web.eot'
-import fontGraphikRegularWebTtf from 'resources/fonts/Graphik-Regular-Web.ttf'
-import fontGraphikRegularWebWoff from 'resources/fonts/Graphik-Regular-Web.woff'
-import fontGraphikRegularWebWoff2 from 'resources/fonts/Graphik-Regular-Web.woff2'
+import fontGraphikRegularWebEot from './resources/fonts/Graphik-Regular-Web.eot'
+import fontGraphikRegularWebTtf from './resources/fonts/Graphik-Regular-Web.ttf'
+import fontGraphikRegularWebWoff from './resources/fonts/Graphik-Regular-Web.woff'
+import fontGraphikRegularWebWoff2 from './resources/fonts/Graphik-Regular-Web.woff2'
 
-import fontGraphikMediumWebEot from 'resources/fonts/Graphik-Medium-Web.eot'
-import fontGraphikMediumWebTtf from 'resources/fonts/Graphik-Medium-Web.ttf'
-import fontGraphikMediumWebWoff from 'resources/fonts/Graphik-Medium-Web.woff'
-import fontGraphikMediumWebWoff2 from 'resources/fonts/Graphik-Medium-Web.woff2'
+import fontGraphikMediumWebEot from './resources/fonts/Graphik-Medium-Web.eot'
+import fontGraphikMediumWebTtf from './resources/fonts/Graphik-Medium-Web.ttf'
+import fontGraphikMediumWebWoff from './resources/fonts/Graphik-Medium-Web.woff'
+import fontGraphikMediumWebWoff2 from './resources/fonts/Graphik-Medium-Web.woff2'
 
-import fontGraphikBoldWebEot from 'resources/fonts/Graphik-Bold-Web.eot'
-import fontGraphikBoldWebTtf from 'resources/fonts/Graphik-Bold-Web.ttf'
-import fontGraphikBoldWebWoff from 'resources/fonts/Graphik-Bold-Web.woff'
-import fontGraphikBoldWebWoff2 from 'resources/fonts/Graphik-Bold-Web.woff2'
+import fontGraphikBoldWebEot from './resources/fonts/Graphik-Bold-Web.eot'
+import fontGraphikBoldWebTtf from './resources/fonts/Graphik-Bold-Web.ttf'
+import fontGraphikBoldWebWoff from './resources/fonts/Graphik-Bold-Web.woff'
+import fontGraphikBoldWebWoff2 from './resources/fonts/Graphik-Bold-Web.woff2'
 
 import styled, { injectGlobal } from 'styled-components'
-import constants from 'constants/index'
+import constants from './constants/index'
 
 const { colors } = constants
 
