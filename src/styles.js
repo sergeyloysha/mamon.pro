@@ -421,3 +421,39 @@ Service.Description = styled.div`
     font-size: 1.8rem;
   }
 `
+
+export const Clients = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    background: #fbfbfb;
+    margin-top: 8rem;
+  }
+`
+
+Clients.List = styled.div`
+  padding: 5rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+`
+
+Clients.Item = styled.div`
+  padding: 0 1.5rem;
+  margin: 1.5rem 0;
+  width: 25%;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+`
+
+Clients.Icon = styled.img`
+  display: block;
+  max-width: 100%;
+  opacity: .8;
+`
