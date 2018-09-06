@@ -455,5 +455,5 @@ Clients.Item = styled.div`
 Clients.Icon = styled.img`
   display: block;
   max-width: 100%;
-  opacity: .8;
+  opacity: .7;
 `
