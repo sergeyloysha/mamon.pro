@@ -1,6 +1,6 @@
 {
-  "main.js": "static/js/main.6e0b80f3.js",
-  "main.js.map": "static/js/main.6e0b80f3.js.map",
+  "main.js": "static/js/main.2b401b3c.js",
+  "main.js.map": "static/js/main.2b401b3c.js.map",
   "static/media/Graphik-Bold-Web.eot": "static/media/Graphik-Bold-Web.733642b4.eot",
   "static/media/Graphik-Bold-Web.ttf": "static/media/Graphik-Bold-Web.e2bf48a7.ttf",
   "static/media/Graphik-Bold-Web.woff": "static/media/Graphik-Bold-Web.3e6b4033.woff",
@@ -17,6 +17,8 @@
   "static/media/alex_tukaylo.jpg": "static/media/alex_tukaylo.4ce15698.jpg",
   "static/media/andrey_pitunov.jpg": "static/media/andrey_pitunov.43185e0b.jpg",
   "static/media/artyom_khomyakov.jpeg": "static/media/artyom_khomyakov.c8cb456a.jpeg",
+  "static/media/atandt.svg": "static/media/atandt.8acc2747.svg",
+  "static/media/audi.svg": "static/media/audi.7da2ff19.svg",
   "static/media/dmitry_shindin.jpg": "static/media/dmitry_shindin.0e6c5901.jpg",
   "static/media/evgeny_yakimovich.jpeg": "static/media/evgeny_yakimovich.1881f7b0.jpeg",
   "static/media/icon-app.svg": "static/media/icon-app.b48137bd.svg",
@@ -24,6 +26,8 @@
   "static/media/icon-design.svg": "static/media/icon-design.69506c4d.svg",
   "static/media/icon-front-end.svg": "static/media/icon-front-end.c44a6787.svg",
   "static/media/logo.svg": "static/media/logo.54201ce8.svg",
+  "static/media/meltwater.svg": "static/media/meltwater.423a9540.svg",
+  "static/media/nyu.svg": "static/media/nyu.a3559fcf.svg",
   "static/media/sergey.png": "static/media/sergey.f3fd849b.png",
   "static/media/tomash_svorobovich.jpg": "static/media/tomash_svorobovich.f41f82f9.jpg"
 }
