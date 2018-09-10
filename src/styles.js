@@ -442,7 +442,7 @@ Clients.Item = styled.div`
 Clients.Icon = styled.img`
   display: block;
   max-width: 100%;
-  opacity: .7;
+  opacity: .5;
 `
 
 export const Projects = styled.div`
