@@ -74,7 +74,7 @@ injectGlobal`
 export const Container = styled.div`
   width: 100%;
   max-width: 107rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   margin: 0 auto;
 `
 
@@ -216,14 +216,14 @@ Staff.List = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
 `
 
 Staff.Item = styled.div`
   width: 100%;
   max-width: 40rem;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   margin-bottom: 5rem;
 
   @media screen and (min-width: 600px) {
@@ -358,13 +358,13 @@ export const Services = styled.div`
 Services.List = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
   justify-content: center;
 `
 
 Services.Item = styled.div`
-  padding: 0 1.5rem 5rem 1.5rem;
+  padding: 0 2rem 5rem 2rem;
   text-align: center;
   width: 100%;
   
@@ -438,13 +438,13 @@ Clients.List = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
 `
 
 Clients.Item = styled.div`
-  padding: 0 1.5rem;
-  margin: 1.5rem 0;
+  padding: 0 2rem;
+  margin: 2rem 0;
   width: 25%;
   height: 5rem;
 
@@ -456,4 +456,40 @@ Clients.Icon = styled.img`
   display: block;
   max-width: 100%;
   opacity: .7;
+`
+
+export const Projects = styled.div`
+
+`
+
+Projects.List = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 4rem 0 0 0;
+`
+
+Projects.Item = styled.a`
+  width: 50%;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+  transition: opacity .2s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+`
+
+Projects.Item.Thumb = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
+`
+
+Projects.Item.Heading = styled.h3`
+  font-family: 'Graphik Medium';
+  font-size: 2.1rem;
+  margin: 2rem 0;
 `

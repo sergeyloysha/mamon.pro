@@ -1,8 +1,8 @@
 import React from 'react'
-import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients } from '../styles'
+import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients, Projects } from '../styles'
 import constants from '../constants/index'
 
-const { clients, staff, icons, globals } = constants
+const { clients, staff, icons, globals, projects } = constants
 
 export default () => {
   return (
@@ -63,7 +63,7 @@ export default () => {
               <Services.List>
                 <Services.Item>
                   <Service>
-                    <Service.Icon src={icons.front} alt='' style={{top: '1rem'}} />
+                    <Service.Icon src={icons.front} alt='' style={{ top: '1rem' }} />
                     <Service.Heading>Front-end Development</Service.Heading>
                     <Service.Description>We can turn gorgeous designs into live products with clean code that is on par with todays standards.</Service.Description>
                   </Service>
@@ -77,7 +77,7 @@ export default () => {
                 </Services.Item>
                 <Services.Item>
                   <Service>
-                    <Service.Icon src={icons.app} alt='' style={{top: '1rem'}} />
+                    <Service.Icon src={icons.app} alt='' style={{ top: '1rem' }} />
                     <Service.Heading>App Development</Service.Heading>
                     <Service.Description>Need a web app, custom backend system or an API? We use rock-solid and scalable technologies like Node and PHP.</Service.Description>
                   </Service>
@@ -91,6 +91,21 @@ export default () => {
                 </Services.Item>
               </Services.List>
             </Services>
+          </Container>
+        </Section>
+
+        <Section>
+          <Container>
+            <Projects>
+              <Projects.List>
+                { projects.map((project, index) =>
+                  <Projects.Item href={project.url} target='_blank'>
+                    <Projects.Item.Thumb src={project.thumb} />
+                    {/* <Projects.Item.Heading>{ project.title }</Projects.Item.Heading> */}
+                  </Projects.Item>
+                ) }
+              </Projects.List>
+            </Projects>
           </Container>
         </Section>
 
