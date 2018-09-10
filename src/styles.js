@@ -222,16 +222,11 @@ Staff.List = styled.div`
 
 Staff.Item = styled.div`
   width: 100%;
-  max-width: 40rem;
   padding: 0 2rem;
   margin-bottom: 5rem;
 
   @media screen and (min-width: 600px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 992px) {
-    width: 33.333332%;
+    width: 25%;
   }
 `
 
@@ -242,9 +237,6 @@ Staff.Card = styled.div`
   border-radius: .5rem;
   background: #fff;
   box-shadow: 0 1rem 4rem rgba(98, 122, 129, 0.13);
-
-  display: flex;
-  align-items: center;
 `
 
 Staff.Card.Photo = styled.div`
@@ -258,6 +250,7 @@ Staff.Card.Photo = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 2rem;
 
   ${props => props.source && `
     background-image: url(${props.source});
@@ -269,6 +262,7 @@ Staff.Card.Info = styled.div``
 Staff.Card.Info.Name = styled.div`
   font-family: 'Graphik Medium';
   font-size: 1.8rem;
+  max-width: 60%;
 `
 Staff.Card.Info.Position = styled.div`
   font-size: 1.6rem;
@@ -369,7 +363,7 @@ Services.Item = styled.div`
   width: 100%;
   
   @media screen and (min-width: 600px) {
-    width: 50%;
+    width: 25%;
   }
 
   @media screen and (min-width: 768px) {
@@ -379,10 +373,6 @@ Services.Item = styled.div`
 
 export const Service = styled.div`
   position: relative;
-
-  @media screen and (min-width: 768px) {
-    padding-right: 10rem;
-  }
 `
 
 Service.Icon = styled.img`
@@ -401,24 +391,23 @@ Service.Heading = styled.h2`
   padding-top: 9rem;
   font-family: 'Graphik Medium';
   font-weight: normal;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   line-height: 1.2;
   margin: 0 0 2rem 0;
 
   @media screen and (min-width: 768px) {
-    font-size: 2.8rem;
+    font-size: 2.1rem;
+    max-width: 50%;
   }
 `
 Service.Description = styled.div`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #777;
-  max-width: 30rem;
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    max-width: 42rem;
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 `
 
