@@ -44,20 +44,6 @@ export default () => {
         </Section>
 
         <Section>
-          <Clients>
-            <Container>
-              <Clients.List>
-                { clients.map(client =>
-                  <Clients.Item>
-                    <Clients.Icon src={client.icon} alt={client.name} />
-                  </Clients.Item>
-                ) }
-              </Clients.List>
-            </Container>
-          </Clients>
-        </Section>
-
-        <Section>
           <Container>
             <Services>
               <Services.List>
@@ -92,6 +78,20 @@ export default () => {
               </Services.List>
             </Services>
           </Container>
+        </Section>
+
+        <Section>
+          <Clients>
+            <Container>
+              <Clients.List>
+                { clients.map(client =>
+                  <Clients.Item>
+                    <Clients.Icon src={client.icon} alt={client.name} />
+                  </Clients.Item>
+                ) }
+              </Clients.List>
+            </Container>
+          </Clients>
         </Section>
 
         <Section>

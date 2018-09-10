@@ -343,9 +343,8 @@ Footer.Contacts = styled.div`
 
 export const Services = styled.div`
   padding: 5rem 0;
-
   @media screen and (min-width: 768px) {
-    padding: 10rem 0 5rem 0;
+    padding: 5rem 0;
   }
 `
 
@@ -363,9 +362,8 @@ Services.Item = styled.div`
   width: 100%;
   
   @media screen and (min-width: 600px) {
-    width: 25%;
+    width: 50%;
   }
-
   @media screen and (min-width: 768px) {
     text-align: left;
   }
@@ -373,6 +371,9 @@ Services.Item = styled.div`
 
 export const Service = styled.div`
   position: relative;
+  @media screen and (min-width: 768px) {
+    padding-right: 10rem;
+  }
 `
 
 Service.Icon = styled.img`
@@ -380,7 +381,6 @@ Service.Icon = styled.img`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
   @media screen and (min-width: 768px) {
     left: 0;
     transform: translateX(0);
@@ -391,23 +391,22 @@ Service.Heading = styled.h2`
   padding-top: 9rem;
   font-family: 'Graphik Medium';
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   margin: 0 0 2rem 0;
-
   @media screen and (min-width: 768px) {
-    font-size: 2.1rem;
-    max-width: 50%;
+    font-size: 2.8rem;
   }
 `
 Service.Description = styled.div`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #777;
+  max-width: 30rem;
   margin: 0 auto;
-
   @media screen and (min-width: 768px) {
+    max-width: 42rem;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 `
 
@@ -417,7 +416,6 @@ export const Clients = styled.div`
   @media screen and (min-width: 768px) {
     display: block;
     background: #fbfbfb;
-    margin-top: 8rem;
   }
 `
 
@@ -456,7 +454,7 @@ Projects.List = styled.div`
   flex-wrap: wrap;
   margin-left: -2rem;
   margin-right: -2rem;
-  padding: 4rem 0 0 0;
+  padding: 10rem 0 2rem 0;
 `
 
 Projects.Item = styled.a`
