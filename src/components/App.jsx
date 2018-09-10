@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients, Projects } from '../styles'
+import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients, Projects, Heading1 } from '../styles'
 import constants from '../constants/index'
 
 const { clients, staff, icons, globals, projects } = constants
@@ -29,7 +29,8 @@ export default () => {
       </App.Header>
 
       <App.Content>
-        <Section>
+
+        <Section top bottom>
           <Container>
             <Home>
               <Home.Inner>
@@ -43,7 +44,7 @@ export default () => {
           </Container>
         </Section>
 
-        <Section>
+        <Section top>
           <Container>
             <Services>
               <Services.List>
@@ -80,7 +81,7 @@ export default () => {
           </Container>
         </Section>
 
-        <Section>
+        <Section top bottom>
           <Clients>
             <Container>
               <Clients.List>
@@ -94,8 +95,9 @@ export default () => {
           </Clients>
         </Section>
 
-        <Section>
+        <Section top>
           <Container>
+            <Section.Heading>Our Projects</Section.Heading>
             <Projects>
               <Projects.List>
                 { projects.map((project, index) =>
@@ -109,8 +111,9 @@ export default () => {
           </Container>
         </Section>
 
-        <Section>
+        <Section top bottom>
           <Container>
+            <Section.Heading>Meet our team</Section.Heading>
             <Staff>
               <Staff.List>
                 { staff.map((item, index) =>

@@ -64,10 +64,51 @@ injectGlobal`
     color: ${colors.base};
 
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .app {
     
+  }
+`
+
+export const Heading1 = styled.h1`
+  font-family: 'Graphik Bold';
+  font-size: 3.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 5rem;
+    max-width: 63rem;
+  }
+`
+
+export const Heading2 = styled.h2`
+  font-family: 'Graphik Medium';
+  font-weight: normal;
+  font-size: 2.2rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.8rem;
+  }
+`
+
+export const Heading3 = styled.h3`
+  font-family: 'Graphik Medium';
+  font-size: 1.8rem;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 2.1rem;
+  }
+`
+
+export const Heading4 = styled.h4`
+  font-family: 'Graphik Regular';
+  font-size: 1.6rem;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
   }
 `
 
@@ -125,7 +166,34 @@ App.Content = styled.main`
 
 `
 
-export const Section = styled.section``
+export const Section = styled.section`
+  
+  ${props => props.top && `
+    padding-top: 2rem;
+  `}
+
+  ${props => props.bottom && `
+    padding-bottom: 2rem;
+  `}
+
+  @media screen and (min-width: 768px) {
+    ${props => props.top && `
+      padding-top: 4rem;
+    `}
+
+    ${props => props.bottom && `
+      padding-bottom: 4rem;
+    `}
+  }
+`
+
+Section.Heading = styled(Heading2)`
+  margin: 0 0 2rem 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 4rem 0;
+  }
+`
 
 export const Nav = styled.nav`
   margin: 0;
@@ -180,16 +248,9 @@ Home.Inner = styled.div`
   }
 `
 
-Home.Heading = styled.h1`
+Home.Heading = styled(Heading1)`
   margin: 4rem 0 6rem 0;
-  font-family: 'Graphik Bold';
-  font-size: 3.6rem;
   line-height: 1.2;
-
-  @media screen and (min-width: 768px) {
-    font-size: 5rem;
-    max-width: 63rem;
-  }
 `
 
 Home.Description = styled.div`
@@ -199,40 +260,44 @@ Home.Description.Paragraph = styled.p`
   margin: 0 0 3rem 0;
   font-size: 1.8rem;
 
+  &:last-child {
+    margin: 0;
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 2.4rem;
     max-width: 63rem;
   }
 `
 
-export const Staff = styled.div`
-
-  @media screen and (min-width: 768px) {
-    padding: 5rem 0;
-  }
-`
+export const Staff = styled.div``
 
 Staff.List = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -2rem;
-  margin-right: -2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
 `
 
 Staff.Item = styled.div`
-  width: 100%;
-  padding: 0 2rem;
-  margin-bottom: 5rem;
+  width: 50%;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 860px) {
     width: 25%;
   }
 `
 
 Staff.Card = styled.div`
   height: 100%;
-  padding: 3rem;
+  padding: 2rem;
   position: relative;
   border-radius: .5rem;
   background: #fff;
@@ -259,10 +324,9 @@ Staff.Card.Photo = styled.div`
 
 Staff.Card.Info = styled.div``
 
-Staff.Card.Info.Name = styled.div`
-  font-family: 'Graphik Medium';
-  font-size: 1.8rem;
+Staff.Card.Info.Name = styled(Heading4)`
   max-width: 60%;
+  margin: 0 0 1rem 0;
 `
 Staff.Card.Info.Position = styled.div`
   font-size: 1.6rem;
@@ -341,12 +405,7 @@ Footer.Contacts = styled.div`
   } 
 `
 
-export const Services = styled.div`
-  padding: 5rem 0;
-  @media screen and (min-width: 768px) {
-    padding: 5rem 0;
-  }
-`
+export const Services = styled.div``
 
 Services.List = styled.div`
   display: flex;
@@ -357,7 +416,7 @@ Services.List = styled.div`
 `
 
 Services.Item = styled.div`
-  padding: 0 2rem 5rem 2rem;
+  padding: 0 2rem 4rem 2rem;
   text-align: center;
   width: 100%;
   
@@ -387,16 +446,10 @@ Service.Icon = styled.img`
   }
   
 `
-Service.Heading = styled.h2`
+Service.Heading = styled(Heading2)`
   padding-top: 9rem;
-  font-family: 'Graphik Medium';
-  font-weight: normal;
-  font-size: 2.2rem;
   line-height: 1.2;
   margin: 0 0 2rem 0;
-  @media screen and (min-width: 768px) {
-    font-size: 2.8rem;
-  }
 `
 Service.Description = styled.div`
   font-size: 1.6rem;
@@ -454,18 +507,24 @@ Projects.List = styled.div`
   flex-wrap: wrap;
   margin-left: -2rem;
   margin-right: -2rem;
-  padding: 10rem 0 2rem 0;
 `
 
 Projects.Item = styled.a`
-  width: 50%;
   padding: 0 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   transition: opacity .2s;
   cursor: pointer;
 
   &:hover {
     opacity: .8;
+  }
+
+  @media screen and (min-width: 554px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 4rem;
   }
 `
 
@@ -475,8 +534,6 @@ Projects.Item.Thumb = styled.img`
   height: auto;
 `
 
-Projects.Item.Heading = styled.h3`
-  font-family: 'Graphik Medium';
-  font-size: 2.1rem;
+Projects.Item.Heading = styled(Heading3)`
   margin: 2rem 0;
 `
