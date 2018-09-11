@@ -21,6 +21,12 @@ export default [
     position: 'Technology Director',
     thumb: thumb2
   }, {
+    id: 4,
+    firstName: 'Evgeny',
+    lastName: 'Yakimovich',
+    position: 'Product Designer',
+    thumb: thumb4
+  }, {
     id: 3,
     firstName: 'Andrey',
     lastName: 'Pitunov',
@@ -33,26 +39,18 @@ export default [
     position: 'Front-end Developer',
     thumb: thumb8
   }, {
+    id: 9,
+    firstName: 'Artyom',
+    lastName: 'Khomyakov',
+    position: 'Back-end Developer',
+    thumb: thumb9
+  }, {
     id: 10,
     firstName: 'Agneshka',
     lastName: 'Maksimik',
     position: 'Mobile Developer',
     thumb: thumb10
   }, {
-    id: 9,
-    firstName: 'Artyom',
-    lastName: 'Khomyakov',
-    position: 'Back-end Developer',
-    thumb: thumb9
-  },
-  {
-    id: 4,
-    firstName: 'Evgeny',
-    lastName: 'Yakimovich',
-    position: 'Product Designer',
-    thumb: thumb4
-  },
-  {
     id: 5,
     firstName: 'Tomash',
     lastName: 'Svorobovich',

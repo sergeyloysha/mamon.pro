@@ -66,7 +66,7 @@ export default () => {
                   <Service>
                     <Service.Icon src={icons.app} alt='' style={{ top: '1rem' }} />
                     <Service.Heading>App Development</Service.Heading>
-                    <Service.Description>Need a web app, custom backend system or an API? We use rock-solid and scalable technologies like Node and PHP.</Service.Description>
+                    <Service.Description>All apps we create have a few things in common. They are rock-solid, beautifully designed, and used across the globe.</Service.Description>
                   </Service>
                 </Services.Item>
                 <Services.Item>
@@ -97,13 +97,13 @@ export default () => {
 
         <Section top>
           <Container>
-            <Section.Heading>Our Projects</Section.Heading>
+            <Section.Heading>Latest Projects</Section.Heading>
             <Projects>
               <Projects.List>
                 { projects.map((project, index) =>
                   <Projects.Item href={project.url} target='_blank'>
                     <Projects.Item.Thumb src={project.thumb} />
-                    {/* <Projects.Item.Heading>{ project.title }</Projects.Item.Heading> */}
+                    <Projects.Item.Heading>{ project.title }</Projects.Item.Heading>
                   </Projects.Item>
                 ) }
               </Projects.List>

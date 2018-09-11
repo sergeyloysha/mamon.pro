@@ -278,6 +278,11 @@ Staff.List = styled.div`
   justify-content: center;
   margin-left: -1rem;
   margin-right: -1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 `
 
 Staff.Item = styled.div`
@@ -325,7 +330,7 @@ Staff.Card.Photo = styled.div`
 Staff.Card.Info = styled.div``
 
 Staff.Card.Info.Name = styled(Heading4)`
-  max-width: 60%;
+  max-width: 50%;
   margin: 0 0 1rem 0;
 `
 Staff.Card.Info.Position = styled.div`
@@ -340,23 +345,16 @@ export const Footer = styled.footer`
 `
 
 Footer.Inner = styled.div`
-  padding: 5rem 0 0 0;
+  padding: 4rem 0 0 0;
 
   @media screen and (min-width: 992px) {
-    padding: 9rem 0 0 0;
+    padding: 8rem 0 0 0;
   }
 `
 
-Footer.Heading = styled.h1`
-  margin: 3rem 0 2rem 0;
-  font-family: 'Graphik Bold';
-  font-size: 3.2rem;
+Footer.Heading = styled(Heading1)`
   line-height: 1.2;
-
-  @media screen and (min-width: 768px) {
-    margin: 6rem 0 4rem 0;
-    font-size: 5rem;
-  }
+  margin: 0 0 2rem 0;
 `
 
 Footer.List = styled.div`
@@ -393,14 +391,14 @@ Footer.List.Link = styled.a`
 `
 
 Footer.Contacts = styled.div`
-  margin-top: 5rem;
+  margin-top: 4rem;
   padding: 4rem 0;
   border-top: .2rem solid #545454;
   color: #545454;
   font-size: 1.8rem;
 
   @media screen and (min-width: 992px) {
-    margin-top: 9rem;
+    margin-top: 6rem;
     font-size: 2.1rem;
   } 
 `
