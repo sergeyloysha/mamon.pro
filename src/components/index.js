@@ -1,5 +1,7 @@
-import App from './App'
+import Home from './Home'
+import Privacy from './Privacy'
 
 export {
-  App
+  Home,
+  Privacy
 }

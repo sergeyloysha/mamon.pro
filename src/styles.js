@@ -76,7 +76,9 @@ injectGlobal`
 
 export const Heading1 = styled.h1`
   font-family: 'Graphik Bold';
+  font-weight: normal;
   font-size: 3.6rem;
+  margin: 4rem 0 2rem 0;
 
   @media screen and (min-width: 768px) {
     font-size: 5rem;
@@ -88,6 +90,7 @@ export const Heading2 = styled.h2`
   font-family: 'Graphik Medium';
   font-weight: normal;
   font-size: 2.2rem;
+  margin: 4rem 0 2rem 0;
 
   @media screen and (min-width: 768px) {
     font-size: 2.8rem;
@@ -96,7 +99,9 @@ export const Heading2 = styled.h2`
 
 export const Heading3 = styled.h3`
   font-family: 'Graphik Medium';
+  font-weight: normal;
   font-size: 1.8rem;
+  margin: 4rem 0 2rem 0;
   
   @media screen and (min-width: 768px) {
     font-size: 2.1rem;
@@ -105,10 +110,38 @@ export const Heading3 = styled.h3`
 
 export const Heading4 = styled.h4`
   font-family: 'Graphik Regular';
+  font-weight: normal;
   font-size: 1.6rem;
+  margin: 4rem 0 2rem 0;
   
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;
+  }
+`
+
+export const Paragraph = styled.p`
+  margin: 2rem 0;
+  font-family: 'Graphik Regular';
+  font-size: 1.6rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+`
+
+export const Link = styled.a`
+  display: inline-block;
+  color: ${colors.base}
+  text-decoration: none;
+  border-bottom: .1rem solid ${colors.base};
+  transition: .2s ease-out;
+
+  &:hover {
+    border-color: transparent;
   }
 `
 
@@ -136,6 +169,7 @@ App.Header.Inner = styled.div`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `
 
 Logo.Source = styled.div`
@@ -512,6 +546,7 @@ Projects.Item = styled.a`
   margin-bottom: 2rem;
   transition: opacity .2s;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     opacity: .8;
@@ -532,6 +567,15 @@ Projects.Item.Thumb = styled.img`
   height: auto;
 `
 
-Projects.Item.Heading = styled(Heading3)`
-  margin: 2rem 0;
+Projects.Item.Heading = styled.div`
+  font-family: 'Graphik Medium';
+  font-size: 2.1rem;
+  color: ${colors.base};
+
+  margin: 2rem 0 1rem 0;
+`
+
+Projects.Item.Description = styled.div`
+  font-size: 1.5rem;
+  color: #777;
 `

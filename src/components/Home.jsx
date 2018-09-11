@@ -1,10 +1,12 @@
 import React from 'react'
-import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients, Projects, Heading1 } from '../styles'
+import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients, Projects } from '../styles'
 import constants from '../constants/index'
 
 const { clients, staff, icons, globals, projects } = constants
 
-export default () => {
+export default (props) => {
+  const { history } = props
+
   return (
     <App>
       <App.Header>
@@ -12,7 +14,7 @@ export default () => {
           <App.Header.Inner>
             <Logo
               onClick={(e) => {
-                console.log('Yo!')
+                history.push('/')
               }}
             >
               <Logo.Source source={icons.logo} />
@@ -85,8 +87,8 @@ export default () => {
           <Clients>
             <Container>
               <Clients.List>
-                { clients.map(client =>
-                  <Clients.Item>
+                { clients.map((client, index) =>
+                  <Clients.Item key={index}>
                     <Clients.Icon src={client.icon} alt={client.name} />
                   </Clients.Item>
                 ) }
@@ -101,9 +103,10 @@ export default () => {
             <Projects>
               <Projects.List>
                 { projects.map((project, index) =>
-                  <Projects.Item href={project.url} target='_blank'>
+                  <Projects.Item key={index} href={project.url} target='_blank'>
                     <Projects.Item.Thumb src={project.thumb} />
                     <Projects.Item.Heading>{ project.title }</Projects.Item.Heading>
+                    <Projects.Item.Description>{ project.description }</Projects.Item.Description>
                   </Projects.Item>
                 ) }
               </Projects.List>
