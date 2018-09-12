@@ -405,6 +405,26 @@ Staff.Card.Info.Position = styled.div`
   color: #777;
 `
 
+export const Inputs = styled.form`
+  position: relative;
+  max-width: 60rem; 
+`
+
+Inputs.List = styled.div`
+  
+`
+Inputs.Line = styled.div`
+  
+`
+Inputs.Line.Label = styled.label`
+  width: 100%;
+  display: block;
+`
+
+Inputs.Action = styled.div`
+  text-align: right  
+`
+
 export const Footer = styled.footer`
   position: relative;
   color: ${colors.white};
