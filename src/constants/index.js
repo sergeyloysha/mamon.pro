@@ -4,7 +4,6 @@ import icons from './icons'
 import colors from './colors'
 import globals from './globals'
 import projects from './projects'
-import inputs from './inputs'
 
 export default {
   clients,
@@ -12,6 +11,5 @@ export default {
   icons,
   colors,
   globals,
-  projects,
-  inputs
+  projects
 }

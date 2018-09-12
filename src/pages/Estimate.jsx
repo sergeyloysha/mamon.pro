@@ -16,20 +16,6 @@ export default (props) => {
         <Section top bottom>
           <Container>
             <Heading1>Short Description Here</Heading1>
-            <Inputs>
-              <Inputs.List>
-                { inputs.map((input, index) =>
-                  <Inputs.Line>
-                    <Inputs.Line.Label>{input.label}</Inputs.Line.Label>
-                    {(input.type == 'textarea') ? (<textarea />) : (<input type={input.type} />)}
-                  </Inputs.Line>
-                )}
-                <Inputs.Action>
-                  <Button>Submit</Button>    
-                </Inputs.Action>
-              </Inputs.List>
-            </Inputs>
-          
           </Container>
         </Section>
 

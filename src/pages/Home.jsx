@@ -22,7 +22,11 @@ export default (props) => {
                   <Home.Description.Paragraph>From SaaS and enterprise software to mobile apps and marketing websites, we create digital experiences that people love.</Home.Description.Paragraph>
                   <Home.Description.Paragraph>We work as one team with our clients in an iterative design and development process.</Home.Description.Paragraph>
                 </Home.Description>
-                <Button large>Get a free estimate!</Button>
+                <Button large
+                  onClick={() => {
+                    window.location.href = 'mailto:' + global.email
+                  }}
+                >Get a free estimate!</Button>
               </Home.Inner>
             </Home>
           </Container>
