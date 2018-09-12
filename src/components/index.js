@@ -1,7 +1,5 @@
-import Home from './Home'
-import Privacy from './Privacy'
+import Header from './Header'
 
 export {
-  Home,
-  Privacy
+  Header
 }

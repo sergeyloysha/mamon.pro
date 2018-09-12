@@ -1,34 +1,15 @@
 import React from 'react'
-import { Container, Section, App, Logo, Nav, Footer, Heading1, Heading3, Paragraph, Link } from '../styles'
-import constants from '../constants/index'
+import { App, Container, Section, Footer, Heading1, Heading3, Paragraph, Link } from '../styles'
+import { Header } from '../components'
+import constants from '../constants/'
 
-const { icons, globals } = constants
+const { globals } = constants
 
 export default (props) => {
-  const { history } = props
-
   return (
     <App>
-      <App.Header>
-        <Container>
-          <App.Header.Inner>
-            <Logo
-              onClick={(e) => {
-                history.push('/')
-              }}
-            >
-              <Logo.Source source={icons.logo} />
-            </Logo>
-            <App.Nav>
-              <Nav.List>
-                <Nav.Item divider>
-                  <Nav.Link href={'mailto:' + globals.email}>{globals.email}</Nav.Link>
-                </Nav.Item>
-              </Nav.List>
-            </App.Nav>
-          </App.Header.Inner>
-        </Container>
-      </App.Header>
+
+      <Header />
 
       <App.Content>
 

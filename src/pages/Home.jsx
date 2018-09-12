@@ -1,34 +1,15 @@
 import React from 'react'
-import { Container, Section, App, Logo, Nav, Home, Staff, Footer, Services, Service, Clients, Projects } from '../styles'
+import { Container, Section, App, Home, Staff, Footer, Services, Service, Clients, Projects, Button } from '../styles'
+import { Header } from '../components'
 import constants from '../constants/index'
 
 const { clients, staff, icons, globals, projects } = constants
 
 export default (props) => {
-  const { history } = props
-
   return (
     <App>
-      <App.Header>
-        <Container>
-          <App.Header.Inner>
-            <Logo
-              onClick={(e) => {
-                history.push('/')
-              }}
-            >
-              <Logo.Source source={icons.logo} />
-            </Logo>
-            <App.Nav>
-              <Nav.List>
-                <Nav.Item divider>
-                  <Nav.Link href={'mailto:' + globals.email}>{globals.email}</Nav.Link>
-                </Nav.Item>
-              </Nav.List>
-            </App.Nav>
-          </App.Header.Inner>
-        </Container>
-      </App.Header>
+
+      <Header />
 
       <App.Content>
 
@@ -41,12 +22,13 @@ export default (props) => {
                   <Home.Description.Paragraph>From SaaS and enterprise software to mobile apps and marketing websites, we create digital experiences that people love.</Home.Description.Paragraph>
                   <Home.Description.Paragraph>We work as one team with our clients in an iterative design and development process.</Home.Description.Paragraph>
                 </Home.Description>
+                <Button large>Get a free estimate!</Button>
               </Home.Inner>
             </Home>
           </Container>
         </Section>
 
-        <Section top>
+        <Section top bottom>
           <Container>
             <Services>
               <Services.List>

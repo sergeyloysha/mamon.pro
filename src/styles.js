@@ -134,7 +134,7 @@ export const Paragraph = styled.p`
 `
 
 export const Link = styled.a`
-  display: inline-block;
+  display: inline;
   color: ${colors.base}
   text-decoration: none;
   border-bottom: .1rem solid ${colors.base};
@@ -143,6 +143,37 @@ export const Link = styled.a`
   &:hover {
     border-color: transparent;
   }
+`
+
+export const Button = styled.a`
+  display: inline-block;
+  color: ${colors.white};
+  background: ${colors.indigo};
+  padding: 1rem 2rem;
+  border-radius: .4rem;
+
+  font-family: 'Graphik Medium';
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
+  font-size: 1.4rem;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  ${props => props.black && `
+    background: ${colors.black};
+  `}
+
+  ${props => props.large && `
+    padding: 1.2rem 3rem;
+    font-size: 1.8rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.4rem;
+    }
+  `}
 `
 
 export const Container = styled.div`
@@ -276,6 +307,7 @@ export const Home = styled.div`
 `
 
 Home.Inner = styled.div`
+  margin-bottom: 4rem;
 
   @media screen and (min-width: 768px) {
     width: 100%;
@@ -288,6 +320,7 @@ Home.Heading = styled(Heading1)`
 `
 
 Home.Description = styled.div`
+  margin-bottom: 4rem;
 `
 
 Home.Description.Paragraph = styled.p`
