@@ -1,5 +1,7 @@
 import Header from './Header'
+import Cookies from './Cookies'
 
 export {
-  Header
+  Header,
+  Cookies
 }

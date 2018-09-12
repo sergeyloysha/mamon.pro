@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container, Section, App, Footer, Inputs, Heading1, Button } from '../styles'
+import { Container, Section, App, Footer, Heading1 } from '../styles'
 import { Header } from '../components'
 import constants from '../constants'
 
-const { globals, inputs } = constants
+const { globals } = constants
 
 export default (props) => {
   return (

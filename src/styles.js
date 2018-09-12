@@ -137,12 +137,18 @@ export const Link = styled.a`
   display: inline;
   color: ${colors.base}
   text-decoration: none;
-  border-bottom: .1rem solid ${colors.base};
+  border-bottom: .1rem solid;
+  border-color: ${colors.base};
   transition: .2s ease-out;
 
   &:hover {
     border-color: transparent;
   }
+
+  ${props => props.indigo && `
+    color: ${colors.indigo};
+    border-color: ${colors.indigo};
+  `}
 `
 
 export const Button = styled.a`
@@ -159,11 +165,17 @@ export const Button = styled.a`
   font-size: 1.4rem;
   
   @media screen and (min-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   ${props => props.black && `
     background: ${colors.black};
+  `}
+
+  ${props => props.white && `
+    background: ${colors.white};
+    color: ${colors.indigo};
+    box-shadow: inset 0 0 0 1px ${colors.indigo};
   `}
 
   ${props => props.large && `
@@ -405,26 +417,6 @@ Staff.Card.Info.Position = styled.div`
   color: #777;
 `
 
-export const Inputs = styled.form`
-  position: relative;
-  max-width: 60rem; 
-`
-
-Inputs.List = styled.div`
-  
-`
-Inputs.Line = styled.div`
-  
-`
-Inputs.Line.Label = styled.label`
-  width: 100%;
-  display: block;
-`
-
-Inputs.Action = styled.div`
-  text-align: right  
-`
-
 export const Footer = styled.footer`
   position: relative;
   color: ${colors.white};
@@ -631,4 +623,33 @@ Projects.Item.Heading = styled.div`
 Projects.Item.Description = styled.div`
   font-size: 1.5rem;
   color: #777;
+`
+
+export const Cookies = styled.div`
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  padding: 2rem;
+  max-width: 38rem;
+  border-radius: .4rem;
+  border: .1rem solid rgba(255,255,255,.1);
+  box-shadow: 0 .1rem 0 rgba(0,0,0,.05), 0 .2rem .6rem rgba(0,0,0,.05), 0 1rem 2rem rgba(0,0,0,.05);
+  background: ${colors.white};
+`
+
+Cookies.Inner = styled.div`
+  
+`
+
+Cookies.Message = styled.div`
+  font-size: 1.5rem;
+`
+
+Cookies.Controls = styled.div`
+  padding-top: 2rem;
+
+  ${Button} {
+    margin-right: 2rem;
+  }
 `
