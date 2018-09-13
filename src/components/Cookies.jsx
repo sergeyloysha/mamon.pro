@@ -6,18 +6,6 @@ export default class extends Component {
     show: false
   }
 
-  componentWillMount () {
-    if (!this.isSet()) {
-      setTimeout(() => this.setState({
-        show: true
-      }), 5000)
-    }
-  }
-
-  isSet = () => {
-    return !!localStorage.getItem('gdpr')
-  }
-
   show () {
     this.setState({
       show: true
@@ -30,6 +18,10 @@ export default class extends Component {
     })
   }
 
+  isSet = () => {
+    return !!localStorage.getItem('gdpr')
+  }
+
   handleAllow = () => {
     localStorage.setItem('gdpr', true)
     this.hide()
@@ -39,13 +31,19 @@ export default class extends Component {
     this.hide()
   }
 
+  componentWillMount () {
+    if (!this.isSet()) {
+      setTimeout(() => this.show(), 5000)
+    }
+  }
+
   render () {
     const { show } = this.state
 
     return (
       <Cookies show={show}>
         <Cookies.Inner>
-          <Cookies.Message>We use cookies to deliver our services. By using our website, you agree to the use of cookies as described in our <Link href='/privacy'>Privacy Policy</Link>.</Cookies.Message>
+          <Cookies.Message>We use cookies to deliver our services. By using our website, you agree to the use of cookies as described in our <Link target='_blank' href='/privacy'>Privacy Policy</Link>.</Cookies.Message>
           <Cookies.Controls>
             <Button onClick={this.handleAllow}>Allow</Button>
             <Button white onClick={this.handleDecline}>Decline</Button>

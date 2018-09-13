@@ -109,7 +109,7 @@ export const Heading3 = styled.h3`
 `
 
 export const Heading4 = styled.h4`
-  font-family: 'Graphik Regular';
+  font-family: 'Graphik Medium';
   font-weight: normal;
   font-size: 1.6rem;
   margin: 4rem 0 2rem 0;
