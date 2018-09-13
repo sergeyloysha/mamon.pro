@@ -636,6 +636,17 @@ export const Cookies = styled.div`
   border: .1rem solid rgba(255,255,255,.1);
   box-shadow: 0 .1rem 0 rgba(0,0,0,.05), 0 .2rem .6rem rgba(0,0,0,.05), 0 1rem 2rem rgba(0,0,0,.05);
   background: ${colors.white};
+
+  transform: translateX(6rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+
+  ${props => props.show && `
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  `}
 `
 
 Cookies.Inner = styled.div`
