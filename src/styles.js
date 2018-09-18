@@ -151,18 +151,20 @@ export const Link = styled.a`
   `}
 `
 
-export const Button = styled.a`
+export const Button = styled.button`
   display: inline-block;
   color: ${colors.white};
   background: ${colors.indigo};
   padding: 1rem 2rem;
+  border: 0;
   border-radius: .4rem;
 
   font-family: 'Graphik Medium';
-  text-decoration: none;
-  cursor: pointer;
-  transition: .2s;
   font-size: 1.4rem;
+
+  transition: .2s;
+  outline: 0;
+  cursor: pointer;
   
   @media screen and (min-width: 768px) {
     font-size: 1.6rem;
@@ -178,14 +180,82 @@ export const Button = styled.a`
     box-shadow: inset 0 0 0 1px ${colors.indigo};
   `}
 
+  ${props => props.medium && `
+    padding: 1.4rem 2.4rem;
+    font-size: 1.8rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+  `}
+
   ${props => props.large && `
-    padding: 1.2rem 3rem;
+    padding: 1.6rem 2.4rem;
     font-size: 1.8rem;
 
     @media screen and (min-width: 768px) {
       font-size: 2.4rem;
     }
   `}
+
+  ${props => props.full && `
+    width: 100%;
+    text-align: center;
+  `}
+
+  ${props => props.disabled && `
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .8;
+  `}
+`
+
+export const Form = styled.form`
+  margin-top: 2rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 4rem;
+  }
+`
+
+export const Field = styled.div`
+  padding: 0 0 3rem 0;
+`
+
+export const Input = styled.input`
+  display: block;
+  width: 100%;
+  padding: 1.3rem 2rem;
+  border-radius: .4rem;
+  border: .1rem solid rgba(0,0,0, .1);
+
+  font-family: 'Graphik Regular';
+  font-size: 1.8rem;
+  outline: 0;
+  transition: border-color .1s, box-shadow .2s;
+
+  &:focus {
+    border-color: ${colors.indigo};
+    box-shadow: 0 0 0 .2rem ${colors.indigoLight};
+  }
+`
+
+export const Textarea = styled.textarea`
+  display: block;
+  width: 100%;
+  padding: 1.4rem 2rem;
+  border-radius: .4rem;
+  border: .1rem solid rgba(0,0,0, .1);
+
+  font-family: 'Graphik Regular';
+  font-size: 1.8rem;
+  outline: 0;
+  transition: border-color .1s, box-shadow .2s;
+
+  &:focus {
+    border-color: ${colors.indigo};
+    box-shadow: 0 0 0 .2rem ${colors.indigoLight};
+  }
 `
 
 export const Container = styled.div`
@@ -641,6 +711,7 @@ export const Cookies = styled.div`
   opacity: 0;
   visibility: hidden;
   transition: all .2s;
+  z-index: 5;
 
   ${props => props.show && `
     visibility: visible;
@@ -663,4 +734,23 @@ Cookies.Controls = styled.div`
   ${Button} {
     margin-right: 2rem;
   }
+`
+
+export const Alert = styled.div`
+  font-family: 'Graphik Regular';
+  padding: 1.3rem 2rem;
+  border-radius: .4rem;
+  color: #fff;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  ${props => props.error && `
+    background: #BF1E31;
+  `}
+
+  ${props => props.success && `
+    background: #00a654;
+  `}
 `

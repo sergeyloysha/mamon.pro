@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import { Container, App, Logo, Nav, Button } from '../styles'
+import { Container, App, Logo, Nav } from '../styles'
 import constants from '../constants/'
 
 const { icons, globals } = constants

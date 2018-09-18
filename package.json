@@ -4,6 +4,11 @@
   "private": true,
   "homepage": "https://mamon.pro",
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-validator": "^5.3.0",
+    "nodemailer": "^4.6.8",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.4.0-alpha.1",
@@ -13,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "now-start": "cd build && serve -s ./"
+    "now-start": "node server.js"
   },
   "devDependencies": {
     "styled-components": "^3.3.3"
