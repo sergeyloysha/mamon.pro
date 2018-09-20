@@ -243,6 +243,9 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 4.6rem;
   padding: 1.4rem 2rem;
   border-radius: .4rem;
   border: .1rem solid rgba(0,0,0, .1);
