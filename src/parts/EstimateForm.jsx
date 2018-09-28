@@ -50,7 +50,7 @@ export default class extends Component {
 
         setTimeout(() => this.setState({
           success: false
-        }), 3000)
+        }), 5000)
       })
       .catch((error) => {
         this.setState({

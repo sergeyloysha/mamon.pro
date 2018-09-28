@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Section, App, Home, Staff, Footer, Services, Service, Clients, Projects, Button } from '../styles'
+import { Container, Section, App, Home, Staff, Footer, Services, Service, Clients, Projects, Button, Link } from '../styles'
 import { Header, Modal } from '../components'
 import { EstimateForm } from '../parts'
 import constants from '../constants/index'
@@ -31,7 +31,7 @@ export default class extends Component {
             <Container>
               <Home>
                 <Home.Inner>
-                  <Home.Heading>We're an independent development agency.</Home.Heading>
+                  <Home.Heading>We're an independent <Link href='#services' indigo bordered>design &amp; development</Link> agency.</Home.Heading>
                   <Home.Description>
                     <Home.Description.Paragraph>From SaaS and enterprise software to mobile apps and marketing websites, we create digital experiences that people love.</Home.Description.Paragraph>
                     <Home.Description.Paragraph>We work as one team with our clients in an iterative design and development process.</Home.Description.Paragraph>
@@ -44,7 +44,7 @@ export default class extends Component {
             </Container>
           </Section>
 
-          <Section top bottom>
+          <Section id='services' top bottom>
             <Container>
               <Services>
                 <Services.List>

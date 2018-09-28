@@ -71,6 +71,7 @@ Modal.Inner = styled.div`
 Modal.Close = styled.div`
   position: absolute;
   top: 2rem;
+  right: 2rem;
   transition: .2s;
   cursor: pointer;
   z-index: 7;
@@ -82,13 +83,11 @@ Modal.Close = styled.div`
   @media screen and (min-width: 768px) {
     position: fixed;
   }
-  
-  ${props => props.position === 'left' && `
-    right: 2rem;
-  `}
 
   ${props => props.position === 'right' && `
-    left: 2rem;
+    svg {
+      fill: #000 !important;
+    }
   `}
 
   svg {
@@ -108,11 +107,25 @@ export default class extends Component {
     }
   }
 
+  handleKeydown = e => {
+    if (e.keyCode === 27) {
+      this.handleClose()
+    }
+  }
+  componentDidMount () {
+    document.addEventListener('keydown', this.handleKeydown, false)
+  }
+  componentWillUnmount () {
+    document.removeEventListener('keydown', this.handleKeydown, false)
+  }
+
   render () {
     const { show, width, position, children } = this.props
 
     return (
-      <Overlay show={show}>
+      <Overlay
+        show={show}
+      >
         <Modal.Close
           onClick={this.handleClose}
           position={position || 'left'}

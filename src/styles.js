@@ -149,6 +149,10 @@ export const Link = styled.a`
     color: ${colors.indigo};
     border-color: ${colors.indigo};
   `}
+
+  ${props => props.bordered && `
+    border-bottom-width: .5rem;
+  `}
 `
 
 export const Button = styled.button`
