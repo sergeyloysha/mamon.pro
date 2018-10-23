@@ -49,28 +49,28 @@ export default class extends Component {
               <Services>
                 <Services.List>
                   <Services.Item>
-                    <Service>
+                    <Service href='/services#front-end'>
                       <Service.Icon src={icons.front} alt='' style={{ top: '1rem' }} />
                       <Service.Heading>Front-end Development</Service.Heading>
                       <Service.Description>We can turn gorgeous designs into live products with clean code that is on par with todays standards.</Service.Description>
                     </Service>
                   </Services.Item>
                   <Services.Item>
-                    <Service>
+                    <Service href='/services#back-end'>
                       <Service.Icon src={icons.back} alt='' />
                       <Service.Heading>Back-end Development</Service.Heading>
                       <Service.Description>Need a web app, custom backend system or an API? We use rock-solid and scalable technologies like Node and PHP.</Service.Description>
                     </Service>
                   </Services.Item>
                   <Services.Item>
-                    <Service>
+                    <Service href='/services#apps'>
                       <Service.Icon src={icons.app} alt='' style={{ top: '1rem' }} />
                       <Service.Heading>App Development</Service.Heading>
                       <Service.Description>All apps we create have a few things in common. They are rock-solid, beautifully designed, and used across the globe.</Service.Description>
                     </Service>
                   </Services.Item>
                   <Services.Item>
-                    <Service>
+                    <Service href='/services#design'>
                       <Service.Icon src={icons.design} alt='' />
                       <Service.Heading>Web App Interfaces</Service.Heading>
                       <Service.Description>Thorough research forms the steady foundation for the road from wire-frames to pixel perfect web apps.</Service.Description>

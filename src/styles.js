@@ -582,10 +582,14 @@ Services.Item = styled.div`
   }
 `
 
-export const Service = styled.div`
+export let Service = styled.a`
+  display: block;
   position: relative;
+  text-decoration: none;
+  cursor: pointer;
+
   @media screen and (min-width: 768px) {
-    padding-right: 10rem;
+    margin-right: 10rem;
   }
 `
 
@@ -601,9 +605,13 @@ Service.Icon = styled.img`
   
 `
 Service.Heading = styled(Heading2)`
+  display: inline-block;
+  color: ${colors.base};
   padding-top: 9rem;
   line-height: 1.2;
   margin: 0 0 2rem 0;
+  border-bottom: .3rem solid;
+  transition: .2s;
 `
 Service.Description = styled.div`
   font-size: 1.6rem;
@@ -614,6 +622,14 @@ Service.Description = styled.div`
     max-width: 42rem;
     margin: 0;
     font-size: 1.8rem;
+  }
+`
+
+Service = styled(Service)`
+  &:hover {
+    ${Service.Heading} {
+      color: ${colors.indigo};
+    }
   }
 `
 

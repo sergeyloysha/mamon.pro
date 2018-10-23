@@ -1,4 +1,4 @@
 export default {
   email: 'contact@mamon.pro',
-  address: '1 May Street #21, Grodno, 230006'
+  address: 'st. Academic 17, Grodno, 230005'
 }
