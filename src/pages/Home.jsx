@@ -95,7 +95,7 @@ export default class extends Component {
             </Clients>
           </Section>
 
-          <Section top>
+          {/* <Section top>
             <Container>
               <Section.Heading>Latest Projects</Section.Heading>
               <Projects>
@@ -110,7 +110,7 @@ export default class extends Component {
                 </Projects.List>
               </Projects>
             </Container>
-          </Section>
+          </Section> */}
 
           <Section top bottom>
             <Container>

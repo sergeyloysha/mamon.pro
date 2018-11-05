@@ -1,5 +1,5 @@
 import React from 'react'
-import { App, Container, Section, Footer, Heading1 } from '../styles'
+import { App, Container, Section, Footer, Heading1, Paragraph } from '../styles'
 import { Header } from '../components'
 import constants from '../constants/'
 
@@ -15,7 +15,8 @@ export default (props) => {
 
         <Section top bottom>
           <Container>
-            <Heading1>Services</Heading1>
+            <Heading1>What we do</Heading1>
+            <Paragraph>We build software that makes businesses more efficient and customers’ lives easier. The products we create are carefully designed for the end user and brought to life with elegantly written code.</Paragraph>
           </Container>
         </Section>
 
