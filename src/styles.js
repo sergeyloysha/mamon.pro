@@ -586,7 +586,6 @@ export let Service = styled.a`
   display: block;
   position: relative;
   text-decoration: none;
-  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     margin-right: 10rem;
@@ -610,7 +609,6 @@ Service.Heading = styled(Heading2)`
   padding-top: 9rem;
   line-height: 1.2;
   margin: 0 0 2rem 0;
-  border-bottom: .3rem solid;
   transition: .2s;
 `
 Service.Description = styled.div`
@@ -622,14 +620,6 @@ Service.Description = styled.div`
     max-width: 42rem;
     margin: 0;
     font-size: 1.8rem;
-  }
-`
-
-Service = styled(Service)`
-  &:hover {
-    ${Service.Heading} {
-      color: ${colors.indigo};
-    }
   }
 `
 
