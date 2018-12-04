@@ -1,35 +1,23 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
-import { Container, App, Logo, Nav } from '../styles'
-import constants from '../constants/'
+import { Header, Nav, Container } from '../styles'
+import { Logo } from '../components'
+import { globals } from '../constants/'
 
-const { icons, globals } = constants
-
-const Header = (props) => {
-  const { history } = props
-
+export default (props) => {
   return (
-    <App.Header>
+    <Header>
       <Container>
-        <App.Header.Inner>
-          <Logo
-            onClick={(e) => {
-              history.push('/')
-            }}
-          >
-            <Logo.Source source={icons.logo} />
-          </Logo>
-          <App.Nav>
+        <Header.Inner>
+          <Logo />
+          <Nav>
             <Nav.List>
               <Nav.Item divider>
                 <Nav.Link href={'mailto:' + globals.email}>{globals.email}</Nav.Link>
               </Nav.Item>
             </Nav.List>
-          </App.Nav>
-        </App.Header.Inner>
+          </Nav>
+        </Header.Inner>
       </Container>
-    </App.Header>
+    </Header>
   )
 }
-
-export default withRouter(Header)

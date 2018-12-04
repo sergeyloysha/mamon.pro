@@ -27,6 +27,12 @@ export default [
     position: 'Product Designer',
     thumb: thumb4
   }, {
+    id: 5,
+    firstName: 'Tomash',
+    lastName: 'Svorobovich',
+    position: 'Designer',
+    thumb: thumb5
+  }, {
     id: 3,
     firstName: 'Andrey',
     lastName: 'Pitunov',
@@ -48,13 +54,7 @@ export default [
     id: 10,
     firstName: 'Agneshka',
     lastName: 'Maksimik',
-    position: 'Mobile Developer',
+    position: 'Back-end Developer',
     thumb: thumb10
-  }, {
-    id: 5,
-    firstName: 'Tomash',
-    lastName: 'Svorobovich',
-    position: 'Designer',
-    thumb: thumb5
   }
 ]

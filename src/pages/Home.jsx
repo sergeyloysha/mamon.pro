@@ -1,15 +1,18 @@
-import React, { Component } from 'react'
-import { Container, Section, App, Home, Staff, Footer, Services, Service, Clients, Projects, Button, Link } from '../styles'
+import React, { Component, Fragment } from 'react'
+import { Container, Section, Content, Outer, Button, Home, Staff, Footer, Service, Row, Col, Heading1, Heading2, Paragraph, Chat, Messangers, Social, CTA, Client } from '../styles'
 import { Header, Modal } from '../components'
 import { EstimateForm } from '../parts'
-import constants from '../constants/index'
-
-const { clients, staff, icons, globals, projects } = constants
+import { icons, staff, globals, colors, clients } from '../constants'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export default class extends Component {
   state = {
-    estimateModal: false
+    estimateModal: false,
+    outer: null
   }
+
+  refOuter = null
 
   handleModal = (state) => {
     this.setState({
@@ -17,126 +20,181 @@ export default class extends Component {
     })
   }
 
+  getOuterRef = (n) => {
+    this.refOuter = n
+  }
+
+  componentDidMount () {
+    const heightOuter = this.refOuter.getBoundingClientRect().height
+
+    this.setState({
+      outer: heightOuter
+    })
+  }
+
   render () {
-    const { estimateModal } = this.state
+    const { estimateModal, outer } = this.state
 
     return (
-      <App>
+      <Fragment>
+        <Content style={{ marginBottom: outer + 'px' }}>
 
-        <Header />
+          <Header />
 
-        <App.Content>
-
-          <Section top bottom>
+          <Section full>
             <Container>
               <Home>
-                <Home.Inner>
-                  <Home.Heading>We're an independent <Link href='#services' indigo bordered>design &amp; development</Link> agency.</Home.Heading>
-                  <Home.Description>
-                    <Home.Description.Paragraph>From SaaS and enterprise software to mobile apps and marketing websites, we create digital experiences that people love.</Home.Description.Paragraph>
-                    <Home.Description.Paragraph>We work as one team with our clients in an iterative design and development process.</Home.Description.Paragraph>
-                  </Home.Description>
-                  <Button large
-                    onClick={() => this.handleModal(true)}
-                  >Get a free estimate!</Button>
-                </Home.Inner>
+                <Heading1>We're an independent design &amp; development team.</Heading1>
+                <Row>
+                  <Col sm={10}>
+                    <Paragraph>From SaaS and enterprise software to marketing websites, we create digital experiences that people love.</Paragraph>
+                    <Paragraph>We work as one team with our clients in an iterative design and development process.</Paragraph>
+                  </Col>
+                </Row>
               </Home>
             </Container>
           </Section>
 
-          <Section id='services' top bottom>
+          <Section full>
             <Container>
-              <Services>
-                <Services.List>
-                  <Services.Item>
-                    <Service>
-                      <Service.Icon src={icons.front} alt='' style={{ top: '1rem' }} />
-                      <Service.Heading>Front-end Development</Service.Heading>
-                      <Service.Description>We can turn gorgeous designs into live products with clean code that is on par with todays standards.</Service.Description>
-                    </Service>
-                  </Services.Item>
-                  <Services.Item>
-                    <Service>
-                      <Service.Icon src={icons.back} alt='' />
-                      <Service.Heading>Back-end Development</Service.Heading>
-                      <Service.Description>Need a web app, custom backend system or an API? We use rock-solid and scalable technologies like Node and PHP.</Service.Description>
-                    </Service>
-                  </Services.Item>
-                  <Services.Item>
-                    <Service>
-                      <Service.Icon src={icons.app} alt='' style={{ top: '1rem' }} />
-                      <Service.Heading>App Development</Service.Heading>
-                      <Service.Description>All apps we create have a few things in common. They are rock-solid, beautifully designed, and used across the globe.</Service.Description>
-                    </Service>
-                  </Services.Item>
-                  <Services.Item>
-                    <Service>
-                      <Service.Icon src={icons.design} alt='' />
-                      <Service.Heading>Web App Interfaces</Service.Heading>
-                      <Service.Description>Thorough research forms the steady foundation for the road from wire-frames to pixel perfect web apps.</Service.Description>
-                    </Service>
-                  </Services.Item>
-                </Services.List>
-              </Services>
+              <Row>
+                { clients.map((client, index) =>
+                  <Col sm={6} md={3} key={index}>
+                    <Client>
+                      <Client.Icon src={client.icon} alt={client.name} />
+                    </Client>
+                  </Col>
+                ) }
+              </Row>
             </Container>
           </Section>
 
-          <Section top bottom>
-            <Clients>
+          <Section full>
+            <Container>
+              <Section.Heading>Our Expertise</Section.Heading>
+              <Section.Content>
+                <Row>
+                  <Col sm={4}>
+                    <Service>
+                      <Service.Icon>
+                        <img src={icons.development} alt='Web Development' />
+                      </Service.Icon>
+                      <Service.Heading>Development</Service.Heading>
+                      <Service.List>
+                        <Service.Item>React / Redux</Service.Item>
+                        <Service.Item>Vue / Vuex</Service.Item>
+                        <Service.Item>ES5 / ES6+</Service.Item>
+                        <Service.Item>HTML5</Service.Item>
+                        <Service.Item>SCSS / Stylus</Service.Item>
+                      </Service.List>
+                    </Service>
+                  </Col>
+                  <Col sm={4}>
+                    <Service>
+                      <Service.Icon>
+                        <img src={icons.design} alt='Design' />
+                      </Service.Icon>
+                      <Service.Heading>Design</Service.Heading>
+                      <Service.List>
+                        <Service.Item>User Experience (UX)</Service.Item>
+                        <Service.Item>Interface Design (UI)</Service.Item>
+                        <Service.Item>Product Design</Service.Item>
+                        <Service.Item>Visual Design</Service.Item>
+                        <Service.Item>Illustrations</Service.Item>
+                      </Service.List>
+                    </Service>
+                  </Col>
+                  <Col sm={4}>
+                    <Service>
+                      <Service.Icon>
+                        <img src={icons.marketing} alt='Marketing' />
+                      </Service.Icon>
+                      <Service.Heading>Marketing</Service.Heading>
+                      <Service.List>
+                        <Service.Item>HTML emails</Service.Item>
+                        <Service.Item>Landing pages</Service.Item>
+                        <Service.Item>Marketo integration</Service.Item>
+                        <Service.Item>HubSpot integration</Service.Item>
+                        <Service.Item>Eloqua integration</Service.Item>
+                      </Service.List>
+                    </Service>
+                  </Col>
+                </Row>
+              </Section.Content>
+            </Container>
+          </Section>
+
+          <Section full background={colors.light}>
+            <Container>
+              <Row>
+                <Col md={6}>
+                  <Heading2>High level communication</Heading2>
+                  <Paragraph lineHeight={1.8}>So many good teams fail because of poor planning and lack of communications. We keep you aligned with our team - every day, week and month. So you know what’s going on at every of your project.</Paragraph>
+                  <Messangers>
+                    <Messangers.Item width={'8rem'}>
+                      <Messangers.Icon src={icons.trello} />
+                    </Messangers.Item>
+                    <Messangers.Item width={'10rem'}>
+                      <Messangers.Icon src={icons.slack} />
+                    </Messangers.Item>
+                  </Messangers>
+                </Col>
+                <Col mdOffset={0.5} md={5.5}>
+                  <Chat>
+                    <Chat.Message type='in'>Hello Vadim, how things are going?</Chat.Message>
+                    <Chat.Message type='out'>Hey, everything is going well. We’re already delivered the design.</Chat.Message>
+                    <Chat.Message type='in'>Coooool, let me check.</Chat.Message>
+                    <Chat.Message type='out'>Sure.</Chat.Message>
+                  </Chat>
+                </Col>
+              </Row>
+            </Container>
+          </Section>
+
+          <Section full color={colors.white}>
+            <CTA>
               <Container>
-                <Clients.List>
-                  { clients.map((client, index) =>
-                    <Clients.Item key={index}>
-                      <Clients.Icon src={client.icon} alt={client.name} />
-                    </Clients.Item>
-                  ) }
-                </Clients.List>
+                <Row>
+                  <Col sm={6}>
+                    <Heading2>Let's work together</Heading2>
+                    <Paragraph>We'd love to hear about your product.<br />Let's talk and turn your great idea<br />into something even greater!</Paragraph>
+                    <Button white onClick={() => this.handleModal(true)}>Get a free estimate</Button>
+                  </Col>
+                  <Col sm={6}>
+                    <CTA.Image />
+                  </Col>
+                </Row>
               </Container>
-            </Clients>
+            </CTA>
           </Section>
 
-          {/* <Section top>
-            <Container>
-              <Section.Heading>Latest Projects</Section.Heading>
-              <Projects>
-                <Projects.List>
-                  { projects.map((project, index) =>
-                    <Projects.Item key={index} href={project.url} target='_blank'>
-                      <Projects.Item.Thumb src={project.thumb} />
-                      <Projects.Item.Heading>{ project.title }</Projects.Item.Heading>
-                      <Projects.Item.Description>{ project.description }</Projects.Item.Description>
-                    </Projects.Item>
-                  ) }
-                </Projects.List>
-              </Projects>
-            </Container>
-          </Section> */}
-
-          <Section top bottom>
+          <Section full>
             <Container>
               <Section.Heading>Meet our team</Section.Heading>
-              <Staff>
-                <Staff.List>
-                  { staff.map((item, index) =>
-                    <Staff.Item key={index}>
-                      <Staff.Card>
-                        <Staff.Card.Photo source={item.thumb} />
-                        <Staff.Card.Info>
-                          <Staff.Card.Info.Name>
-                            { [item.firstName, item.lastName].join(' ') }
-                          </Staff.Card.Info.Name>
-                          <Staff.Card.Info.Position>
-                            { item.position }
-                          </Staff.Card.Info.Position>
-                        </Staff.Card.Info>
-                      </Staff.Card>
-                    </Staff.Item>)
-                  }
-                </Staff.List>
-              </Staff>
+              <Row>
+                { staff.map((item, index) =>
+                  <Col sm={6} md={3} key={index}>
+                    <Staff.Card>
+                      <Staff.Card.Photo source={item.thumb} />
+                      <Staff.Card.Info>
+                        <Staff.Card.Info.Name>
+                          {item.firstName}<br />{item.lastName}
+                        </Staff.Card.Info.Name>
+                        <Staff.Card.Info.Position>
+                          { item.position }
+                        </Staff.Card.Info.Position>
+                      </Staff.Card.Info>
+                    </Staff.Card>
+                  </Col>)
+                }
+              </Row>
             </Container>
           </Section>
-          <Section>
+
+        </Content>
+
+        <Outer innerRef={this.getOuterRef}>
+          <Section background={colors.indigo}>
             <Footer>
               <Container>
                 <Footer.Inner>
@@ -147,13 +205,39 @@ export default class extends Component {
                     </Footer.List.Item>
                   </Footer.List>
                   <Footer.Contacts>
-                    {globals.address}
+                    <Row>
+                      <Col sm={6}>{globals.address}</Col>
+                      <Col sm={6} align='right'>
+                        <Social>
+                          <Social.Item href='//www.facebook.com/mamonprohq/'>
+                            <Social.Icon>
+                              <FontAwesomeIcon icon={faFacebook} />
+                            </Social.Icon>
+                          </Social.Item>
+                          <Social.Item href='//www.linkedin.com/company/mamon/'>
+                            <Social.Icon>
+                              <FontAwesomeIcon icon={faLinkedin} />
+                            </Social.Icon>
+                          </Social.Item>
+                          <Social.Item href='//twitter.com/mamon_pro'>
+                            <Social.Icon>
+                              <FontAwesomeIcon icon={faTwitter} />
+                            </Social.Icon>
+                          </Social.Item>
+                          <Social.Item href='//instagram.com/mamon.pro'>
+                            <Social.Icon>
+                              <FontAwesomeIcon icon={faInstagram} />
+                            </Social.Icon>
+                          </Social.Item>
+                        </Social>
+                      </Col>
+                    </Row>
                   </Footer.Contacts>
                 </Footer.Inner>
               </Container>
             </Footer>
           </Section>
-        </App.Content>
+        </Outer>
 
         <Modal
           show={estimateModal}
@@ -162,7 +246,7 @@ export default class extends Component {
           <EstimateForm />
         </Modal>
 
-      </App>
+      </Fragment>
     )
   }
 }

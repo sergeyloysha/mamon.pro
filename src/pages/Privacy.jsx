@@ -1,19 +1,17 @@
-import React from 'react'
-import { App, Container, Section, Footer, Heading1, Heading3, Paragraph, Link } from '../styles'
+import React, { Fragment } from 'react'
+import { Content, Container, Section, Footer, Heading1, Heading3, Paragraph, Link } from '../styles'
 import { Header } from '../components'
-import constants from '../constants/'
-
-const { globals } = constants
+import { globals } from '../constants'
 
 export default (props) => {
   return (
-    <App>
+    <Fragment>
 
-      <Header />
+      <Content>
 
-      <App.Content>
+        <Header />
 
-        <Section top bottom>
+        <Section full>
           <Container>
             <Heading1>Privacy Policy</Heading1>
             <Paragraph>Mamon Pro, LLC ("Mamon" or "we" or "us" or "our") respects the privacy of our users ("user" or "you"). This privacy policy explains how we collect, use, process and safeguard your information when you visit our website www.mamon.pro including mobile website or related landing pages (collectively, the "Site"). Please read this Privacy Policy carefully. If you do not agree with the terms of this privacy policy, please do not access the Site.</Paragraph>
@@ -62,7 +60,7 @@ export default (props) => {
           </Container>
         </Section>
 
-        <Section top>
+        <Section>
           <Footer>
             <Container>
               <Footer.Inner>
@@ -79,7 +77,7 @@ export default (props) => {
             </Container>
           </Footer>
         </Section>
-      </App.Content>
-    </App>
+      </Content>
+    </Fragment>
   )
 }

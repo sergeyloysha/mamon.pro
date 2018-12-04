@@ -3,5 +3,7 @@ export default {
   white: '#ffffff',
   indigo: '#5528FF',
   indigoLight: 'rgb(200, 185, 255)',
-  base: '#121212'
+  base: '#2D333A',
+  green: '#0ca750',
+  light: '#fafafa'
 }

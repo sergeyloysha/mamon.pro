@@ -14,13 +14,17 @@ import fontGraphikBoldWebWoff from './resources/fonts/Graphik-Bold-Web.woff'
 import fontGraphikBoldWebWoff2 from './resources/fonts/Graphik-Bold-Web.woff2'
 
 import styled, { injectGlobal } from 'styled-components'
-import constants from './constants/index'
+import { colors, icons } from './constants'
 
-const { colors } = constants
+const fonts = {
+  regular: 'Graphik Regular',
+  medium: 'Graphik Medium',
+  bold: 'Graphik Bold'
+}
 
 injectGlobal`
   @font-face {
-    font-family: 'Graphik Regular';
+    font-family: ${fonts.regular};
     src: url('${fontGraphikRegularWebEot}');
     src: url('${fontGraphikRegularWebEot}#iefix') format('embedded-opentype'),
         url('${fontGraphikRegularWebWoff2}') format("woff2"),
@@ -29,7 +33,7 @@ injectGlobal`
   }
 
   @font-face {
-    font-family: 'Graphik Medium';
+    font-family: ${fonts.medium};
     src: url('${fontGraphikMediumWebEot}#iefix') format('embedded-opentype'),
         url('${fontGraphikMediumWebWoff2}') format("woff2"),
         url('${fontGraphikMediumWebWoff}') format("woff"),
@@ -37,7 +41,7 @@ injectGlobal`
   }
 
   @font-face {
-    font-family: 'Graphik Bold';
+    font-family: ${fonts.bold};
     src: url('${fontGraphikBoldWebEot}#iefix') format('embedded-opentype'),
         url('${fontGraphikBoldWebWoff2}') format("woff2"),
         url('${fontGraphikBoldWebWoff}') format("woff"),
@@ -58,7 +62,7 @@ injectGlobal`
     margin: 0;
     padding: 0;
 
-    font: 400 1.4rem/1.5 'Graphik Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font: 400 1.4rem/1.5 ${fonts.regular}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 1.4rem;
     color: ${colors.base};
@@ -75,41 +79,42 @@ injectGlobal`
 `
 
 export const Heading1 = styled.h1`
-  font-family: 'Graphik Bold';
-  font-weight: normal;
-  font-size: 3.6rem;
-  margin: 4rem 0 2rem 0;
+  font-family: ${fonts.medium};
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 1.4;
+  margin: 0;
 
   @media screen and (min-width: 768px) {
-    font-size: 5rem;
-    max-width: 63rem;
+    font-size: 5.6rem;
   }
 `
 
 export const Heading2 = styled.h2`
-  font-family: 'Graphik Medium';
-  font-weight: normal;
-  font-size: 2.2rem;
-  margin: 4rem 0 2rem 0;
+  font-family: ${fonts.medium};
+  font-weight: 500;
+  font-size: 4.2rem;
+  line-height: 1.4;
+  margin: 0;
 
   @media screen and (min-width: 768px) {
-    font-size: 2.8rem;
+    font-size: 4.2rem;
   }
 `
 
 export const Heading3 = styled.h3`
-  font-family: 'Graphik Medium';
+  font-family: ${fonts.medium};
   font-weight: normal;
   font-size: 1.8rem;
-  margin: 4rem 0 2rem 0;
+  margin: 0;
   
   @media screen and (min-width: 768px) {
-    font-size: 2.1rem;
+    font-size: 2.4rem;
   }
 `
 
 export const Heading4 = styled.h4`
-  font-family: 'Graphik Medium';
+  font-family: ${fonts.medium};
   font-weight: normal;
   font-size: 1.6rem;
   margin: 4rem 0 2rem 0;
@@ -121,7 +126,7 @@ export const Heading4 = styled.h4`
 
 export const Paragraph = styled.p`
   margin: 2rem 0;
-  font-family: 'Graphik Regular';
+  font-family: ${fonts.regular};
   font-size: 1.6rem;
 
   &:last-child {
@@ -131,6 +136,10 @@ export const Paragraph = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;
   }
+
+  ${props => props.lineHeight && `
+    line-height: ${props.lineHeight};
+  `}
 `
 
 export const Link = styled.a`
@@ -159,11 +168,12 @@ export const Button = styled.button`
   display: inline-block;
   color: ${colors.white};
   background: ${colors.indigo};
-  padding: 1rem 2rem;
+  padding: 1.4rem 2rem;
   border: 0;
   border-radius: .4rem;
 
-  font-family: 'Graphik Medium';
+  font-family: ${fonts.medium};
+  font-weight: 500;
   font-size: 1.4rem;
 
   transition: .2s;
@@ -171,7 +181,7 @@ export const Button = styled.button`
   cursor: pointer;
   
   @media screen and (min-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   ${props => props.black && `
@@ -233,7 +243,7 @@ export const Input = styled.input`
   border-radius: .4rem;
   border: .1rem solid rgba(0,0,0, .1);
 
-  font-family: 'Graphik Regular';
+  font-family: ${fonts.regular};
   font-size: 1.8rem;
   outline: 0;
   transition: border-color .1s, box-shadow .2s;
@@ -254,7 +264,7 @@ export const Textarea = styled.textarea`
   border-radius: .4rem;
   border: .1rem solid rgba(0,0,0, .1);
 
-  font-family: 'Graphik Regular';
+  font-family: ${fonts.regular};
   font-size: 1.8rem;
   outline: 0;
   transition: border-color .1s, box-shadow .2s;
@@ -267,86 +277,66 @@ export const Textarea = styled.textarea`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 107rem;
+  max-width: 104rem;
   padding: 0 2rem;
   margin: 0 auto;
 `
 
-export const App = styled.div`
-  margin: 0;
-`
+export const Header = styled.header``
 
-App.Header = styled.header`
-  padding: 5rem 0;
-`
-
-App.Header.Inner = styled.div`
+Header.Inner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 6rem 0;
 `
 
-export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+export const Content = styled.main`
+  position: relative;
+  background: ${colors.white};
+  z-index: 2;
 `
 
-Logo.Source = styled.div`
-  display: block;
-  width: 4.8rem;
-  height: 4.8rem;
-  transform: rotate(-45deg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  ${props => props.source && `
-    background-image: url(${props.source});
-  `}
-`
-
-Logo.Title = styled.div`
-  font-weight: 600;
-  font-size: 2.8rem;
-  margin-left: 2rem;
-`
-
-App.Nav = styled.nav`
-
-`
-
-App.Content = styled.main`
-
+export const Outer = styled.main`
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 `
 
 export const Section = styled.section`
   
-  ${props => props.top && `
-    padding-top: 2rem;
-  `}
-
-  ${props => props.bottom && `
-    padding-bottom: 2rem;
+  ${props => props.full && `
+    padding: 4rem 0;
   `}
 
   @media screen and (min-width: 768px) {
-    ${props => props.top && `
-      padding-top: 4rem;
-    `}
-
-    ${props => props.bottom && `
-      padding-bottom: 4rem;
+    ${props => props.full && `
+      padding: 8rem 0;
     `}
   }
+
+  ${props => props.background && `
+    background-color: ${props.background};
+  `}
+
+  ${props => props.color && `
+    color: ${props.color};
+  `}
 `
 
 Section.Heading = styled(Heading2)`
-  margin: 0 0 2rem 0;
+  padding-bottom: 4rem;
+  margin: 0;
 
   @media screen and (min-width: 768px) {
-    margin: 0 0 4rem 0;
+    padding-bottom: 6rem;
   }
+`
+
+Section.Content = styled.div`
+
 `
 
 export const Nav = styled.nav`
@@ -393,76 +383,54 @@ Nav.Link = styled.a`
 `
 
 export const Home = styled.div`
-`
 
-Home.Inner = styled.div`
-  margin-bottom: 4rem;
-
-  @media screen and (min-width: 768px) {
-    width: 100%;
-  }
-`
-
-Home.Heading = styled(Heading1)`
-  margin: 4rem 0 6rem 0;
-  line-height: 1.2;
-`
-
-Home.Description = styled.div`
-  margin-bottom: 4rem;
-`
-
-Home.Description.Paragraph = styled.p`
-  margin: 0 0 3rem 0;
-  font-size: 1.8rem;
-
-  &:last-child {
-    margin: 0;
+  ${Heading1} {
+    margin: 0 0 4rem 0;
+    color: ${colors.indigo};
   }
 
-  @media screen and (min-width: 768px) {
-    font-size: 2.4rem;
-    max-width: 63rem;
+  ${Paragraph} {
+    font-size: 2rem;
+    margin: 0 0 3rem 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.6rem;
+    }
   }
+
 `
 
 export const Staff = styled.div``
 
-Staff.List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: -1rem;
-  margin-right: -1rem;
-
-  @media screen and (min-width: 768px) {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
-`
-
-Staff.Item = styled.div`
-  width: 50%;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-
-  @media screen and (min-width: 768px) {
-    padding: 0 2rem;
-    margin-bottom: 4rem;
-  }
-
-  @media screen and (min-width: 860px) {
-    width: 25%;
-  }
-`
-
 Staff.Card = styled.div`
-  height: 100%;
-  padding: 2rem;
   position: relative;
-  border-radius: .5rem;
+  height: 100%;
+  padding: 2rem 0;
   background: #fff;
-  box-shadow: 0 1rem 4rem rgba(98, 122, 129, 0.13);
+  border-bottom: .5rem solid ${colors.base};
+  margin-bottom: 4rem;
+  cursor: default;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    width: 0;
+    height: .5rem;
+    background: ${colors.indigo};
+    transition: width .2s ease-out;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
 `
 
 Staff.Card.Photo = styled.div`
@@ -497,7 +465,6 @@ Staff.Card.Info.Position = styled.div`
 export const Footer = styled.footer`
   position: relative;
   color: ${colors.white};
-  background: ${colors.base};
 `
 
 Footer.Inner = styled.div`
@@ -549,8 +516,8 @@ Footer.List.Link = styled.a`
 Footer.Contacts = styled.div`
   margin-top: 4rem;
   padding: 4rem 0;
-  border-top: .2rem solid #545454;
-  color: #545454;
+  border-top: .2rem solid rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .5);
   font-size: 1.8rem;
 
   @media screen and (min-width: 992px) {
@@ -559,153 +526,19 @@ Footer.Contacts = styled.div`
   } 
 `
 
-export const Services = styled.div``
-
-Services.List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -2rem;
-  margin-right: -2rem;
-  justify-content: center;
-`
-
-Services.Item = styled.div`
-  padding: 0 2rem 4rem 2rem;
-  text-align: center;
-  width: 100%;
-  
-  @media screen and (min-width: 600px) {
-    width: 50%;
-  }
-  @media screen and (min-width: 768px) {
-    text-align: left;
-  }
-`
-
-export let Service = styled.a`
-  display: block;
-  position: relative;
-  text-decoration: none;
-
-  @media screen and (min-width: 768px) {
-    margin-right: 10rem;
-  }
-`
-
-Service.Icon = styled.img`
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  @media screen and (min-width: 768px) {
-    left: 0;
-    transform: translateX(0);
-  }
-  
-`
-Service.Heading = styled(Heading2)`
-  display: inline-block;
-  color: ${colors.base};
-  padding-top: 9rem;
-  line-height: 1.2;
-  margin: 0 0 2rem 0;
-  transition: .2s;
-`
-Service.Description = styled.div`
-  font-size: 1.6rem;
-  color: #777;
-  max-width: 30rem;
-  margin: 0 auto;
-  @media screen and (min-width: 768px) {
-    max-width: 42rem;
-    margin: 0;
-    font-size: 1.8rem;
-  }
-`
-
-export const Clients = styled.div`
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    background: #fbfbfb;
-  }
-`
-
-Clients.List = styled.div`
-  padding: 5rem 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-left: -2rem;
-  margin-right: -2rem;
-`
-
-Clients.Item = styled.div`
-  padding: 0 2rem;
+export const Client = styled.div`
   margin: 2rem 0;
-  width: 25%;
   height: 5rem;
 
   display: flex;
   align-items: center;
+  opacity: .3;
 `
 
-Clients.Icon = styled.img`
+Client.Icon = styled.img`
   display: block;
   max-width: 100%;
   opacity: .8;
-`
-
-export const Projects = styled.div`
-
-`
-
-Projects.List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -2rem;
-  margin-right: -2rem;
-`
-
-Projects.Item = styled.a`
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-  transition: opacity .2s;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    opacity: .8;
-  }
-
-  @media screen and (min-width: 554px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 4rem;
-  }
-`
-
-Projects.Item.Thumb = styled.img`
-  display: block;
-  width: 100%;
-  height: auto;
-`
-
-Projects.Item.Heading = styled.div`
-  font-family: 'Graphik Medium';
-  font-size: 2.1rem;
-  color: ${colors.base};
-
-  margin: 2rem 0 1rem 0;
-`
-
-Projects.Item.Description = styled.div`
-  font-size: 1.5rem;
-  color: #777;
 `
 
 export const Cookies = styled.div`
@@ -750,7 +583,7 @@ Cookies.Controls = styled.div`
 `
 
 export const Alert = styled.div`
-  font-family: 'Graphik Regular';
+  font-family: ${fonts.regular};
   padding: 1.3rem 2rem;
   border-radius: .4rem;
   color: #fff;
@@ -766,4 +599,207 @@ export const Alert = styled.div`
   ${props => props.success && `
     background: #00a654;
   `}
+`
+
+export const Row = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-left: -2rem;
+  margin-right: -2rem;
+`
+
+export const Col = styled.div`
+  width: 100%;
+  padding: 0 2rem;
+
+  ${props => props.sm && `
+    @media screen and (min-width: 576px) {
+      width: ${100 / 12 * props.sm}%;
+    }
+  `}
+
+  ${props => props.smOffset && `
+    @media screen and (min-width: 576px) {
+      margin-left: ${100 / 12 * props.smOffset}%;
+    }
+  `}
+
+  ${props => props.md && `
+    @media screen and (min-width: 768px) {
+      width: ${100 / 12 * props.md}%;
+    }
+  `}
+
+  ${props => props.mdOffset && `
+    @media screen and (min-width: 768px) {
+      margin-left: ${100 / 12 * props.mdOffset}%;
+    }
+  `}
+
+  ${props => props.align && `
+    text-align: ${props.align};
+  `}
+
+`
+
+export const Service = styled.div`
+  @media screen and (max-width: 767px) {
+    margin-bottom: 4rem;
+  }
+`
+
+Service.Icon = styled.div`
+  width: 4rem;
+  margin-bottom: 2rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+`
+
+Service.Heading = styled.div`
+  font-family: ${fonts.medium};
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+`
+Service.Thumb = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 4rem;
+  height: 8rem;
+`
+Service.List = styled.div``
+Service.Item = styled.div`
+  font-size: 1.6rem;
+  margin-bottom: .2rem;
+
+  &::before {
+    content: '\\2014';
+    padding-right: .6rem;
+  }
+`
+
+export const CTA = styled.div`
+  position: relative;
+  margin: 0 8rem;
+  padding: 8rem 0;
+  background: ${colors.indigo};
+
+  ${Paragraph} {
+    line-height: 1.8;
+    margin: 2rem 0 4rem 0;
+    opacity: .8;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    width: 4rem;
+    height: 110%;
+    background: ${colors.white};
+    z-index: 2;
+  }
+`
+
+CTA.Image = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 48%;
+  clip-path: polygon(9% 0, 100% 0%, 100% 100%, 0 100%);
+
+  background-image: url(${icons.image1});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+`
+
+export const Chat = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+Chat.Message = styled.div`
+  max-width: 28rem;
+  padding: 1.5rem 1.5rem 1.3rem 1.5rem;
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  ${props => props.type === 'in' && `
+    border-radius: 2rem 2rem 2rem 0;
+    background: #eee;
+    color: ${colors.base};
+    align-self: flex-start;
+  `}
+
+  ${props => props.type === 'out' && `
+    border-radius: 2rem 2rem 0 2rem;
+    background: ${colors.indigo};
+    color: ${colors.white};
+    align-self: flex-end;
+  `}
+`
+
+export const Messangers = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+Messangers.Item = styled.div`
+  width: 8rem;
+  opacity: .8;
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  ${props => props.width && `
+    width: ${props.width};
+  `}
+`
+
+Messangers.Icon = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
+`
+
+export const Social = styled.div`
+  display: inline-flex;
+  margin-left: auto;
+`
+
+Social.Item = styled.a`
+  display: block;
+  opacity: .6;
+  transition: opacity .2s ease-out;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin: 0 2rem 0 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+`
+
+Social.Icon = styled.div`
+  svg {
+    color: ${colors.white};
+    width: 2.4rem !important;
+    height: 2.4rem;
+  }
 `
