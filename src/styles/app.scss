@@ -1,0 +1,425 @@
+@import "./vendor/normalize.css";
+@import "./vendor/grid.css";
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./typo.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Graphik Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: map-get($colors, base);
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+a {
+  &:link,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 $gutter;
+}
+
+.page {
+  background: map-get($colors, white);
+  
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  padding: $grid 0;
+
+  @media screen and (min-width: 768px) {
+    padding: $grid * 2 0;
+  }
+
+  &_tiny {
+    padding: $grid 0;
+  }
+
+  &__head {
+    margin-bottom: $grid;
+  }
+
+  &__content {
+
+  }
+
+  &_gray {
+    background: #f6fafd;
+  }
+
+  &_bottom-clear {
+    padding-bottom: 0;
+  }
+}
+
+.head {
+  &__title {
+
+  }
+
+  &__description {
+    padding-top: $gutter / 2;
+  }
+}
+
+.header {
+  padding: $grid 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+
+  }
+
+  &__nav {
+
+  }
+}
+
+.logo {
+  width: 4rem;
+
+  &__source {
+    display: block;
+    width: 100%;
+    transform: rotate(-45deg);
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: $gutter * 2;
+    }
+
+    &_email {
+      &::before {
+        content: '/';
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    color: map-get($colors, base);
+    transition: color .2s;
+
+    &:hover {
+      color: map-get($colors, indigo);
+    }
+  }
+}
+
+.hero {
+  &__heading {
+    color: map-get($colors, indigo);
+    margin-bottom: 4rem;
+  }
+
+  &__description {
+    font-size: 2.4rem;
+    max-width: 70rem;
+    color: map-get($colors, gray);
+
+    p {
+      margin: 0 0 $gutter 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+
+  &__count {
+    position: relative;
+    top: .4rem;
+    font-family: 'Gilroy';
+    font-size: 6rem;
+    font-weight: 600;
+    color: map-get($colors, indigo);
+  }
+
+  &__text {
+    line-height: 1.3;
+    margin-left: 1rem;
+    color: map-get($colors, gray);
+  }
+}
+
+.card {
+  margin-top: $grid;
+
+  &_center {
+    text-align: center;
+  }
+
+  &_clear {
+    margin-top: 0;
+  }
+
+  &__title {
+    margin-bottom: $grid / 2;
+    // color: map-get($colors, indigo);
+  }
+
+  &__description {
+    opacity: .8;
+    max-width: 90%;
+    min-height: $grid;
+    margin-bottom: $grid / 2;
+  }
+
+  &__content {
+    
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__item {
+    font-size: 1.8rem;
+    background: rgba(map-get($colors, indigo), .1);
+    color: map-get($colors, indigo);
+    padding: $gutter / 4 $gutter / 2;
+    margin: 0 $gutter / 2 $gutter / 2 0;
+    border-radius: .4rem;
+  }
+
+  &__text {
+    
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    opacity: .8;
+  }
+
+  &__image {
+    &:not(:first-child) {
+      margin-left: $gutter;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__button {
+    margin-top: $gutter;
+  }
+}
+
+.scream {
+  @extend h3;
+  font-weight: 400;
+}
+
+.messages {
+  margin-top: $grid;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: $gutter;
+    }
+  }
+
+  &__message {
+    display: inline-flex;
+    padding: 1rem 2rem;
+    border-radius: 2rem 2rem 2rem 0;
+    background: #e9f0f5;
+    max-width: 60%;
+    font-size: 1.8rem;
+
+    &_my {
+      border-radius: 2rem 2rem 0 2rem;
+      background: map-get($colors, indigo);
+      color: #fff;
+      margin-left: auto;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #202945;
+  // background: map-get($colors, indigo);
+  color: map-get($colors, white);
+  z-index: 1;
+
+  &__inner {
+    padding: $grid * 2 0 $grid 0;
+  }
+
+  &__title {
+    margin-bottom: $gutter;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 2.8rem;
+    
+    a {
+      display: inline-block;
+      margin-left: $gutter / 2;
+
+      color: map-get($colors, white);
+      transition: opacity .2s;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: $grid;
+    border-top: .2rem solid rgba(map-get($colors, white), .2);
+    padding-top: $grid;
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__address {
+    opacity: .5;
+    margin-bottom: $gutter;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.social {
+  display: inline-flex;
+  margin-left: auto;
+
+  &__item {
+    display: block;
+    opacity: .6;
+    transition: opacity .2s ease-out;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin: 0 2rem 0 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    svg {
+      color: map-get($colors, white);
+      width: 2.4rem !important;
+      height: 2.4rem;
+    }
+  }
+}
+
+.collage {
+  position: relative;
+  z-index: 0;
+  height: 600px;
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  & > div {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: $gutter / 2 $gutter;
+  background: map-get($colors, indigo);
+  color: map-get($colors, white);
+  border-radius: .4rem;
+  outline: 0;
+}

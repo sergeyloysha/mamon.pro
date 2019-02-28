@@ -59,6 +59,27 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="app" class="app"></div>
+
+  <script>
+    var footer, page, size;
+
+    window.addEventListener("load", function(event) {
+      footer = document.querySelector('footer');
+      page = document.querySelector('.page');
+
+      function stickyFooter () {
+        size = footer.getBoundingClientRect().height
+        page.style.marginBottom = size + 'px'
+
+        console.log(size)
+      }
+
+      window.addEventListener('resize', stickyFooter)
+
+      stickyFooter()
+
+    });
+  </script>
 </body>
 
 </html>

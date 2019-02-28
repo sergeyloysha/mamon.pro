@@ -1,0 +1,46 @@
+h1 {
+  font-family: 'Graphik Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+  font-family: 'Graphik Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-family: 'Graphik Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 3.2rem;
+  }
+}
+
+p {
+  margin: 0 0 $gutter 0;
+}
+
+.color {
+  &-indigo {
+    color: map-get($colors, indigo);
+  }
+}
+
+.center {
+  text-align: center;
+}
