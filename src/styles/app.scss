@@ -179,6 +179,7 @@ a {
     font-family: 'Gilroy Bold';
     font-size: 6rem;
     color: map-get($colors, indigo);
+    line-height: 1;
   }
 
   &__text {
