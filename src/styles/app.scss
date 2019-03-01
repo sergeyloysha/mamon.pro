@@ -173,33 +173,18 @@ a {
 
 .stat {
   display: flex;
-  align-items: center;
 
   &__count {
     position: relative;
-    display: flex;
-    align-items: center;
-    height: 5.2rem;
-    top: .4rem;
-    
-    div {
-      font-family: 'Gilroy Bold';
-      font-size: 6rem;
-      color: map-get($colors, indigo);
-      line-height: 5.2rem;
-    }
+    font-family: 'Gilroy Bold';
+    font-size: 6rem;
+    color: map-get($colors, indigo);
   }
 
   &__text {
-    display: flex;
-    align-items: center;
-    height: 5.2rem;
-
-    div {
-      line-height: 1.3;
-      margin-left: 1rem;
-      color: map-get($colors, gray);
-    }
+    line-height: 1.3;
+    margin-left: 2rem;
+    color: map-get($colors, gray);
   }
 }
 

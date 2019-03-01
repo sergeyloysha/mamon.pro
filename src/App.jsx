@@ -54,26 +54,26 @@ class App extends Component {
               <div className='row'>
                 <div className='col-xs-6 col-md-3'>
                   <div className='stat'>
-                    <div className='stat__count'><div>16</div></div>
-                    <div className='stat__text'><div>Projects<br />launched</div></div>
+                    <div className='stat__count'>16</div>
+                    <div className='stat__text'>Projects<br />launched</div>
                   </div>
                 </div>
                 <div className='col-xs-6 col-md-3'>
                   <div className='stat'>
-                    <div className='stat__count'><div>04</div></div>
-                    <div className='stat__text'><div>Countries<br />represented</div></div>
+                    <div className='stat__count'>04</div>
+                    <div className='stat__text'>Countries<br />represented</div>
                   </div>
                 </div>
                 <div className='col-xs-6 col-md-3'>
                   <div className='stat'>
-                    <div className='stat__count'><div>03</div></div>
-                    <div className='stat__text'><div>Years in<br />business</div></div>
+                    <div className='stat__count'>03</div>
+                    <div className='stat__text'>Years in<br />business</div>
                   </div>
                 </div>
                 <div className='col-xs-6 col-md-3'>
                   <div className='stat'>
-                    <div className='stat__count'><div>08</div></div>
-                    <div className='stat__text'><div>In-house<br />employees</div></div>
+                    <div className='stat__count'>08</div>
+                    <div className='stat__text'>In-house<br />employees</div>
                   </div>
                 </div>
               </div>
