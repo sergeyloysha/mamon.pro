@@ -201,17 +201,14 @@ class App extends Component {
                 <div className='collage__item collage__item_new' style={{ width: '576px', left: '37.2917%', top: '233px', zIndex: 11 }}>
                   <img src='/assets/images/projects/1.png' alt='' />
                 </div>
-                <div className='collage__item' style={{ width: '258px', left: '14.3056%', top: '305px' }}>
-                  <img src='https://d2998a9lzvovjv.cloudfront.net/collage-4@1x.43e9845e.png' alt='' />
-                </div>
-                <div className='collage__item' style={{ width: '203px', left: '2.91667%', top: '23px' }}>
+                <div className='collage__item' style={{ width: '200px', left: '15%', top: '220px', zIndex: 10 }}>
                   <img src='https://d2998a9lzvovjv.cloudfront.net/collage-5@1x.690c7042.png' alt='' />
                 </div>
                 <div className='collage__item' style={{ width: '511px', left: '20.8333%', top: '15px', zIndex: 8 }}>
                   <img src='https://d2998a9lzvovjv.cloudfront.net/collage-6@1x.b92a5336.png' alt='' />
                 </div>
-                <div className='collage__item' style={{ width: '630px', left: '15.4167%', top: '454px' }}>
-                  <img src='https://d2998a9lzvovjv.cloudfront.net/collage-7@1x.3a7273e7.png' alt='' />
+                <div className='collage__item' style={{ width: '400px', left: '15.4167%', top: '454px' }}>
+                  <img src='/assets/images/projects/6.png' alt='' />
                 </div>
                 <div className='collage__item' style={{ width: '83px', left: '90.9028%', top: '119px', zIndex: 11 }}>
                   <img src='https://d2998a9lzvovjv.cloudfront.net/collage-8@1x.13f5e54b.png' alt='' />
