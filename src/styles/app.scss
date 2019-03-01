@@ -176,7 +176,7 @@ a {
 
   &__count {
     position: relative;
-    font-family: 'Gilroy Bold';
+    font-weight: 600;
     font-size: 6rem;
     color: map-get($colors, indigo);
     line-height: 6rem;
