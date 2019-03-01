@@ -173,6 +173,7 @@ a {
 
 .stat {
   display: flex;
+  align-items: center;
 
   &__count {
     position: relative;
