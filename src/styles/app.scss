@@ -394,17 +394,23 @@ a {
 .collage {
   position: relative;
   z-index: 0;
-  height: 600px;
+  height: 680px;
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
 
-  & > div {
+  &__item {
     display: block;
     position: absolute;
     max-width: 100%;
     overflow: hidden;
+    
+    &_new {
+      border-radius: .4rem;
+      box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
 
     img {
       display: block;
