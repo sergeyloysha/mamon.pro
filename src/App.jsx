@@ -253,11 +253,34 @@ class App extends Component {
               <div className='section__content'>
                 <div className='row'>
                   <div className='col-md-8 col-md-offset-2'>
+                    <div className='testimonial'>
+                      <div className='testimonial__text'>Mamon is one of the best front-end teams we have worked with. Their work has the power to change your business.</div>
+                      <div className='testimonial__author'>
+                        <div className='testimonial__author-photo'>
+                          <img src='/assets/images/testimonials/angela-w.jpeg' alt='Angela Wiesenmüller' />
+                        </div>
+                        <div className='testimonial__author-info'>
+                          <div className='testimonial__author-name'>Angela Wiesenmüller</div>
+                          <div className='testimonial__author-position'>Director EMEA at Meltwater</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className='section'>
+            <div className='container'>
+              <div className='section__content'>
+                <div className='row'>
+                  <div className='col-md-8 col-md-offset-2'>
                     <div className='card card_center card_clear'>
-                      <h2 className='card__title'>Let's talk</h2>
+                      <h2 className='card__title'>Have a project for us?</h2>
                       <div className='card__text'>We would love for you to tell us more about your product; what it’s about and what you believe needs improvement.</div>
                       <div className='card__button'>
-                        <a className='button' href='mailto:hello@mamon.pro'>Talk to us</a>
+                        <a className='button' href='mailto:hello@mamon.pro'>Let's chat</a>
                       </div>
                     </div>
                   </div>

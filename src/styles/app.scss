@@ -429,3 +429,57 @@ a {
   border-radius: .4rem;
   outline: 0;
 }
+
+.testimonial {
+  text-align: center;
+
+  &__text {
+    position: relative;
+    font-size: 2.4rem;
+    margin-bottom: 10rem;
+
+    &::after {
+      position: absolute;
+      content: '“';
+      bottom: -8rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      font-size: 6rem;
+      line-height: 1;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      opacity: .5;
+    }
+  }
+
+  &__author {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+
+    &-photo {
+      width: 8rem;
+      border-radius: 100%;
+      overflow: hidden;
+      margin-right: 2rem;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-info {
+
+    }
+
+    &-name {
+      font-weight: 700;
+    }
+
+    &-position {
+      font-size: 1.6rem;
+    }
+  }
+}
