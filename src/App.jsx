@@ -248,7 +248,7 @@ class App extends Component {
             </div>
           </section>
 
-          <section className='section section_gray'>
+          <section className='section section_gray' style={{ borderTop: '1px solid #e1eaf0' }}>
             <div className='container'>
               <div className='section__content'>
                 <div className='row'>
