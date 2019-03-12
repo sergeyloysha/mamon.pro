@@ -198,7 +198,7 @@ class App extends Component {
                 <div className='collage__item' style={{ width: '199px', left: '6.11111%', top: '534px', zIndex: 9 }}>
                   <img src='https://d2998a9lzvovjv.cloudfront.net/collage-2@1x.3c561a1a.png' alt='' />
                 </div>
-                <div className='collage__item collage__item_new' style={{ width: '576px', left: '37.2917%', top: '233px', zIndex: 11 }}>
+                <div className='collage__item collage__item_new' style={{ width: '576px', left: '37.2917%', top: '325px', zIndex: 11 }}>
                   <img src='/assets/images/projects/1.png' alt='' />
                 </div>
                 <div className='collage__item' style={{ width: '200px', left: '15%', top: '220px', zIndex: 10 }}>
