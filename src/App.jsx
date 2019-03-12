@@ -108,7 +108,7 @@ class App extends Component {
                       <h2 className='card__title'>Design</h2>
                       <div className='card__description'>We know every pixel is valuable and know how to make the most pretty and intuitive apps.</div>
                       <div className='card__list'>
-                        <div className='card__item'>User Experience (UX)</div>
+                        <div className='card__item'>User Intrface (UI)</div>
                         <div className='card__item'>User Experience (UX)</div>
                         <div className='card__item'>Product Design</div>
                         <div className='card__item'>Visual Design</div>
