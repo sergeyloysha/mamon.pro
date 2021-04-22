@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-family: Gilroy, system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-size: 1.8rem;
   font-style: normal;
   line-height: 1.5;
@@ -109,9 +109,9 @@ a {
 }
 
 .logo {
-  a {
-    color: map-get($colors, indigo);
-  }
+  display: block;
+  width: 128px;
+  color: map-get($colors, indigo);
 
   svg {
     display: block;
@@ -140,6 +140,7 @@ a {
 
   &__link {
     display: inline-flex;
+    font-weight: 600;
     color: map-get($colors, base);
     transition: color .2s;
 
@@ -152,19 +153,16 @@ a {
 .hero {
   &__heading {
     color: map-get($colors, indigo);
-    margin-bottom: 2.4rem;
-
-    h1 {
-      font-weight: 800;
-      font-size: 6.4rem;
-      margin: 0;
-    }
+    margin-bottom: 1.6rem;
+    max-width: 768px;
   }
 
   &__description {
+    font-weight: 500;
     font-size: 2.4rem;
-    max-width: 80%;
-    color: map-get($colors, gray);
+    line-height: 3.2rem;
+    max-width: 640px;
+    color: map-get($colors, black);
 
     p {
       margin: 0 0 1.6rem 0;
