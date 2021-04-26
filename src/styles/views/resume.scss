@@ -1,0 +1,42 @@
+.resume {
+  &__inner {
+    width: 1032px;
+    padding: calc(var(--gap) * 4);
+    margin: 0 auto;
+  }
+
+  &__head {
+    padding: calc(var(--gap) * 10) calc(var(--gap) * 16) calc(var(--gap) * 5) calc(var(--gap) * 16);
+    border-bottom: 1px solid var(--color-gray);
+  }
+
+  &__position {
+    color: var(--color-black);
+  }
+
+  &__heading {
+    color: var(--color-purple);
+
+    h1 {
+      font-size: 4.8rem;
+      line-height: 6.4rem;
+      letter-spacing: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__main {
+    flex: 1;
+    padding: calc(var(--gap) * 10) calc(var(--gap) * 10) calc(var(--gap) * 10) calc(var(--gap) * 16);
+  }
+
+  &__sidebar {
+    flex-shrink: 0;
+    width: 388px;
+    padding: calc(var(--gap) * 10) calc(var(--gap) * 16) calc(var(--gap) * 10) calc(var(--gap) * 10);
+    border-left: 1px solid var(--color-gray);
+  }
+}
