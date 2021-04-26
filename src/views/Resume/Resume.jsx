@@ -121,9 +121,13 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
                     </div>
                     <div className="cv-section__content">
                       {resume.contacts.map((item, key) => (
-                        <div className="resume-section__line resume-section__text" key={key}>
-                          <h5>{item.name}</h5>
-                          <p>{item.value}</p>
+                        <div className="cv-section__item cv-item" key={key}>
+                          <div className="cv-item__title">
+                            <h5>{item.name}</h5>
+                          </div>
+                          <div className="cv-item__content">
+                            <p>{item.value}</p>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -133,82 +137,45 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
                 <div className="cv-block__section">
                   <div className="cv-section">
                     <div className="cv-section__title">
-                      <h3></h3>
+                      <h3>Languages</h3>
                     </div>
-                    <div className="cv-section__content"></div>
+                    <div className="cv-section__content">
+                      {resume.languages.map((item, key) => (
+                        <div className="cv-section__item cv-item" key={key}>
+                          <div className="cv-item__title">
+                            <h5>{item.name}</h5>
+                          </div>
+                          <div className="cv-item__content">
+                            <p>{languageLevels[item.level]}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
                 <div className="cv-block__section">
                   <div className="cv-section">
                     <div className="cv-section__title">
-                      <h3></h3>
+                      <h3>Skills</h3>
                     </div>
-                    <div className="cv-section__content"></div>
+                    <div className="cv-section__content">
+                      {resume.skills.map((item, key) => (
+                        <p key={key}>
+                          <h5>{item.name}</h5>
+                          <span>Expert</span>
+                          <div className="resume__skillProgress" />
+                          <div className="resume__skillLine" style={{ width: `${item.level}%` }} />
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
         </main>
-      </div>
-    </div>
-  )
-
-  return (
-    <div className="resume">
-      <div className="resume__inner">
-        <div className="resume__head">
-          <div className="resume__position">{resume.position}</div>
-          <div className="resume__heading">
-            <h1>{resume.firstName} {resume.lastName}</h1>
-          </div>
-        </div>
-        <div className="resume__content">
-          <div className="resume__main">
-            
-          </div>
-
-          <div className="resume__sidebar">
-
-            <div className="resume__section">
-              <div className="resume-section">
-                <div className="resume-section__heading">
-                  <h3>Languages</h3>
-                </div>
-                <div className="resume-section__content">
-                  {resume.languages.map((item, key) => (
-                    <div className="resume-section__line resume-section__text" key={key}>
-                      <h5>{item.name}</h5>
-                      <span>{languageLevels[item.level]}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="resume__section">
-              <div className="resume-section">
-                <div className="resume-section__heading">
-                  <h3>Skills</h3>
-                </div>
-                <div className="resume-section__content">
-                  <div className="resume-section__text">
-                    {resume.skills.map((item, key) => (
-                      <p key={key}>
-                        <h5>{item.name}</h5>
-                        <span>Expert</span>
-                        <div className="resume__skillProgress" />
-                        <div className="resume__skillLine" style={{ width: `${item.level}%` }} />
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )
