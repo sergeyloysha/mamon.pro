@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import resumes from '../../data/resumes'
 import history from '../../history'
 
-const Resume = ({ match: { params: { username, id } }, ...props }) => {
+const Resume = ({ match: { params: { id } }, ...props }) => {
   const [resume, setResume] = useState(null)
 
   useEffect(() => {
