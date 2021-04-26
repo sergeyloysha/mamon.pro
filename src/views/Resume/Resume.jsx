@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import html2pdf from 'html2pdf.js'
 
 import resumes from '../../data/resumes'
 import history from '../../history'
@@ -17,6 +18,20 @@ const languageLevels = [
 const Resume = ({ match: { params: { id } }, ...props }) => {
   const [resume, setResume] = useState(null)
 
+  const refPdf = useRef(null)
+
+  const downloadPdf = () => {
+    const opt = {
+      margin: 1,
+      filename: `CV-${resume.firstName}-${resume.lastName}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      // html2canvas:  { scale: 1 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }
+
+    html2pdf().set(opt).from(refPdf.current.innerHTML).save()
+  }
+
   useEffect(() => {
     if(resumes[id]) {
       setResume(resumes[id])
@@ -26,7 +41,7 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
   }, [])
 
   if(resume === null) return null
-  
+
   return (
     <div className="cv-page">
       <div className="cv-page__header">
@@ -36,14 +51,14 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
               <Logo />
             </div>
             <div className="cv-header__button">
-              <div className="cv-button">Download PDF</div>
+              <div onClick={downloadPdf} className="cv-button">Download PDF</div>
             </div>
           </div>
         </header>
       </div>
       <div className="cv-page__content">
         <main className="cv-block">
-          <div className="cv-block__inner">
+          <div className="cv-block__inner" ref={refPdf}>
             <div className="cv-block__head">
               <div className="cv-block__heading">
                 <h1>{resume.firstName} {resume.lastName}</h1>
