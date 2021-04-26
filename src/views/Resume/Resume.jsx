@@ -56,22 +56,18 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
 
                 <div className="cv-block__section">
                   <div className="cv-section">
-                    <div className="cv-section__title">
+                    <div className="cv-section__title cv-section__title_green">
                       <h3>Education</h3>
                     </div>
                     <div className="cv-section__content">
                       {resume.education.map((item, key) => (
-                        <div className="resume-section__item" key={key}>
-                          <div className="item-education">
-                            <div className="item-education__head">
-                              <div className="item-education__name">
-                                <h5>{item.name}</h5>
-                              </div>
-                              <div className="item-education__years">{item.yearFrom} - {item.yearTo}</div>
+                        <div className="cv-section__item" key={key}>
+                          <div className="cv-edutaction">
+                            <div className="cv-education__head">
+                              <div className="cv-education__name">{item.name}</div>
+                              <div className="cv-education__years">{item.yearFrom} - {item.yearTo}</div>
                             </div>
-                            <div className="item-education__text">
-                              {item.value}
-                            </div>
+                            <div className="cv-education__text">{item.value}</div>
                           </div>
                         </div>
                       ))}
@@ -81,16 +77,20 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
 
                 <div className="cv-block__section">
                   <div className="cv-section">
-                    <div className="cv-section__title">
+                    <div className="cv-section__title cv-section__title_purple">
                       <h3>Last experience</h3>
                     </div>
                     <div className="cv-section__content">
                       {resume.projects.map((item, key) => (
-                        <div className="resume-section__line resume-section__text" key={key}>
-                          <h5>{item.environment}</h5>
-                          <p>{item.dateFrom} – {item.dateTo}</p>
-                          <p>{item.role}</p>
-                          <p>{item.summary}</p>
+                        <div className="cv-section__item cv-section__item_large" key={key}>
+                          <div className="cv-experience">
+                            <div className="cv-experience__stack">{item.environment}</div>
+                            <div className="cv-experience__meta">
+                              <div className="cv-experience__item">{item.role}</div>
+                              <div className="cv-experience__item">{item.dateFrom} – {item.dateTo}</div>
+                            </div>
+                            <div className="cv-experience__text">{item.summary}</div>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -101,7 +101,7 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
               <div className="cv-block__side">
                 <div className="cv-block__section">
                   <div className="cv-section">
-                    <div className="cv-section__title">
+                    <div className="cv-section__title cv-section__title_red">
                       <h3>Contacts</h3>
                     </div>
                     <div className="cv-section__content">
@@ -121,7 +121,7 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
 
                 <div className="cv-block__section">
                   <div className="cv-section">
-                    <div className="cv-section__title">
+                    <div className="cv-section__title cv-section__title_blue">
                       <h3>Languages</h3>
                     </div>
                     <div className="cv-section__content">
@@ -141,17 +141,21 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
 
                 <div className="cv-block__section">
                   <div className="cv-section">
-                    <div className="cv-section__title">
-                      <h3>Skills</h3>
+                    <div className="cv-section__title cv-section__title_orange">
+                      <h3>Core Skills</h3>
                     </div>
                     <div className="cv-section__content">
                       {resume.skills.map((item, key) => (
-                        <p key={key}>
-                          <h5>{item.name}</h5>
-                          <span>Expert</span>
-                          <div className="resume__skillProgress" />
-                          <div className="resume__skillLine" style={{ width: `${item.level}%` }} />
-                        </p>
+                        <div className="cv-section__item cv-item" key={key}>
+                          <div className="cv-item__title">
+                            <h5>{item.name}</h5>
+                          </div>
+                          <div className="cv-item__content">
+                            <div className="cv-progress">
+                              <span style={{width: `${item.level}%`}}></span>
+                            </div>
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </div>

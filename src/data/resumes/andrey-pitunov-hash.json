@@ -49,92 +49,88 @@
       "dateTo": "April 2021",
       "role": "Front-end developer",
       "summary": "An mobile application that allow user friendly access to the registers of soccer schools. According to the app coaches can check their calendar to be aware of trainings; manage trainee’s arrivals/departures and check their personal info.",
-      "environment": "React-Native, REDUX, styled-components, Redux-Persist, Offline mode"
+      "environment": "React-Native, Redux, Redux-Persist, Styled-components, Offline mode"
     },
     {
       "dateFrom": "January 2021",
       "dateTo": "February 2021",
       "role": "Front-end developer",
       "summary": "A modern automated documentation system dedicated to development teams. It automates Git repositories tech documentation from source files, statistics and custom notes for easily onboarding of new team members or future long term project support.    ",
-      "environment": "Pug, SCSS, Vanilla Js, React, REST  API"
+      "environment": "Pug, SCSS, React, JavaScript, REST API"
     },
     {
-      "dateFrom": "October 2020    ",
-      "dateTo": "December 2020    ",
+      "dateFrom": "October 2020",
+      "dateTo": "December 2020",
       "role": "Front-end developer",
       "summary": "hormiga app - Web application for tracking your parcels. Arabic localization was used. Advanced & interactive update delivery parameters (date and time, place, etc)    ",
-      "environment": "HTML/CSS, React, REDUX, styled-components, google maps api, google autocomplete api    "
+      "environment": "HTML/CSS, React, Redux, Styled-components, Google Maps API, Google Autocomplete API"
     },
     {
-      "dateFrom": "September 2020    ",
-      "dateTo": "October 2020    ",
+      "dateFrom": "September 2020",
+      "dateTo": "October 2020",
       "role": "Front-end developer",
-      "summary": "Ameda - redesign    ",
-      "environment": "HTML/CSS, JavaScript    "
+      "summary": "Ameda - redesign",
+      "environment": "HTML, CSS, JavaScript"
     },
     {
-      "dateFrom": "March 2020    ",
-      "dateTo": "August 2020    ",
+      "dateFrom": "March 2020",
+      "dateTo": "August 2020",
       "role": "Front-end developer",
-      "summary": "Architecture and development of a complex CRM system for funeral industry    ",
-      "environment": "HTML/CSS, React, REDUX, socket.io, styled-components    "
+      "summary": "Architecture and development of a complex CRM system for funeral industry",
+      "environment": "HTML, PostCSS, React, Redux, Socket.io, Styled-components"
     },
     {
-      "dateFrom": "January 2020    ",
-      "dateTo": "March 2020    ",
+      "dateFrom": "January 2020",
+      "dateTo": "March 2020",
       "role": "Front-end developer",
-      "summary": "Architecture and development of art gallery social network web applications using React/Redux    ",
-      "environment": "HTML/CSS, React, REDUX, socket.io, styled-components    "
+      "summary": "Architecture and development of art gallery social network web applications using React/Redux",
+      "environment": "HTML, PostCSS, React, Redux, Socket.io, Styled-components"
     }
   ],
   "skills": [
     {
-      "name": "JavaScript",
+      "name": "JavaScript / TypeScript",
+      "level": 90
+    },
+    {
+      "name": "React",
+      "level": 90
+    },
+    {
+      "name": "React Native",
       "level": 80
     },
     {
-      "name": "TypeScript",
-      "level": 65
+      "name": "Next.js",
+      "level": 90
     },
     {
-      "name": "ReactJs",
-      "level": 80
+      "name": "Gatsby",
+      "level": 70
     },
     {
-      "name": "React Native    ",
-      "level": 80
+      "name": "Node / Express",
+      "level": 70
     },
     {
-      "name": "NextJs ",
-      "level": 80
-    },
-    {
-      "name": "GatsbyJs ",
-      "level": 80
-    },
-    {
-      "name": "SocketIo ",
+      "name": "Socket.IO",
       "level": 75
     },
     {
-      "name": "SCSS/SASS    ",
-      "level": 95
+      "name": "PostCSS / SCSS / Stylus",
+      "level": 100
     },
     {
-      "name": "CSS-in-JS    ",
+      "name": "CSS-in-JS",
+      "level": 100
+    },
+    {
+      "name": "Jade / Twig",
       "level": 90
     },
     {
-      "name": "css / postcss / tailwind    ",
-      "level": 90
-    },
-    {
-      "name": "pug / jade    ",
-      "level": 80
-    },
-    {
-      "name": "PWA ",
-      "level": 60
+      "name": "PWA",
+      "level": 65
     }
   ]
 }
