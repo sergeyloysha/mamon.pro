@@ -1,4 +1,6 @@
-
+:root {
+  --gap: 0.4rem;
+}
 
 $colors: (
   white: #fff,
@@ -10,3 +12,5 @@ $colors: (
 
 $gutter: 2rem;
 $grid: 5rem;
+
+$gap: .4rem;
