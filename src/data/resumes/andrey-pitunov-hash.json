@@ -1,13 +1,14 @@
 {
+  "position": "Front-end Developer",
   "firstName": "Andrey",
   "lastName": "Pitunov",
   "summary": "<p>Solid understanding and advanced skills of working with front-end web technologies like HTML/CSS, JavaScript, React Native, ReactJS/Redux, NextJs</p><p>Involved with the development team in estimating, planning and refactoring software development programs, projects and tasks</p><p>Leading development effort for features on the client side</p><p>Ability to identify core requirements of a successful web page navigation</p><p>Follow programming standards and best practice</p>",
   "languages": [{
     "name": "Russian",
-    "level": 5
+    "level": 10
   }, {
     "name": "English",
-    "level": 2
+    "level": 20
   }],
   "contacts": [{
     "key": "email",
