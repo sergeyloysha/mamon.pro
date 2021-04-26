@@ -1,0 +1,46 @@
+{
+  "firstName": "Andrey",
+  "lastName": "Pitunov",
+  "summary": "<p>Solid understanding and advanced skills of working with front-end web technologies like HTML/CSS, JavaScript, React Native, ReactJS/Redux, NextJs</p><p>Involved with the development team in estimating, planning and refactoring software development programs, projects and tasks</p><p>Leading development effort for features on the client side</p><p>Ability to identify core requirements of a successful web page navigation</p><p>Follow programming standards and best practice</p>",
+  "languages": [{
+    "name": "Russian",
+    "level": 5
+  }, {
+    "name": "English",
+    "level": 2
+  }],
+  "contacts": [{
+    "key": "email",
+    "type": "text",
+    "value": "andrey.pitunov@mamon.pro"
+  }, {
+    "key": "phone",
+    "type": "text",
+    "value": "+375 (25) 768-40-23"
+  }, {
+    "key": "linkedin",
+    "type": "text",
+    "value": "/in/andreypitunov"
+  }, {
+    "key": "github",
+    "type": "text",
+    "value": "@andreypitunov"
+  }],
+  "education": [{
+    "name": "Belarusian State University of Informatics and Radioelectronics",
+    "value": "Software engineer",
+    "yearFrom": "2013",
+    "yearTo": "2018"
+  }],
+  "projects": [{
+    "dateFrom": "February 2021",
+    "dateTo": "April 2021",
+    "role": "Front-end developer",
+    "summary": "An mobile application that allow user friendly access to the registers of soccer schools. According to the app coaches can check their calendar to be aware of trainings; manage trainee’s arrivals/departures and check their personal info.",
+    "environment": "React-Native, REDUX, styled-components, Redux-Persist, Offline mode"
+  }],
+  "skills": [{
+    "name": "JavaScript",
+    "level": 60
+  }]
+}
