@@ -109,6 +109,10 @@
       "level": 70
     },
     {
+      "name": "Redux (Thunk / Saga)",
+      "level": 70
+    },
+    {
       "name": "Node / Express",
       "level": 70
     },
@@ -127,6 +131,10 @@
     {
       "name": "Jade / Twig",
       "level": 90
+    },
+    {
+      "name": "GraphQL / REST API",
+      "level": 65
     },
     {
       "name": "PWA",
