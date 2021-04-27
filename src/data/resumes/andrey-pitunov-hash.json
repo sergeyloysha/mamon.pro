@@ -110,7 +110,7 @@
     },
     {
       "name": "Redux (Thunk / Saga)",
-      "level": 70
+      "level": 75
     },
     {
       "name": "Node / Express",
@@ -134,7 +134,7 @@
     },
     {
       "name": "GraphQL / REST API",
-      "level": 65
+      "level": 80
     },
     {
       "name": "PWA",
