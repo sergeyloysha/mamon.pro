@@ -115,14 +115,14 @@ const Home = () => {
                     </div>
                     <div className='card__list'>
                       <div className='card__item'>React</div>
-                      <div className='card__item'>Vue</div>
-                      <div className='card__item'>NextJS</div>
+                      <div className='card__item'>Next.js</div>
+                      <div className='card__item'>Gatsby</div>
                       <div className='card__item'>Wordpress</div>
                       <div className='card__item'>ES5 / ES6+</div>
                       <div className='card__item'>HTML5</div>
                       <div className='card__item'>SCSS</div>
                       <div className='card__item'>Stylus</div>
-                      <div className='card__item'>Node</div>
+                      <div className='card__item'>Node/Express</div>
                       <div className='card__item'>PHP</div>
                     </div>
                   </div>

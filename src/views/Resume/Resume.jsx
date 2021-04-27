@@ -47,9 +47,9 @@ const Resume = ({ match: { params: { id } }, ...props }) => {
       <div className="cv-page__header">
         <header className="cv-header">
           <div className="cv-header__inner">
-            <div className="cv-header__logo">
+            <a href="/" className="cv-header__logo">
               <Logo />
-            </div>
+            </a>
             <div className="cv-header__button">
               <div onClick={downloadPdf} className="cv-button">Download PDF</div>
             </div>
