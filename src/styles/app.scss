@@ -42,7 +42,7 @@ a {
 }
 
 .page {
-  background: map-get($colors, white);
+  background: var(--color-white);
   
   position: relative;
   z-index: 2;
@@ -327,7 +327,7 @@ a {
   bottom: 0;
   background: var(--color-purple);
   // background: map-get($colors, indigo);
-  color: map-get($colors, white);
+  color: var(--color-white);
   z-index: 1;
 
   &__inner {
@@ -353,7 +353,7 @@ a {
       display: inline-block;
       margin-left: $gutter / 2;
 
-      color: map-get($colors, white);
+      color: var(--color-white);
       transition: opacity .2s;
 
       &:hover {
@@ -364,7 +364,7 @@ a {
 
   &__bottom {
     margin-top: $grid;
-    border-top: .2rem solid rgba(map-get($colors, white), .2);
+    border-top: .2rem solid rgba(var(--color-white), .2);
     padding-top: $grid;
 
     display: flex;
@@ -409,7 +409,7 @@ a {
 
   &__icon {
     svg {
-      color: map-get($colors, white);
+      color: var(--color-white);
       width: 2.4rem !important;
       height: 2.4rem;
     }
@@ -448,11 +448,15 @@ a {
 
 .button {
   display: inline-block;
-  padding: $gutter / 2 $gutter;
-  background: map-get($colors, indigo);
-  color: map-get($colors, white);
+  padding: calc(var(--gap) * 3) calc(var(--gap) * 5);
+  background-color: var(--color-purple);
+  color: var(--color-white);
   border-radius: .4rem;
   outline: 0;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 .testimonial {
