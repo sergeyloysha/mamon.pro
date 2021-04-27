@@ -49,7 +49,7 @@
       "dateTo": "April 2021",
       "role": "Front-end developer",
       "summary": "An mobile application that allow user friendly access to the registers of soccer schools. According to the app coaches can check their calendar to be aware of trainings; manage trainee’s arrivals/departures and check their personal info.",
-      "environment": "React-Native, Redux, Redux-Persist, Styled-components, Offline mode"
+      "environment": "React-Native, Redux, Redux-Persist, Astroturf, Offline mode"
     },
     {
       "dateFrom": "January 2021",

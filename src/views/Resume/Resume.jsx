@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import html2pdf from 'html2pdf.js'
 
-import resumes from '../../data/resumes'
+import resumes from '../../data/cv'
 import history from '../../history'
 import { Logo } from '../../components/icons'
 import './Resume.scss'

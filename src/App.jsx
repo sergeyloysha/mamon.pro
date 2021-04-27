@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Router history={history}>
       <Switch>
-        <Route path='/resume/:id' component={Resume} />
+        <Route path='/cv/:id' component={Resume} />
         <Route path='/' exact component={Home} />
         <Route path='*' component={Home} />
       </Switch>
