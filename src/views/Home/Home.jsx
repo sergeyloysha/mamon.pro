@@ -12,106 +12,103 @@ const Home = () => {
   return (
     <div className='wrapper'>
       <div className='page'>
-        <header className='header'>
-          <div className='container'>
-            <div className='header__inner'>
-              <div className='header__logo'>
-                <a href='/' title='Mamon' className='logo'>
-                  <Logo />
-                </a>
-              </div>
-              <div className='header__nav'>
-                <nav className='nav'>
-                  <ul className='nav__list'>
-                    <li className='nav__item nav__item_email'>
-                      <a href='mailto:hello@mamon.pro' className='nav__link'>
-                        hello@mamon.pro
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+        <div className="page__hero">
+          <header className='header'>
+            <div className='container'>
+              <div className='header__inner'>
+                <div className='header__logo'>
+                  <a href='/' title='Mamon' className='logo'>
+                    <Logo />
+                  </a>
+                </div>
+                <div className='header__nav'>
+                  <nav className='nav'>
+                    <ul className='nav__list'>
+                      <li className='nav__item nav__item_email'>
+                        <a href='mailto:hello@mamon.pro' className='nav__link'>
+                          hello@mamon.pro
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </div>
-          </div>
-        </header>
+          </header>
 
-        <section className='section'>
-          <div className='container'>
-            <div className='hero'>
-              <div className='hero__heading'>
-                <h1>We build top-notch custom web &amp; mobile solutions</h1>
-              </div>
-              <div className='hero__description'>
-                <p>
-                  From SaaS and enterprise software to marketing websites, we
-                  create digital experiences that people love.
-                </p>
+          <section className='section'>
+            <div className='container'>
+              <div className='hero'>
+                <div className='hero__heading'>
+                  <h1>We build top-notch custom web &amp; mobile solutions</h1>
+                </div>
+                <div className='hero__description'>
+                  <p>
+                    From SaaS and enterprise software to marketing websites, we
+                    create digital experiences that people love.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className='section section_tiny'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-xs-6 col-md-3'>
-                <div className='stat'>
-                  <div className='stat__count'>32</div>
-                  <div className='stat__text'>
-                    Projects
-                    <br />
-                    launched
+          </section>
+          <section className='section section_tiny'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-xs-6 col-md-3'>
+                  <div className='stat'>
+                    <div className='stat__count'>43</div>
+                    <div className='stat__text'>
+                      Projects
+                      <br />
+                      launched
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className='col-xs-6 col-md-3'>
-                <div className='stat'>
-                  <div className='stat__count'>07</div>
-                  <div className='stat__text'>
-                    Countries
-                    <br />
-                    represented
+                <div className='col-xs-6 col-md-3'>
+                  <div className='stat'>
+                    <div className='stat__count'>07</div>
+                    <div className='stat__text'>
+                      Countries<br />represented
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className='col-xs-6 col-md-3'>
-                <div className='stat'>
-                  <div className='stat__count'>04</div>
-                  <div className='stat__text'>
-                    Years in
-                    <br />
-                    business
+                <div className='col-xs-6 col-md-3'>
+                  <div className='stat'>
+                    <div className='stat__count'>04</div>
+                    <div className='stat__text'>
+                      Years in
+                      <br />
+                      business
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className='col-xs-6 col-md-3'>
-                <div className='stat'>
-                  <div className='stat__count'>05</div>
-                  <div className='stat__text'>
-                    In-house
-                    <br />
-                    employees
+                <div className='col-xs-6 col-md-3'>
+                  <div className='stat'>
+                    <div className='stat__count'>05</div>
+                    <div className='stat__text'>
+                      In-house
+                      <br />
+                      employees
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section className='section'>
           <div className='container'>
             <div className='section__head'>
-              <div className='scream'>
-                Want to know what we can do for you?
-                <br />
-                <strong>It’s a mix of these things:</strong>
-              </div>
+              <h2>Want to know what we can do for you?</h2>
             </div>
             <div className='section__content'>
               <div className='row'>
                 <div className='col-md-6'>
                   <div className='card'>
-                    <h2 className='card__title'>Development</h2>
+                    <div className='card__title'>
+                      <h3>Development</h3>
+                    </div>
                     <div className='card__description'>
                       We can turn designs into live products with clean code
                       that is on par with todays standards.
@@ -132,7 +129,9 @@ const Home = () => {
                 </div>
                 <div className='col-md-6'>
                   <div className='card'>
-                    <h2 className='card__title'>Design</h2>
+                    <div className='card__title'>
+                      <h3>Design</h3>
+                    </div>
                     <div className='card__description'>
                       We know every pixel is valuable and know how to make the
                       most pretty and intuitive apps.
@@ -146,9 +145,13 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="row">
                 <div className='col-md-6'>
                   <div className='card'>
-                    <h2 className='card__title'>Marketing</h2>
+                    <div className='card__title'>
+                      <h3>Marketing</h3>
+                    </div>
                     <div className='card__description'>
                       We help marketing teams build anything they can dream of
                     </div>
@@ -163,7 +166,9 @@ const Home = () => {
                 </div>
                 <div className='col-md-6'>
                   <div className='card'>
-                    <h2 className='card__title'>Quality Assurance</h2>
+                    <div className='card__title'>
+                      <h3>Quality Assurance</h3>
+                    </div>
                     <div className='card__description'>
                       Our QA team ensures high standard of quality of products
                       delivered.
@@ -186,19 +191,15 @@ const Home = () => {
         <section className='section section_gray'>
           <div className='container'>
             <div className='section__head'>
-              <div className='scream'>
-                In addition to strong expertise, we offer:
-              </div>
+              <h2>In addition to strong expertise, we offer:</h2>
             </div>
             <div className='section__content'>
               <div className='row'>
                 <div className='col-md-6'>
                   <div className='card card_clear'>
-                    <h2 className='card__title color-indigo'>
-                      High-level
-                      <br />
-                      communication
-                    </h2>
+                    <div className='card__title color-indigo'>
+                      <h3>High-level<br />communication</h3>
+                    </div>
                     <div className='card__description'>
                       So many good teams fail because of poor planning and lack
                       of communications. We keep you aligned with our team -
@@ -485,7 +486,9 @@ const Home = () => {
               <div className='row'>
                 <div className='col-md-8 col-md-offset-2'>
                   <div className='card card_center card_clear'>
-                    <h2 className='card__title'>Have a project for us?</h2>
+                    <div className='card__title'>
+                      <h2>Have a project for us?</h2>
+                    </div>
                     <div className='card__text'>
                       We would love for you to tell us more about your product;
                       what it’s about and what you believe needs improvement.
@@ -506,7 +509,9 @@ const Home = () => {
       <footer className='footer'>
         <div className='container'>
           <div className='footer__inner'>
-            <h1 className='footer__title'>Want to work with us?</h1>
+            <div className="footer__head">
+              <div className='footer__heading'>Want to work with us?</div>
+            </div>
             <div className='footer__link'>
               /<a href='mailto:hello@mamon.pro'>hello@mamon.pro</a>
             </div>
