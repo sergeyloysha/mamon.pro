@@ -1,0 +1,133 @@
+{
+  "position": "Front-end Developer",
+  "firstName": "Aliaksei",
+  "lastName": "Makush",
+  "summary": "<p>While working as a Web developer I've took part in a wide range of different projects. I've dealt with the layout of the sites for such cms like WordPress, drupal, joomla and etc. At the moment I develop SPA apps using such modern technologies as react, redux, nextjs. I constantly follow trends in Web development and trying to use the best ones.</p>",
+  "languages": [
+    {
+      "name": "Russian",
+      "level": 5
+    },
+    {
+      "name": "English",
+      "level": 2
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Email",
+      "type": "text",
+      "value": "aliaksei.makush@mamon.pro"
+    },
+    {
+      "name": "Phone",
+      "type": "text",
+      "value": "+375 (25) 624-67-46"
+    },
+    {
+      "name": "LinkedIn",
+      "type": "text",
+      "value": "/in/alexemakk"
+    },
+    {
+      "name": "GitHub",
+      "type": "text",
+      "value": "@alemakk"
+    }
+  ],
+  "education": [
+    {
+      "name": "Yanka Kupala State University of Grodno",
+      "value": "mathematics and applied sciences",
+      "yearFrom": "2009",
+      "yearTo": "2014"
+    }
+  ],
+  "projects": [
+    {
+      "dateFrom": "January 2021",
+      "dateTo": "February 2021",
+      "role": "Front-end developer",
+      "summary": "A modern automated documentation system dedicated to development teams. It automates Git repositories tech documentation from source files, statistics and custom notes for easily onboarding of new team members or future long term project support.    ",
+      "environment": "Pug, SCSS, React, JavaScript, REST API"
+    },
+    {
+      "dateFrom": "October 2020",
+      "dateTo": "December 2020",
+      "role": "Front-end developer",
+      "summary": "dotpin  - CRM for mobile application",
+      "environment": "React, Redux, SCSS"
+    },
+    {
+      "dateFrom": "July 2020",
+      "dateTo": "September 2020",
+      "role": "Front-end developer",
+      "summary": "rampa calculator - web application is used by customers to calculate and search for the necessary fasteners according to the specified parameters.",
+      "environment": "React, Redux, styled-components"
+    },
+    {
+      "dateFrom": "March 2020",
+      "dateTo": "June 2020",
+      "role": "Front-end developer",
+      "summary": "mts smartdoc - web application for phone provider located on Belarus. This app collaboration with quidox and provide user safety using quidox application",
+      "environment": "React, Redux, SCSS"
+    },
+    {
+      "dateFrom": "January 2020",
+      "dateTo": "January 2021",
+      "role": "Front-end developer",
+      "summary": "quidox - web application for the exchange of electronic documents",
+      "environment": "React, Redux, SCSS"
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript / TypeScript",
+      "level": 90
+    },
+    {
+      "name": "React",
+      "level": 90
+    },
+    {
+      "name": "Next.js",
+      "level": 80
+    },
+    {
+      "name": "Gatsby",
+      "level": 70
+    },
+    {
+      "name": "Redux (Thunk / Saga)",
+      "level": 75
+    },
+    {
+      "name": "Node / Express",
+      "level": 70
+    },
+    {
+      "name": "Socket.IO",
+      "level": 75
+    },
+    {
+      "name": "PostCSS / SCSS / Stylus",
+      "level": 100
+    },
+    {
+      "name": "CSS-in-JS",
+      "level": 100
+    },
+    {
+      "name": "Jade / Twig",
+      "level": 90
+    },
+    {
+      "name": "GraphQL / REST API",
+      "level": 80
+    },
+    {
+      "name": "PWA",
+      "level": 65
+    }
+  ]
+}
