@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 
-import { ArrowCircle } from '@components/icons'
 import styles from './Secondary.module.scss'
 
 const Secondary = ({ children, size, disabled, color }) => {
@@ -20,7 +19,6 @@ const Secondary = ({ children, size, disabled, color }) => {
       disabled={disabled}
     >
       <span>{children}</span>
-      <ArrowCircle />
     </button>
   )
 }
