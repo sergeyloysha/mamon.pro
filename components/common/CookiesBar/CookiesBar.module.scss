@@ -30,7 +30,7 @@
 
     padding: calc(var(--gap) * 4);
     border-radius: calc(var(--gap) * 2);
-    background-color: var(--color-background-white);
+    background-color: var(--color-white);
     box-shadow: var(--shadow-small);
 
     @include desktop {
@@ -38,7 +38,7 @@
       align-items: center;
       justify-content: space-between;
 
-      padding: calc(var(--gap) * 8);
+      padding: calc(var(--gap) * 4);
     }
   }
 
@@ -48,7 +48,6 @@
 
     @include desktop {
       margin: 0;
-      @include text-18;
     }
   }
 

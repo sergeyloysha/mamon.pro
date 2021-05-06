@@ -17,9 +17,6 @@ const CookiesBar = () => {
           <p>We value your privacy. This website uses cookies to grow.</p>
         </div>
         <div className={styles.cookiesBar__buttons}>
-          <div className={styles.cookiesBar__button}>
-            <Button type="ghost" size="medium" color="black">Choose preference</Button>
-          </div>
           <div className={styles.cookiesBar__button} onClick={() => onAcceptCookies()}>
             <Button size="medium">Accept all cookies</Button>
           </div>
