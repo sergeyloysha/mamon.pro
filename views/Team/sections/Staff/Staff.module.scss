@@ -80,7 +80,9 @@
   }
 
   &__department {
-    @include label-12;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2rem;
     color: var(--color-gray-50);
     text-transform: uppercase;
   }

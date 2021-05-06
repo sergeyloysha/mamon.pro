@@ -16,17 +16,17 @@ const data = [{
   firstName: 'Andrey',
   lastName: 'Pitunov',
   department: 'Development',
-  thumb: '/images/staff/andrey-pitunov.png',
+  thumb: '/images/staff/andrey-pitunov.jpg',
 }, {
   firstName: 'Andrey',
   lastName: 'Yatsenko',
   department: 'Development',
-  thumb: '/images/staff/andrey-yatsenko.png',
+  thumb: '/images/staff/andrey-yatsenko.jpg',
 }, {
   firstName: 'Yuliya',
   lastName: 'Yatsenko',
   department: 'Quality Assurance',
-  thumb: '/images/staff/yuliya-yatsenko.png',
+  thumb: '/images/staff/yuliya-yatsenko.jpg',
 }]
 
 const Staff = () => {
