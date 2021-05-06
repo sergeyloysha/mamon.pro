@@ -6,12 +6,12 @@ const data = [{
   firstName: 'Sergey',
   lastName: 'Loysha',
   department: 'Development',
-  thumb: '/images/staff/sergey-loysha.png',
+  thumb: '/images/staff/sergey-loysha.jpg',
 }, {
   firstName: 'Evgeny',
   lastName: 'Yakimovich',
   department: 'Development',
-  thumb: '/images/staff/evgeny-yakimovich.png',
+  thumb: '/images/staff/evgeny-yakimovich.jpg',
 }, {
   firstName: 'Andrey',
   lastName: 'Pitunov',

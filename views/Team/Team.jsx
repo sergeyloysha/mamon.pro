@@ -1,4 +1,4 @@
-import { CallToAction } from '@components/sections';
+import { CallToAction, Testimonial } from '@components/sections';
 import { Button } from '@components/ui';
 import React from 'react';
 import { Hero, Staff } from './sections';
@@ -8,6 +8,11 @@ const Team = () => {
     <>
       <Hero />
       <Staff />
+      <Testimonial
+        quote="Mamon is one of the best teams we have worked with. Their work has the power to change your business."
+        name="Angela Wiesenmüller"
+        position="Director EMEA at Meltwater"
+      />
       <CallToAction
         color="blue"
         heading="Have a project for us?"
