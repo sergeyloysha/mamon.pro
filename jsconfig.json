@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@lib/*": ["lib/*"],
+      "@components/*": ["components/*"],
+      "@views": ["views"],
+      "@config/*": ["config/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

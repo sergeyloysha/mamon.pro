@@ -1,0 +1,36 @@
+.cta {
+  &_blue {
+    background-color: var(--color-blue-10);
+  }
+
+  &_purple {
+    background-color: var(--color-blue-10);
+  }
+
+  &__inner {
+    padding: calc(var(--gap) * 16) 0;
+
+    @include tablet {
+      padding: calc(var(--gap) * 20) 0;
+    }
+  }
+
+  &__content {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__head {
+    margin: 0 0 calc(var(--gap) * 8) 0;
+  }
+
+  &__heading {
+    margin: 0 0 calc(var(--gap) * 4) 0;
+  }
+
+  &__description {
+    @include text-18;
+    color: var(--color-gray-90);
+  }
+}

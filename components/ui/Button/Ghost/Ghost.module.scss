@@ -1,0 +1,64 @@
+.button {
+  display: inline-flex;
+  background-color: transparent;
+  border-radius: var(--gap);
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+
+  &_small {
+    padding: calc(var(--gap) * 3 - 2px) calc(var(--gap) * 4  - 2px);
+
+    span {
+      @include label-14;
+    }
+  }
+
+
+  &_medium {
+    @include tablet {
+      padding: calc(var(--gap) * 3 - 2px) calc(var(--gap) * 6 - 2px);
+
+      span {
+        @include label-16;
+      }
+    }
+  }
+
+  &_large {
+    @include tablet {
+      padding: calc(var(--gap) * 4 - 2px) calc(var(--gap) * 6 - 2px);
+
+      span {
+        @include label-18;
+      }
+    }
+  }
+
+  &_white {
+    border-color: var(--color-white);
+    color: var(--color-white);
+  
+    &_disabled,
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &_black {
+    border-color: var(--color-gray-80);
+    color: var(--color-black);
+
+    &:hover {
+      border-color: var(--color-red);
+      color: var(--color-red);
+    }
+  
+    &_disabled,
+    &:disabled {
+      border-color: var(--color-gray-60);
+      color: var(--color-gray-60);
+      cursor: not-allowed;
+    }
+  }
+}

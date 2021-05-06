@@ -1,0 +1,88 @@
+.cookiesBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--gap) * 4);
+  z-index: 99;
+
+  max-width: 1024px;
+  padding: 0 calc(var(--gap) * 4);
+  margin: 0 auto;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(calc(var(--gap) * 2));
+  transition: var(--transition-default);
+
+  @include desktop {
+    bottom: calc(var(--gap) * 8);
+  }
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    padding: calc(var(--gap) * 4);
+    border-radius: calc(var(--gap) * 2);
+    background-color: var(--color-background-white);
+    box-shadow: var(--shadow-small);
+
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: calc(var(--gap) * 8);
+    }
+  }
+
+  &__text {
+    margin: 0 0 calc(var(--gap) * 4);
+    @include text-16;
+
+    @include desktop {
+      margin: 0;
+      @include text-18;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 calc(var(--gap) * 2) 0;
+    }
+
+    @include tablet {
+      &:not(:last-child) {
+        margin: 0 calc(var(--gap) * 4) 0 0;
+      }
+    }
+
+  }
+}

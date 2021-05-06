@@ -1,0 +1,31 @@
+.testimonial {
+  // background-color: var(--color-blue-10);
+  &__inner {
+    padding: calc(var(--gap) * 16) 0;
+
+    @include tablet {
+      padding: calc(var(--gap) * 20) 0;
+    }
+  }
+
+  &__content {
+    max-width: 640px;
+  }
+
+  &__text {
+    @include heading-3;
+    color: var(--color-purple);
+  }
+
+  &__meta {
+    padding: calc(var(--gap) * 4) 0 0 0;
+  }
+
+  &__name {
+    @include label-16;
+  }
+
+  &__position {
+    @include text-16;
+  }
+}

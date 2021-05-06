@@ -1,0 +1,17 @@
+.layout {
+  position: relative;
+
+  &__header {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__footer {
+    position: relative;
+  }
+}

@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  border-radius: var(--gap);
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  &_disabled,
+  &:disabled {
+    background-color: var(--color-gray-60);
+    cursor: not-allowed;
+  }
+
+  &_purple {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+  }
+
+  &_black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  &_small {
+    padding: calc(var(--gap) * 3) calc(var(--gap) * 4);
+
+    span {
+      @include label-14;
+    }
+  }
+
+
+  &_medium {
+    padding: calc(var(--gap) * 2) calc(var(--gap) * 4);
+
+    span {
+      @include text-16;
+    }
+  }
+
+  &_large {
+    padding: calc(var(--gap) * 3) calc(var(--gap) * 6);
+
+    span {
+      @include text-16;
+    }
+  }
+}
