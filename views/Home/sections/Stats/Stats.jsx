@@ -4,19 +4,15 @@ import { Container } from '@components/common'
 
 const data = [{
   count: 43,
-  emoji: '💻',
   text: 'Projects launched',
 }, {
   count: 7,
-  emoji: '🌏',
   text: 'Countries represented',
 }, {
   count: 4,
-  emoji: '🤘🏻',
   text: 'Years in business',
 }, {
   count: 5,
-  emoji: '🥷🏻',
   text: 'In-house developers',
 }]
 
