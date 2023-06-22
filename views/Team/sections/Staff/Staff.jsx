@@ -27,7 +27,13 @@ const data = [{
   lastName: 'Yatsenko',
   department: 'Quality Assurance',
   thumb: '/images/staff/yuliya-yatsenko.jpg',
-}]
+},
+  {
+    firstName: 'Aliaksei',
+    lastName: 'Makush',
+    department: 'Cone Owner',
+    thumb: '/images/staff/aliaksei-makush.jpg',
+  }]
 
 const Staff = () => {
   return (
